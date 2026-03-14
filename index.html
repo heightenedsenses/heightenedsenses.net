@@ -1336,10 +1336,19 @@
       <div class="section-rule"></div>
       <p class="contact-body">Share your requirements, part numbers, or program details and we will respond with sourcing options, lead times, and an execution plan. WAWF / PIEE invoicing supported.</p>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#ceacbbada5ada6afa3acabbcbd8ea6aba7a9a6baaba0abaabdaba0bdabbde0a0abba" class="contact-link">
+        <a href="#" id="email-link" class="contact-link">
           <span class="contact-link-icon">EMAIL</span>
-          <span class="__cf_email__" data-cfemail="c3a1b6a0a8a0aba2aea1a6b1b083aba6aaa4abb7a6ada6a7b0a6adb0a6b0edada6b7">[email&#160;protected]</span>
+          <span id="email-display"></span>
         </a>
+        <script>
+          (function(){
+            var u='info';
+            var d='heightenedsenses.net';
+            var e=u+'@'+d;
+            document.getElementById('email-display').textContent=e;
+            document.getElementById('email-link').href='mailto:'+e;
+          })();
+        </script>
         <a href="tel:4439445958" class="contact-link">
           <span class="contact-link-icon">PHONE</span>
           (443) 944-5958
@@ -1363,11 +1372,11 @@
       <div class="form-row">
         <div class="form-field">
           <label>First Name</label>
-          <input type="text" name="first_name" placeholder="Paul" required>
+          <input type="text" name="first_name" placeholder="Your First Name" required>
         </div>
         <div class="form-field">
           <label>Last Name</label>
-          <input type="text" name="last_name" placeholder="Chambers" required>
+          <input type="text" name="last_name" placeholder="Your Last Name" required>
         </div>
       </div>
       <div class="form-field">
@@ -1421,7 +1430,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Smooth nav active state
   const sections = document.querySelectorAll('section[id], div[id]');
   const navLinks = document.querySelectorAll('.nav-
