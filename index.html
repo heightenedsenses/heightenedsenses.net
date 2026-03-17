@@ -206,32 +206,32 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
    TABLET — max-width: 900px
 ============================================= */
 @media(max-width:900px){
-  :root{--pad:40px}
+  :root{--pad:32px}
   .nav-links{display:none}
   .nav-cta{display:none}
   .burger{display:flex}
 
-  .hero{grid-template-columns:1fr;padding:100px 32px 60px;min-height:auto;gap:40px}
+  .hero{grid-template-columns:1fr;padding:90px 32px 56px;min-height:auto;gap:36px}
   .hero-fade{background:linear-gradient(to bottom,var(--bg) 0%,transparent 30%,transparent 70%,var(--bg) 100%)}
   .hero-l{max-width:100%}
-  .hero-h1{font-size:clamp(52px,12vw,80px)}
+  .hero-h1{font-size:clamp(48px,11vw,80px)}
   .hero-body{max-width:100%;font-size:15px}
   .hero-r{justify-content:center}
-  .rs{max-width:380px}
+  .rs{max-width:360px}
 
-  .about-grid{grid-template-columns:1fr;gap:40px}
-  .hs-block{width:60%}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .hs-block{width:55%}
 
   .plat-grid{grid-template-columns:1fr;border:none;gap:1px;background:var(--wb)}
   .pc{border-right:none}
   .pc::after{display:none}
   .pi{height:200px}
 
-  .cap-grid-wrap{grid-template-columns:1fr;gap:40px}
+  .cap-grid-wrap{grid-template-columns:1fr;gap:36px}
 
   .eco-grid{grid-template-columns:1fr 1fr}
 
-  .con-grid{grid-template-columns:1fr;gap:48px}
+  .con-grid{grid-template-columns:1fr;gap:40px}
   .f2{grid-template-columns:1fr 1fr}
 }
 
@@ -239,55 +239,94 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
    MOBILE — max-width: 600px
 ============================================= */
 @media(max-width:600px){
-  :root{--pad:20px}
-  nav{padding:0 16px}
-  .logo-img{height:28px}
+  /* Core: all sections use 18px side margins — content never touches screen edge */
+  :root{--pad:18px}
+  html,body{max-width:100vw;overflow-x:hidden}
 
-  .hero{padding:80px 20px 48px;gap:32px}
-  .hero-h1{font-size:clamp(48px,14vw,72px)}
-  .hero-body{font-size:14px}
-  .hero-acts{flex-direction:column;align-items:flex-start;gap:10px}
-  .btn-a,.btn-g{width:100%;text-align:center;padding:14px 20px}
-  .rs{max-width:300px}
+  nav{padding:0 18px;height:52px}
+  .logo-img{height:26px}
+  .burger{padding:4px}
 
-  .sec{padding:48px 20px}
-  .sh{font-size:clamp(28px,8vw,40px)}
+  /* Hero: stacked, full width, comfortable margins */
+  .hero{grid-template-columns:1fr;padding:76px 18px 44px;gap:28px;min-height:auto}
+  .hero-fade{background:linear-gradient(to bottom,var(--bg) 0%,transparent 25%,transparent 75%,var(--bg) 100%)}
+  .hero-l{max-width:100%}
+  .hero-h1{font-size:clamp(42px,13vw,64px);margin-bottom:16px}
+  .hero-body{font-size:14px;max-width:100%;margin-bottom:20px}
+  .badges{gap:6px;margin-bottom:24px}
+  .bdg{font-size:8.5px;padding:4px 10px}
+  .hero-acts{flex-direction:column;align-items:stretch;gap:10px;width:100%}
+  .btn-a,.btn-g{width:100%;text-align:center;padding:14px 16px;display:block}
+  .hero-r{justify-content:center}
+  .rs{max-width:280px;width:100%}
 
-  .cred-bar{padding:0 16px}
-  .ci{padding:12px 16px;font-size:10px}
+  /* Sections */
+  .sec{padding:44px 18px}
+  .sh{font-size:clamp(26px,7.5vw,38px)}
+  .sr{margin:14px 0 24px}
 
-  .about-grid{gap:32px}
-  .cg{grid-template-columns:1fr 1fr}
-  .cc{padding:13px 14px}
+  /* Cred bar — scrollable, no overflow */
+  .cred-bar{padding:0 18px}
+  .ci{padding:12px 18px;font-size:9.5px;gap:7px}
+  .cd{width:4px;height:4px}
+
+  /* About */
+  .about-grid{grid-template-columns:1fr;gap:28px}
+  .cg{grid-template-columns:1fr 1fr;width:100%}
+  .cc{padding:12px 12px}
+  .cc-l{font-size:8.5px;letter-spacing:.16em}
   .cc-v{font-size:13px}
-  .hs-block{width:80%}
+  .hs-block{width:75%;max-width:260px}
 
-  .plat-grid{grid-template-columns:1fr}
-  .pi{height:180px}
-  .pcon{padding:18px 18px 22px}
+  /* Platforms — single column, full width */
+  .plat-grid{grid-template-columns:1fr;width:100%}
+  .pi{height:170px}
+  .pcon{padding:16px 16px 20px}
   .pn{font-size:20px}
+  .ps{font-size:8px}
   .pd{font-size:13px}
+  .pt{gap:4px}
+  .tg{font-size:7.5px;padding:3px 8px}
 
-  .cap-grid-wrap{grid-template-columns:1fr;gap:32px}
-  .cap-cells{grid-template-columns:1fr}
-  .cap-cell{border-right:none}
+  /* Capabilities */
+  .cap-grid-wrap{grid-template-columns:1fr;gap:28px}
+  .cap-intro{max-width:100%;font-size:14px}
+  .pkg-body{padding:14px 14px}
+  .pkg-name{font-size:13px}
+  .pkg-desc{font-size:12px}
+  .cap-cells{grid-template-columns:1fr;width:100%}
+  .cap-cell{border-right:none;padding:18px 16px}
   .cap-cell:nth-child(2n){border-right:none}
   .cap-cell:nth-last-child(-n+2){border-bottom:1px solid var(--cb)}
   .cap-cell:last-child{border-bottom:none}
+  .cap-desc{font-size:12px}
 
-  .eco-grid{grid-template-columns:1fr}
-  .ecard{padding:22px 18px}
+  /* Ecosystem — single column on mobile */
+  .eco-grid{grid-template-columns:1fr;width:100%}
+  .ecard{padding:20px 16px}
+  .ecat{font-size:8.5px}
+  .ename{font-size:17px}
+  .eval{font-size:12px}
 
-  .con-grid{gap:36px}
+  /* Contact */
+  .con-grid{grid-template-columns:1fr;gap:32px}
+  .con-intro{font-size:14px;max-width:100%}
+  .con-row{grid-template-columns:56px 1fr;padding:11px 0}
+  .con-key{font-size:8.5px}
+  .con-val{font-size:13px;word-break:break-word}
   .f2{grid-template-columns:1fr}
-  .fi,.fsel,.fta{font-size:16px}
-  .fsub{width:100%;text-align:center}
-  .con-row{grid-template-columns:60px 1fr}
-  .con-val{font-size:13px}
+  .fi,.fsel,.fta{font-size:16px;padding:11px 12px}
+  .fsub{width:100%;text-align:center;padding:14px 20px;align-self:stretch}
 
-  footer{padding:24px 20px}
-  .ft{flex-direction:column;align-items:flex-start;gap:16px}
+  /* Footer */
+  footer{padding:22px 18px}
+  .ft{flex-direction:column;align-items:flex-start;gap:14px}
   .fcopy{text-align:left}
+  .fb{flex-direction:column;align-items:center;gap:8px;text-align:center}
+  .fcreds{flex-direction:column;align-items:center;gap:0}
+  .fcreds span{padding:5px 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.06);width:100%;text-align:center}
+  .fcreds span:last-child{border-bottom:none}
+}
   .fb{flex-direction:column;align-items:center;gap:10px}
   .fcreds{gap:0}
   .fcreds span{padding:4px 10px;border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -514,7 +553,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <div>
       <p class="con-intro">Share your requirements, part numbers, or program details and we will respond with sourcing options, lead times, and an execution plan. WAWF / PIEE invoicing supported.</p>
       <div class="con-rows">
-        <div class="con-row"><span class="con-key">Email</span><span class="con-val"><a href="mailto:info@heightenedsenses.net">info@heightenedsenses.net</a></span></div>
+        <div class="con-row"><span class="con-key">Email</span><span class="con-val">info@heightenedsenses.net</span></div>#64;heightenedsenses<div class="con-row"><span class="con-key">Email</span><span class="con-val">info@heightenedsenses.net</span></div>#46;net</span></div>
         <div class="con-row"><span class="con-key">Phone</span><span class="con-val"><a href="tel:4439445958">(443) 944-5958</a></span></div>
         <div class="con-row"><span class="con-key">Addr</span><span class="con-val">187 Marina Wynd Way, Sneads Ferry, NC 28460</span></div>
         <div class="con-row"><span class="con-key">Cap St</span><span class="con-val ambl"><a href="assets/Heightened_Senses_Capability_Statement_20260313.pdf" target="_blank">Download Capability Statement &#8599;</a></span></div>
@@ -604,12 +643,4 @@ document.getElementById('cform').addEventListener('submit', function(e) {
   }
   if (!valid) return;
   var btn = this.querySelector('.fsub');
-  btn.textContent = 'SENDING...'; btn.style.opacity = '.6'; btn.disabled = true;
-  setTimeout(function() {
-    document.getElementById('cform').style.display = 'none';
-    document.getElementById('fsuc').classList.add('on');
-  }, 900);
-});
-</script>
-</body>
-</html>
+  btn.textC
