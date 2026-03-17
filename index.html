@@ -196,7 +196,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 .footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:18px;display:flex;justify-content:center;flex-wrap:wrap;gap:24px;font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28)}
 
 /* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal{opacity:1;transform:none;transition:opacity .65s ease,transform .65s ease}.rev-ready .reveal{opacity:0;transform:translateY(28px)}.rev-ready .reveal.visible{opacity:1;transform:none}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* SCROLLBAR */
@@ -528,6 +528,7 @@ window.addEventListener('scroll',()=>{
 },{passive:true});
 
 // Scroll reveal
+document.documentElement.classList.add("rev-ready");
 const obs=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
 },{threshold:.07});
