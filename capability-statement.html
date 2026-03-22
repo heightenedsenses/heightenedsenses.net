@@ -128,20 +128,22 @@
     padding: 5px 40px;
     display: flex;
     align-items: center;
+    overflow: hidden;
   }
   .grad-bar span {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
-    font-size: 7.5pt;
-    letter-spacing: 0.15em;
+    font-size: 7pt;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--black);
-    padding: 0 13px;
+    padding: 0 10px;
     border-right: 1px solid rgba(0,0,0,0.2);
     white-space: nowrap;
+    flex-shrink: 1;
   }
   .grad-bar span:first-child { padding-left: 0; }
-  .grad-bar span:last-child  { border-right: none; }
+  .grad-bar span:last-child  { border-right: none; padding-right: 0; }
 
   /* ════════════════════════
      BODY
