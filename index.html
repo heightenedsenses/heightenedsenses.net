@@ -47,14 +47,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .nav-cta:hover{opacity:.88}
 
 /* HAMBURGER */
-.burger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:10px;background:none;border:none;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);touch-action:manipulation;position:relative;z-index:1001;width:44px;height:44px;align-items:center;flex-shrink:0}
-.burger span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s;border-radius:1px}
-.mob-menu{display:none;position:fixed;top:56px;left:0;right:0;z-index:999;background:#080e09;padding:20px 24px 32px;flex-direction:column;gap:0;border-bottom:1px solid var(--cb)}
 
-.mob-menu a{font-family:var(--fh);font-size:16px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.80);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
-.mob-menu a:last-child{border-bottom:none}
-.mob-menu a:hover{color:#fff}
-.mob-menu .nav-cta{margin-top:16px;align-self:flex-start;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)}
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px var(--pad) 60px;overflow:hidden;background:var(--bg);gap:20px}
@@ -208,7 +201,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   :root{--pad:32px}
   .nav-links{display:none}
   .nav-cta{display:none}
-  .burger{display:flex}
 
   .hero{grid-template-columns:1fr;padding:90px 32px 56px;min-height:auto;gap:36px}
   .hero-fade{background:linear-gradient(to bottom,var(--bg) 0%,transparent 30%,transparent 70%,var(--bg) 100%)}
@@ -244,7 +236,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 
   nav{padding:0 18px;height:52px}
   .logo-img{height:26px}
-  .burger{padding:10px;width:44px;height:44px}.nav-cta{display:none}
 
   /* Hero: stacked, full width, comfortable margins */
   .hero{grid-template-columns:1fr;padding:76px 18px 44px;gap:28px;min-height:auto}
@@ -345,19 +336,9 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <a href="#contact">CONTACT</a>
   </div>
   <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
-  <button class="burger" id="burger" aria-label="Menu" type="button" onclick="toggleBurger()">
-    <span id="b0"></span><span id="b1"></span><span id="b2"></span>
-  </button>
+
 </nav>
 
-<!-- MOBILE MENU -->
-<div class="mob-menu" id="mob-menu">
-  <a href="#platforms" onclick="closeMob()">PLATFORMS</a>
-  <a href="#capabilities" onclick="closeMob()">CAPABILITIES</a>
-  <a href="#ecosystem" onclick="closeMob()">ECOSYSTEM</a>
-  <a href="#contact" onclick="closeMob()">CONTACT</a>
-  <a href="#contact" class="nav-cta" onclick="closeMob()">REQUEST A QUOTE</a>
-</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -558,6 +539,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       </div>
       </div>
       </div>
+      </div>
     </div>
     <div>
       <form class="cform" id="cform" novalidate>
@@ -617,29 +599,7 @@ window.addEventListener('scroll', function() {
   if (n) n.style.background = window.scrollY > 40 ? 'rgba(3,6,4,.99)' : 'rgba(5,9,6,.97)';
 }, false);
 
-function toggleBurger() {
-  var mob = document.getElementById('mob-menu');
-  var b0 = document.getElementById('b0');
-  var b1 = document.getElementById('b1');
-  var b2 = document.getElementById('b2');
-  if (!mob) return;
-  var isOpen = mob.style.display === 'flex';
-  mob.style.display = isOpen ? 'none' : 'flex';
-  if (b0) b0.style.transform = isOpen ? '' : 'rotate(45deg) translate(5px,5px)';
-  if (b1) b1.style.opacity = isOpen ? '1' : '0';
-  if (b2) b2.style.transform = isOpen ? '' : 'rotate(-45deg) translate(5px,-5px)';
-}
-function closeMob() {
-  var mob = document.getElementById('mob-menu');
-  var b0 = document.getElementById('b0');
-  var b1 = document.getElementById('b1');
-  var b2 = document.getElementById('b2');
-  if (!mob) return;
-  mob.style.display = 'none';
-  if (b0) b0.style.transform = '';
-  if (b1) b1.style.opacity = '1';
-  if (b2) b2.style.transform = '';
-}
+
 
 // Assemble email client-side to prevent Cloudflare obfuscation
 (function() {
