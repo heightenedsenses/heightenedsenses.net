@@ -38,9 +38,8 @@ img{display:block;max-width:100%}
 .btn-g:hover{color:#fff}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:600;display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 16px;height:56px;background:rgba(5,9,6,.97);border-bottom:1px solid rgba(255,255,255,.05);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);touch-action:manipulation}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:56px;background:rgba(5,9,6,.98);border-bottom:1px solid rgba(255,255,255,.06)}
 .logo-img{height:32px;width:auto;mix-blend-mode:screen;filter:brightness(1.08)}
-.nav-right{display:flex;align-items:center;gap:24px}
 .nav-links{display:flex;align-items:center;gap:24px}
 .nav-links a{font-family:var(--fh);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78);transition:color .15s;white-space:nowrap}
 .nav-links a:hover{color:#fff}
@@ -48,9 +47,9 @@ nav{position:sticky;top:0;z-index:600;display:flex;align-items:center;justify-co
 .nav-cta:hover{opacity:.88}
 
 /* HAMBURGER */
-.burger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;background:none;border:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation;position:relative;z-index:600;min-width:40px;min-height:40px;align-items:center}
+.burger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:10px;background:none;border:none;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);touch-action:manipulation;position:relative;z-index:1001;width:44px;height:44px;align-items:center;flex-shrink:0}
 .burger span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s;border-radius:1px}
-.mob-menu{display:none;position:fixed;top:56px;left:0;right:0;z-index:590;background:rgba(5,9,6,.99);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:20px 24px 32px;flex-direction:column;gap:0;border-bottom:1px solid var(--cb);-webkit-overflow-scrolling:touch}
+.mob-menu{display:none;position:fixed;top:56px;left:0;right:0;z-index:999;background:#080e09;padding:20px 24px 32px;flex-direction:column;gap:0;border-bottom:1px solid var(--cb)}
 .mob-menu.open{display:flex}
 .mob-menu a{font-family:var(--fh);font-size:16px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.80);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
 .mob-menu a:last-child{border-bottom:none}
@@ -339,18 +338,16 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 <!-- NAV -->
 <nav id="main-nav">
   <a href="#home"><img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses LLC"></a>
-  <div class="nav-right">
-    <div class="nav-links">
-      <a href="#platforms">PLATFORMS</a>
-      <a href="#capabilities">CAPABILITIES</a>
-      <a href="#ecosystem">ECOSYSTEM</a>
-      <a href="#contact">CONTACT</a>
-    </div>
-    <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
-    <button class="burger" id="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="nav-links">
+    <a href="#platforms">PLATFORMS</a>
+    <a href="#capabilities">CAPABILITIES</a>
+    <a href="#ecosystem">ECOSYSTEM</a>
+    <a href="#contact">CONTACT</a>
   </div>
+  <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
+  <button class="burger" id="burger" aria-label="Menu" type="button" onclick="toggleBurger()">
+    <span id="b0"></span><span id="b1"></span><span id="b2"></span>
+  </button>
 </nav>
 
 <!-- MOBILE MENU -->
@@ -553,10 +550,11 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <div>
       <p class="con-intro">Share your requirements, part numbers, or program details and we will respond with sourcing options, lead times, and an execution plan. WAWF / PIEE invoicing supported.</p>
       <div class="con-rows">
-        <div class="con-row"><span class="con-key">Email</span><span class="con-val"><a href="mailto:info@heightenedsenses.net">info@heightenedsenses.net</a></span></div>
+        <div class="con-row"><span class="con-key">Email</span><span class="con-val" id="contact-email"><noscript>info [at] heightenedsenses.net</noscript></span></div>
         <div class="con-row"><span class="con-key">Phone</span><span class="con-val"><a href="tel:4439445958">(443) 944-5958</a></span></div>
         <div class="con-row"><span class="con-key">Addr</span><span class="con-val">187 Marina Wynd Way, Sneads Ferry, NC 28460</span></div>
         <div class="con-row"><span class="con-key">Cap St</span><span class="con-val ambl"><a href="assets/Heightened_Senses_Capability_Statement_20260313.pdf" target="_blank">Download Capability Statement &#8599;</a></span></div>
+      </div>
       </div>
       </div>
     </div>
@@ -618,37 +616,36 @@ window.addEventListener('scroll', function() {
   if (n) n.style.background = window.scrollY > 40 ? 'rgba(3,6,4,.99)' : 'rgba(5,9,6,.97)';
 }, false);
 
-document.addEventListener('DOMContentLoaded', function() {
-  var burger = document.getElementById('burger');
+function toggleBurger() {
   var mob = document.getElementById('mob-menu');
-  if (burger && mob) {
-    burger.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var open = mob.classList.toggle('open');
-      var s = burger.querySelectorAll('span');
-      s[0].style.transform = open ? 'rotate(45deg) translate(5px,5px)' : '';
-      s[1].style.opacity = open ? '0' : '1';
-      s[2].style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : '';
-    });
-    // Close menu when tapping outside
-    document.addEventListener('click', function(e) {
-      if (mob.classList.contains('open') && !mob.contains(e.target) && !burger.contains(e.target)) {
-        mob.classList.remove('open');
-        var s = burger.querySelectorAll('span');
-        s[0].style.transform = ''; s[1].style.opacity = ''; s[2].style.transform = '';
-      }
-    });
-  }
-});
+  var b0 = document.getElementById('b0');
+  var b1 = document.getElementById('b1');
+  var b2 = document.getElementById('b2');
+  var isOpen = mob.classList.toggle('open');
+  b0.style.transform = isOpen ? 'rotate(45deg) translate(5px,5px)' : '';
+  b1.style.opacity = isOpen ? '0' : '1';
+  b2.style.transform = isOpen ? 'rotate(-45deg) translate(5px,-5px)' : '';
+}
 function closeMob() {
   var mob = document.getElementById('mob-menu');
-  var burger = document.getElementById('burger');
-  if (mob) mob.classList.remove('open');
-  if (burger) {
-    var s = burger.querySelectorAll('span');
-    s[0].style.transform = ''; s[1].style.opacity = ''; s[2].style.transform = '';
-  }
+  var b0 = document.getElementById('b0');
+  var b1 = document.getElementById('b1');
+  var b2 = document.getElementById('b2');
+  mob.classList.remove('open');
+  b0.style.transform = ''; b1.style.opacity = ''; b2.style.transform = '';
 }
+
+// Assemble email client-side to prevent Cloudflare obfuscation
+(function() {
+  var u = 'info';
+  var d = 'heightenedsenses';
+  var t = 'net';
+  var email = u + '@' + d + '.' + t;
+  var el = document.getElementById('contact-email');
+  if (el) {
+    el.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+  }
+})();
 
 document.getElementById('cform').addEventListener('submit', function(e) {
   e.preventDefault();
