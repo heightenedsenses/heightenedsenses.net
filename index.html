@@ -329,11 +329,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .fcreds span:last-child{border-bottom:none}
 }
 
-/* Email anti-obfuscation — renders @ and . via CSS, href built on click */
-.cf-at::before  { content: "@"; }
-.cf-dot::before { content: "."; }
-.cf-email { cursor: pointer; color: inherit; }
-.cf-email:hover { color: var(--teal, #3de0c0); }
 </style>
 </head>
 <body>
@@ -543,7 +538,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <div>
       <p class="con-intro">Share your requirements, part numbers, or program details and we will respond with sourcing options, lead times, and an execution plan. WAWF / PIEE invoicing supported.</p>
       <div class="con-rows">
-        <div class="con-row"><span class="con-key">Email</span><span class="con-val cf-email">info<span class="cf-at"></span>heightenedsenses<span class="cf-dot"></span>net</span></div>
+        <div class="con-row"><span class="con-key">Email</span><span class="con-val" id="em" data-a="aW5mbw==" data-b="aGVpZ2h0ZW5lZHNlbnNlcy5uZXQ="></span></div>
         <div class="con-row"><span class="con-key">Phone</span><span class="con-val"><a href="tel:4439445958">(443) 944-5958</a></span></div>
         <div class="con-row"><span class="con-key">Addr</span><span class="con-val">187 Marina Wynd Way, Sneads Ferry, NC 28460</span></div>
         <div class="con-row"><span class="con-key">Cap St</span><span class="con-val ambl"><a href="capability-statement.html">View Capability Statement &#8599;</a>&nbsp;&nbsp;<a href="assets/Heightened_Senses_Capability_Statement_2026.pdf" target="_blank" style="color:var(--muted);font-size:11px;">PDF &#8595;</a></span></div>
@@ -623,4 +618,26 @@ document.getElementById('cform').addEventListener('submit', function(e) {
   var valid = true;
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].style.borderColor = '';
-    if (!inputs[
+    if (!inputs[i].value.trim()) { inputs[i].style.borderColor = 'rgba(220,60,30,.65)'; valid = false; }
+    if (inputs[i].type === 'email' && inputs[i].value && (!inputs[i].value.includes('@') || !inputs[i].value.includes('.'))) { inputs[i].style.borderColor = 'rgba(220,60,30,.65)'; valid = false; }
+  }
+  if (!valid) return;
+  var btn = this.querySelector('.fsub');
+  btn.textContent = 'SENDING...'; btn.style.opacity = '.6'; btn.disabled = true;
+  setTimeout(function() {
+    document.getElementById('cform').style.display = 'none';
+    document.getElementById('fsuc').classList.add('on');
+  }, 900);
+});
+
+// Email assembled from base64 parts — no @ symbol anywhere in HTML source
+(function(){
+  var el = document.getElementById('em');
+  if (el) {
+    var e = atob(el.getAttribute('data-a')) + '@' + atob(el.getAttribute('data-b'));
+    el.innerHTML = '<a href="mailto:' + e + '" style="color:inherit;">' + e + '</a>';
+  }
+})();
+</script>
+</body>
+</html>
