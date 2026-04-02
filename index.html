@@ -52,9 +52,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .nav-cta{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:8px 18px;background:var(--amber);color:#080808;border:none;cursor:pointer;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{opacity:.88}
 
-/* HAMBURGER */
-
-
 /* HERO */
 .hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px var(--pad) 60px;overflow:hidden;background:var(--bg);gap:20px}
 .hero-dots{position:absolute;inset:0;z-index:0;background-image:radial-gradient(circle,rgba(61,224,192,.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
@@ -196,6 +193,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 .fcreds span{padding:0 12px;border-right:1px solid rgba(255,255,255,.08)}.fcreds span:last-child{border-right:none}
 .fcopy{font-family:var(--fm);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.26);text-align:right;line-height:1.6}
 .fb{border-top:1px solid rgba(255,255,255,.05);padding-top:14px;display:flex;justify-content:center;flex-wrap:wrap;gap:16px;font-family:var(--fm);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.26)}
+.fb a{color:rgba(255,255,255,.40);transition:color .2s}.fb a:hover{color:var(--teal)}
 
 /* SCROLLBAR */
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--cb2)}
@@ -236,14 +234,12 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
    MOBILE — max-width: 600px
 ============================================= */
 @media(max-width:600px){
-  /* Core: all sections use 18px side margins — content never touches screen edge */
   :root{--pad:18px}
   html,body{max-width:100vw;overflow-x:hidden}
 
   nav{padding:0 18px;height:52px}
   .logo-img{height:26px}
 
-  /* Hero: stacked, full width, comfortable margins */
   .hero{grid-template-columns:1fr;padding:76px 18px 44px;gap:28px;min-height:auto}
   .hero-fade{background:linear-gradient(to bottom,var(--bg) 0%,transparent 25%,transparent 75%,var(--bg) 100%)}
   .hero-l{max-width:100%}
@@ -256,17 +252,14 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .hero-r{justify-content:center}
   .rs{max-width:280px;width:100%}
 
-  /* Sections */
   .sec{padding:44px 18px}
   .sh{font-size:clamp(26px,7.5vw,38px)}
   .sr{margin:14px 0 24px}
 
-  /* Cred bar — scrollable, no overflow */
   .cred-bar{padding:0 18px}
   .ci{padding:12px 18px;font-size:9.5px;gap:7px}
   .cd{width:4px;height:4px}
 
-  /* About */
   .about-grid{grid-template-columns:1fr;gap:28px}
   .cg{grid-template-columns:1fr 1fr;width:100%}
   .cc{padding:12px 12px}
@@ -274,7 +267,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .cc-v{font-size:13px}
   .hs-block{width:75%;max-width:260px}
 
-  /* Platforms — single column, full width */
   .plat-grid{grid-template-columns:1fr;width:100%}
   .pi{height:170px}
   .pcon{padding:16px 16px 20px}
@@ -284,7 +276,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .pt{gap:4px}
   .tg{font-size:7.5px;padding:3px 8px}
 
-  /* Capabilities */
   .cap-grid-wrap{grid-template-columns:1fr;gap:28px}
   .cap-intro{max-width:100%;font-size:14px}
   .pkg-body{padding:14px 14px}
@@ -297,14 +288,12 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .cap-cell:last-child{border-bottom:none}
   .cap-desc{font-size:12px}
 
-  /* Ecosystem — single column on mobile */
   .eco-grid{grid-template-columns:1fr;width:100%}
   .ecard{padding:20px 16px}
   .ecat{font-size:8.5px}
   .ename{font-size:17px}
   .eval{font-size:12px}
 
-  /* Contact */
   .con-grid{grid-template-columns:1fr;gap:32px}
   .con-intro{font-size:14px;max-width:100%}
   .con-row{grid-template-columns:56px 1fr;padding:11px 0}
@@ -314,7 +303,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .fi,.fsel,.fta{font-size:16px;padding:11px 12px}
   .fsub{width:100%;text-align:center;padding:14px 20px;align-self:stretch}
 
-  /* Footer */
   footer{padding:22px 18px}
   .ft{flex-direction:column;align-items:flex-start;gap:14px}
   .fcopy{text-align:left}
@@ -323,12 +311,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .fcreds span{padding:5px 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.06);width:100%;text-align:center}
   .fcreds span:last-child{border-bottom:none}
 }
-  .fb{flex-direction:column;align-items:center;gap:10px}
-  .fcreds{gap:0}
-  .fcreds span{padding:4px 10px;border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
-  .fcreds span:last-child{border-bottom:none}
-}
-
 </style>
 </head>
 <body>
@@ -343,9 +325,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <a href="#contact">CONTACT</a>
   </div>
   <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
-
 </nav>
-
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -408,7 +388,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
         <div class="cc"><span class="cc-l">CAGE Code</span><div class="cc-v">9XFG8</div></div>
         <div class="cc"><span class="cc-l">SAM Status</span><div class="cc-v">Active &#183; Jan 2027</div></div>
         <div class="cc"><span class="cc-l">Founded</span><div class="cc-v">July 2023 &#183; NC</div></div>
-        <div class="cc"><span class="cc-l">Primary NAICS</span><div class="cc-v">336411 &#183; 334511</div></div>
+        <div class="cc"><span class="cc-l">Primary NAICS</span><div class="cc-v">336411 &#183; 334511 &#183; 425120</div></div>
         <div class="cc"><span class="cc-l">SDVOSB Cert Expiry</span><div class="cc-v">August 2028</div></div>
       </div>
       <div class="hs-block">
@@ -515,7 +495,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="eco-grid">
     <div class="ecard"><span class="ecat">Avionics and Flight Control</span><div class="ename">ARK Electronics</div><span class="estat ok">Preferred Partner Confirmed</span><p class="eval">Mission critical avionics and flight control solutions supporting modular, NDAA aligned UAS architectures. A strong fit for secure, mission configurable builds across defense, public safety, and critical infrastructure applications.</p></div>
     <div class="ecard"><span class="ecat">Secure Mesh Communications</span><div class="ename">Doodle Labs</div><span class="estat">Relationship in Development</span><p class="eval">Resilient wireless mesh networking for command and control, video, and data transport in distributed UAS operations. Strong ecosystem alignment for mobile, expeditionary, and multi node mission sets.</p></div>
-    <div class="ecard"><span class="ecat">Ground Control Systems</span><div class="ename">Desert Rotor</div><span class="estat">Relationship in Development</span><p class="eval">U.S.-manufactured portable and vehicle-mounted ground control stations using HOTAS layout — the intuitive interface standard in defense and manned aviation. Compatible with fixed-wing, multirotor, UGV, and USV platforms. Strong fit for expeditionary, command center, and multi-domain UAS operations.</p></div>
+    <div class="ecard"><span class="ecat">Ground Control Systems</span><div class="ename">Desert Rotor</div><span class="estat">Relationship in Development</span><p class="eval">U.S.-manufactured portable and vehicle-mounted ground control stations using HOTAS layout &#8212; the intuitive interface standard in defense and manned aviation. Compatible with fixed-wing, multirotor, UGV, and USV platforms. Strong fit for expeditionary, command center, and multi-domain UAS operations.</p></div>
     <div class="ecard"><span class="ecat">Stabilized EO/IR Payloads</span><div class="ename">Trillium Engineering</div><span class="estat">Relationship in Development</span><p class="eval">Stabilized electro optical and infrared payloads designed for ISR, perimeter security, force protection, and overwatch missions. Well aligned with defense, maritime, and public safety operational requirements.</p></div>
     <div class="ecard"><span class="ecat">Radar and Airspace Awareness</span><div class="ename">MatrixSpace</div><span class="estat">Relationship in Development</span><p class="eval">Compact radar and airspace awareness solutions supporting detection, cuing, and layered C-UAS and perimeter security operations. Strong fit for site security, emergency response, and infrastructure protection use cases.</p></div>
     <div class="ecard"><span class="ecat">Military Power Systems</span><div class="ename">Bren-Tronics</div><span class="estat">Relationship in Development</span><p class="eval">Field proven military power and charging solutions supporting expeditionary operations, sustainment, and portable mission systems. A strong complement for UAS, C-UAS, and extended field deployment requirements.</p></div>
@@ -542,12 +522,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
         <div class="con-row"><span class="con-key">Phone</span><span class="con-val"><a href="tel:4439445958">(443) 944-5958</a></span></div>
         <div class="con-row"><span class="con-key">Addr</span><span class="con-val">187 Marina Wynd Way, Sneads Ferry, NC 28460</span></div>
         <div class="con-row"><span class="con-key">Cap St</span><span class="con-val ambl"><a href="capability-statement.html">View Capability Statement &#8599;</a>&nbsp;&nbsp;<a href="assets/Heightened_Senses_Capability_Statement_2026.pdf" target="_blank" style="color:var(--muted);font-size:11px;">PDF &#8595;</a></span></div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
       </div>
     </div>
     <div>
@@ -599,6 +573,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <span>CAGE: 9XFG8</span>
     <span>EIN: 93-2185308</span>
     <span>SAM Active &#8212; Exp. Jan 2027</span>
+    <span><a href="government-uas-fulfillment">Government UAS Fulfillment &#8599;</a></span>
   </div>
 </footer>
 
@@ -607,10 +582,6 @@ window.addEventListener('scroll', function() {
   var n = document.getElementById('main-nav');
   if (n) n.style.background = window.scrollY > 40 ? 'rgba(3,6,4,.99)' : 'rgba(5,9,6,.97)';
 }, false);
-
-
-
-
 
 document.getElementById('cform').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -630,7 +601,6 @@ document.getElementById('cform').addEventListener('submit', function(e) {
   }, 900);
 });
 
-// Email assembled from base64 parts — no @ symbol anywhere in HTML source
 (function(){
   var el = document.getElementById('em');
   if (el) {
