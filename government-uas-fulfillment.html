@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government UAS Fulfillment — Heightened Senses LLC</title>
+<meta name="description" content="NDAA-Compliant Group 1 sUAS Parts Catalog. Single-source procurement for Government-nominated, PMA-263 validated components. No subscription required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080e09;--bg2:#0d160f;--bg3:#111c13;--bg4:#152018;
+  --teal:#3de0c0;--amber:#e8901e;--white:#ffffff;
+  --muted:rgba(255,255,255,.60);--muted2:rgba(255,255,255,.32);
+  --cb:rgba(61,224,192,.15);--cb2:rgba(61,224,192,.28);--wb:rgba(255,255,255,.07);
+  --fh:'Barlow Condensed',sans-serif;--fb:'Barlow',sans-serif;--fm:'Share Tech Mono',monospace;
+  --pad:72px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--fb);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+/* SHARED */
+.ey{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.ey-line{width:40px;height:1px;background:linear-gradient(90deg,#e8901e,#3de0c0);flex-shrink:0}
+.ey-lbl{font-family:var(--fm);font-size:10px;letter-spacing:.22em;text-transform:uppercase;background:linear-gradient(90deg,#e8901e,#3de0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec{padding:64px var(--pad);border-top:1px solid rgba(255,255,255,.04)}
+.sec-h{font-family:var(--fh);font-weight:900;font-size:clamp(36px,5vw,56px);line-height:.9;text-transform:uppercase;margin-bottom:12px}
+.sec-h .t{color:var(--teal);display:block}
+.sec-h .w{color:var(--white);display:block}
+.sec-sub{font-size:15px;font-weight:300;color:var(--muted);line-height:1.72;max-width:640px;margin-bottom:32px}
+
+/* BUTTONS */
+.btn-a{font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:12px 28px;background:var(--amber);color:#080808;border:none;cursor:pointer;display:inline-block;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)}
+.btn-a:hover{opacity:.88}
+.btn-g{font-family:var(--fh);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:12px 24px;background:transparent;color:rgba(255,255,255,.65);border:none;cursor:pointer;display:inline-block;transition:color .2s}
+.btn-g:hover{color:#fff}
+.btn-teal{font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:12px 28px;background:var(--teal);color:#080808;border:none;cursor:pointer;display:inline-block;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)}
+.btn-teal:hover{opacity:.88}
+.btn-outline{font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:11px 27px;background:transparent;color:var(--teal);border:1px solid var(--cb2);cursor:pointer;display:inline-block;transition:all .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)}
+.btn-outline:hover{background:rgba(61,224,192,.08)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:56px;background:rgba(5,9,6,.98);border-bottom:1px solid rgba(255,255,255,.06)}
+.logo-img{height:32px;width:auto;mix-blend-mode:screen;filter:brightness(1.08)}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-family:var(--fh);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78);transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:#fff}
+.nav-cta{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:8px 18px;background:var(--amber);color:#080808;border:none;cursor:pointer;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);white-space:nowrap;flex-shrink:0;text-decoration:none;display:inline-block}
+.nav-cta:hover{opacity:.88}
+
+/* HERO */
+.hero{position:relative;min-height:72vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px var(--pad) 64px;overflow:hidden;background:var(--bg)}
+.hero-dots{position:absolute;inset:0;z-index:0;background-image:radial-gradient(circle,rgba(61,224,192,.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.hero-fade{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,transparent 0%,var(--bg) 75%);pointer-events:none}
+.hero-content{position:relative;z-index:3;max-width:800px}
+.hero h1{font-family:var(--fh);font-weight:900;line-height:.87;font-size:clamp(42px,6vw,72px);text-transform:uppercase;margin-bottom:16px;color:var(--white)}
+.hero h1 .t{color:var(--teal)}
+.hero-subtitle{font-family:var(--fm);font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:linear-gradient(90deg,#e8901e,#3de0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:24px;line-height:1.6}
+.hero-body{font-size:15px;font-weight:300;color:var(--muted);line-height:1.78;max-width:640px;margin:0 auto 32px}
+.hero-acts{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px}
+
+/* HOW IT WORKS */
+.hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cb);border:1px solid var(--cb);margin-top:32px}
+.hiw-card{background:var(--bg3);padding:28px 24px;transition:background .2s}
+.hiw-card:hover{background:var(--bg4)}
+.hiw-num{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:block}
+.hiw-title{font-family:var(--fh);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--white);margin-bottom:10px}
+.hiw-text{font-size:13px;font-weight:300;color:var(--muted);line-height:1.72}
+
+/* CATALOG TABLE */
+.cat-s{background:var(--bg2)}
+.cat-wrap{overflow-x:auto;margin-top:28px;border:1px solid var(--cb)}
+.cat-table{width:100%;border-collapse:collapse;font-size:13px}
+.cat-table thead{background:var(--bg4)}
+.cat-table th{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);padding:14px 16px;text-align:left;border-bottom:1px solid var(--cb);white-space:nowrap}
+.cat-table td{padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.04);font-weight:300;color:rgba(255,255,255,.82);vertical-align:top}
+.cat-table tbody tr{background:var(--bg3);transition:background .15s}
+.cat-table tbody tr:hover{background:var(--bg4)}
+.cat-table .cat-label{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:400}
+.ndaa-pending{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border:1px solid rgba(232,144,30,.25);color:rgba(232,144,30,.7);white-space:nowrap;display:inline-block}
+.ndaa-approved{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border:1px solid var(--cb2);color:var(--teal);white-space:nowrap;display:inline-block}
+.cat-note{font-size:12px;font-weight:300;color:var(--muted2);line-height:1.72;margin-top:20px;max-width:800px;font-style:italic}
+.price-quote{font-style:italic;color:rgba(255,255,255,.35);font-size:12px}
+.price-note{display:block;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:rgba(255,255,255,.30);margin-top:4px;font-style:italic}
+.item-note{display:block;font-size:11px;color:rgba(255,255,255,.35);font-style:italic;margin-top:2px}
+
+/* SECURITY */
+.sec-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:28px}
+.sec-col h3{font-family:var(--fh);font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--white);margin-bottom:16px}
+.sec-col ul{list-style:none;padding:0}
+.sec-col li{font-size:13px;font-weight:300;color:var(--muted);line-height:1.72;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);padding-left:16px;position:relative}
+.sec-col li::before{content:'';position:absolute;left:0;top:16px;width:6px;height:1px;background:var(--teal)}
+
+/* ECOSYSTEM CARDS */
+.eco-s{background:var(--bg2)}
+.eco-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--cb);border:1px solid var(--cb);margin-top:32px}
+.ecard{background:var(--bg3);padding:24px 20px;transition:background .2s}
+.ecard:hover{background:var(--bg4)}
+.ecat{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:7px;display:block}
+.ename{font-family:var(--fh);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--white);margin-bottom:7px}
+.estat{display:inline-block;font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;padding:3px 9px;margin-bottom:10px;border:1px solid var(--wb);color:var(--muted2)}
+.estat.ok{border-color:var(--cb2);color:var(--teal)}
+.eval{font-size:13px;font-weight:300;color:var(--muted);line-height:1.68}
+
+/* CONTACT / REGISTER */
+.con-s{background:var(--bg)}
+.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.con-intro{font-size:15px;font-weight:300;color:var(--muted);line-height:1.8;max-width:420px;margin-bottom:28px}
+.con-rows{display:flex;flex-direction:column}
+.con-row{display:grid;grid-template-columns:68px 1fr;padding:13px 0;border-bottom:1px solid var(--cb);align-items:baseline}
+.con-row:first-child{border-top:1px solid var(--cb)}
+.con-key{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+.con-val{font-size:13px;font-weight:300;color:var(--white)}
+.con-val a{color:var(--white);transition:color .2s}.con-val a:hover{color:var(--teal)}
+
+/* FORM */
+.cform{display:flex;flex-direction:column}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:13px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
+.fl{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+.fi{font-family:var(--fb);font-size:14px;font-weight:300;color:var(--white);background:rgba(255,255,255,.04);border:1px solid var(--cb);padding:11px 13px;outline:none;transition:border-color .2s;width:100%}
+.fi:focus{border-color:var(--cb2)}
+.fi::placeholder{color:rgba(255,255,255,.22)}
+select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='rgba(255,255,255,.3)'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:32px;cursor:pointer}
+select.fi option{background:var(--bg3);color:var(--white)}
+textarea.fi{min-height:100px;resize:vertical}
+.fbtn{font-family:var(--fh);font-size:14px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:13px 32px;background:var(--amber);color:#080808;border:none;cursor:pointer;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);width:100%;margin-top:6px}
+.fbtn:hover{opacity:.88}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:28px var(--pad)}
+.ft{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:14px}
+.fcreds{display:flex;flex-wrap:wrap;font-family:var(--fm);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.36);justify-content:center}
+.fcreds span{padding:0 12px;border-right:1px solid rgba(255,255,255,.08)}
+.fcreds span:last-child{border-right:none}
+.fcopy{font-family:var(--fm);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.26);text-align:right;line-height:1.6}
+.fb{border-top:1px solid rgba(255,255,255,.05);padding-top:14px;display:flex;justify-content:center;flex-wrap:wrap;gap:16px;font-family:var(--fm);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.26)}
+.fb span{padding:0 8px}
+
+/* BADGES */
+.badges{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:30px;justify-content:center}
+.bdg{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;background:rgba(61,224,192,.05);border:1px solid var(--cb);color:rgba(255,255,255,.50);white-space:nowrap}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  :root{--pad:32px}
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .hero{padding:100px 32px 48px;min-height:auto}
+  .hero h1{font-size:clamp(32px,9vw,52px)}
+  .hiw-grid{grid-template-columns:1fr}
+  .sec-grid{grid-template-columns:1fr;gap:36px}
+  .eco-grid{grid-template-columns:1fr}
+  .con-grid{grid-template-columns:1fr;gap:36px}
+  .f2{grid-template-columns:1fr}
+  .cat-table{font-size:12px}
+  .cat-table th,.cat-table td{padding:10px 10px}
+  .ft{flex-direction:column;align-items:center;text-align:center}
+  .fcopy{text-align:center}
+  .fcreds{justify-content:center}
+}
+@media(max-width:600px){
+  :root{--pad:18px}
+  .hero{padding:90px 18px 36px}
+  .hero h1{font-size:clamp(28px,10vw,42px)}
+  .hero-subtitle{font-size:9px}
+  .badges{justify-content:center}
+  .eco-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== SECTION 1: NAVIGATION ==================== -->
+<nav>
+  <a href="https://heightenedsenses.net/#home">
+    <img src="https://heightenedsenses.net/assets/logo-full.png" alt="Heightened Senses LLC" class="logo-img">
+  </a>
+  <div class="nav-links">
+    <a href="https://heightenedsenses.net/#home">Home</a>
+    <a href="https://heightenedsenses.net/#platforms">Platforms</a>
+    <a href="https://heightenedsenses.net/#capabilities">Capabilities</a>
+    <a href="https://heightenedsenses.net/#ecosystem">Ecosystem</a>
+    <a href="https://heightenedsenses.net/#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Request Access</a>
+  </div>
+</nav>
+
+<!-- ==================== SECTION 2: HERO ==================== -->
+<section class="hero" id="home">
+  <div class="hero-dots"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-content">
+    <div class="ey" style="justify-content:center">
+      <span class="ey-line"></span>
+      <span class="ey-lbl">Government Procurement Catalog</span>
+      <span class="ey-line"></span>
+    </div>
+    <h1><span class="t">Government</span> UAS Fulfillment</h1>
+    <div class="hero-subtitle">NDAA-Compliant Group 1 sUAS Parts &mdash; Single-Source Accountability &mdash; No Subscription Required</div>
+    <p class="hero-body">Heightened Senses, LLC operates as a single-source procurement vehicle for Government-nominated, NDAA-validated Group 1 Small Uncrewed Aircraft System components. All parts are sold by Heightened Senses and fulfilled directly to Government end users. No subscription is required to browse the approved catalog. Government account registration is available at no cost and includes MFA-authenticated access to order history and reporting. WAWF invoicing supported.</p>
+    <div class="hero-acts">
+      <a href="#contact" class="btn-a">Request Access</a>
+      <a href="mailto:contracts@heightenedsenses.net" class="btn-outline">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 3: HOW IT WORKS ==================== -->
+<section class="sec" id="how-it-works">
+  <div class="ey">
+    <span class="ey-line"></span>
+    <span class="ey-lbl">Process</span>
+  </div>
+  <div class="sec-h"><span class="t">How It</span><span class="w">Works</span></div>
+  <div class="hiw-grid">
+    <div class="hiw-card">
+      <span class="hiw-num">Step 01</span>
+      <div class="hiw-title">Government Nominates Parts</div>
+      <p class="hiw-text">The Government nominates specific components for NDAA compliance review. Heightened Senses conducts a preliminary screening and, upon authorization, prepares a full compliance evidence package per PMA-263 guidance for Government validation.</p>
+    </div>
+    <div class="hiw-card">
+      <span class="hiw-num">Step 02</span>
+      <div class="hiw-title">Government Validates</div>
+      <p class="hiw-text">The compliance documentation package is uploaded to the SRA Portal by Heightened Senses personnel using DoD-approved ECA credentials. PMA-263 serves as the final validation authority. Heightened Senses lists the component for ordering only upon official COR notification of approval.</p>
+    </div>
+    <div class="hiw-card">
+      <span class="hiw-num">Step 03</span>
+      <div class="hiw-title">Government Orders</div>
+      <p class="hiw-text">Approved components are available in this catalog at publicly listed prices. Orders are fulfilled directly to Government end users. Monthly consolidated invoicing is submitted through WAWF. Returns and RMA support handled within one business day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 4: APPROVED PARTS CATALOG ==================== -->
+<section class="sec cat-s" id="catalog">
+  <div class="ey">
+    <span class="ey-line"></span>
+    <span class="ey-lbl">Procurement Catalog</span>
+  </div>
+  <div class="sec-h"><span class="t">Approved Parts</span><span class="w">Catalog</span></div>
+  <p class="sec-sub">Government-nominated, NDAA-validated Group 1 sUAS components available for direct order. All pricing reflects publicly available retail catalog pricing.</p>
+  <div class="cat-wrap">
+    <table class="cat-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Item</th>
+          <th>Description</th>
+          <th>NDAA Status</th>
+          <th>Unit Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cat-label">FPV Camera</td>
+          <td>Aura Analog FPV Camera NDAA<span class="item-note">Pre-order</span></td>
+          <td>Analog FPV Camera Module, NDAA Compliant</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$58.00</td>
+        </tr>
+        <tr>
+          <td class="cat-label">FPV Goggles</td>
+          <td>Fat Shark Dominator HDO+ FPV Goggles</td>
+          <td>High-Definition OLED FPV Goggles</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$599.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">FPV Goggles Accessory</td>
+          <td>Fat Shark FSV1814 Battery Case</td>
+          <td>Replacement Battery Case for Fat Shark Goggles</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$21.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">FPV Video Receiver</td>
+          <td>ImmersionRC rapidFIRE 5.8GHz Video Receiver NDAA</td>
+          <td>5.8GHz Analog Video Receiver Module, NDAA Compliant</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$180.00<span class="price-note">Currently Out of Stock &mdash; subject to availability</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Radio Controller</td>
+          <td>TBS Tango 2 Pro Radio Controller Crossfire NDAA</td>
+          <td>Ground Control Transmitter, Crossfire Protocol, NDAA Compliant</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$259.95</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Battery</td>
+          <td>Lumenier NAV 3000mAh 6S Lithium-Ion Battery XT60</td>
+          <td>3000mAh 6S Lithium-Ion Battery Pack, XT60 Connector</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$94.49<span class="price-note">Currently Out of Stock &mdash; subject to availability</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Remote ID</td>
+          <td>Lumenier RID Remote ID Module NDAA</td>
+          <td>FAA-Compliant Remote ID Broadcast Module, NDAA Compliant</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$79.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Antenna</td>
+          <td>Lumenier AXII 2 Diversity Antenna Bundle 5.8GHz RHCP</td>
+          <td>5.8GHz RHCP Diversity Antenna Bundle</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$45.49</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Motor</td>
+          <td>Lumenier ZIP V2 2807 Cinematic Motor 1300KV<span class="item-note">Qty 4 required per build</span></td>
+          <td>2807 Brushless Motor, 1300KV</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$29.99 /ea</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Strap</td>
+          <td>Lumenier Indestructible Kevlar Lipo Strap 20x500mm 2pcs</td>
+          <td>Kevlar Battery Strap, 20x500mm, 2-Pack</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$8.49</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Propeller</td>
+          <td>HQProp 7X4.5 2-Blade Propeller Set of 4</td>
+          <td>7-Inch 2-Blade Propeller Set of 4</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$5.49<span class="price-note">Currently Out of Stock &mdash; subject to availability</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Antenna</td>
+          <td>TBS Airscrew 5.8GHz LR SMA 90 Degree Antenna RHCP</td>
+          <td>5.8GHz Long Range SMA Antenna, 90 Degree, RHCP</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$25.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Charger</td>
+          <td>iSDT C4 EVO 36W 6-Channel Smart Charger</td>
+          <td>36W 6-Channel Smart Charger</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$77.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Safety</td>
+          <td>VIFLY ShortSaver 2 Smart Smoke Stopper XT60 XT30</td>
+          <td>Smart Smoke Stopper, XT60/XT30 Compatible</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$18.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Charger</td>
+          <td>HOTA S6 AC 400W DC 325W Dual Channel Lipo Charger</td>
+          <td>AC 400W / DC 325W Dual Channel Lipo Charger</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$220.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Fastener</td>
+          <td>M4 Hex Nut 91828A231</td>
+          <td>M4 Hex Nut, Metric</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td><span class="price-quote">See Quote</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Fastener</td>
+          <td>M4x0.7 Button Head Screw 92095A192</td>
+          <td>M4x0.7 Button Head Hex Drive Screw</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td><span class="price-quote">See Quote</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Fastener</td>
+          <td>M2x0.4 Button Head Screw 92095A452</td>
+          <td>M2x0.4 Button Head Hex Drive Screw</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td><span class="price-quote">See Quote</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Fastener</td>
+          <td>M3x0.5 Button Head Screw 92095A186</td>
+          <td>M3x0.5 Button Head Hex Drive Screw</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td><span class="price-quote">See Quote</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Fastener</td>
+          <td>M3 Nylon Locknut 93625A100</td>
+          <td>M3 Nylon Insert Locknut</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td><span class="price-quote">See Quote</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Fastener</td>
+          <td>M3 Hex Nut 91828A211</td>
+          <td>M3 Hex Nut, Metric</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td><span class="price-quote">See Quote</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Fastener</td>
+          <td>M3x0.5 Button Head Screw 92095A183</td>
+          <td>M3x0.5 Button Head Hex Drive Screw</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td><span class="price-quote">See Quote</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Battery Cell</td>
+          <td>Molicel 21700 P42A 4200mAh 45A Battery</td>
+          <td>21700 Li-Ion Cell, 4200mAh, 45A Continuous</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$5.29</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Battery Cell</td>
+          <td>Sony Murata VTC6 18650 3000mAh Battery</td>
+          <td>18650 Li-Ion Cell, 3000mAh</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$5.99<span class="price-note">Currently Out of Stock &mdash; subject to availability</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">Nickel Strip</td>
+          <td>Pure Nickel Strip Tabs Pre-Cut 100pcs</td>
+          <td>Pre-Cut Pure Nickel Strip Tabs, 100-Pack</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$9.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Tape</td>
+          <td>Polyimide Kapton Tape 25mm x 33m</td>
+          <td>High-Temperature Polyimide Tape, 25mm x 33m</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$6.78</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Wire</td>
+          <td>28 AWG Silicone Wire Kit 6 Colors</td>
+          <td>28 AWG Silicone Wire Kit, 6 Colors</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$14.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Wire</td>
+          <td>12AWG Silicone Wire 10ft Red and Black</td>
+          <td>12 AWG Silicone Wire, 10ft Red and Black</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$11.98</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Cable</td>
+          <td>JST-XH 6S Balance Lead 5-Pack</td>
+          <td>6S Balance Lead Extension, JST-XH, 5-Pack</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$7.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Connector</td>
+          <td>Amass XT60H Power Connectors 5 Sets</td>
+          <td>XT60H Male/Female Power Connector Set, 5 Pairs</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$8.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Heat Shrink</td>
+          <td>Heat Shrink Tubing 3/16 inch Black 55ft</td>
+          <td>Heat Shrink Tubing, 3/16 inch Black, 55ft</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$12.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Solder</td>
+          <td>63/37 Tin Lead Rosin Core Solder 0.8mm 50g</td>
+          <td>Rosin Core Solder, 63/37, 0.8mm, 50g</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$8.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Solder Accessory</td>
+          <td>Desoldering Wick Braid</td>
+          <td>Copper Desoldering Braid</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$5.95</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Soldering Station</td>
+          <td>200W Precision Digital Soldering Station Kit</td>
+          <td>200W Digital Soldering Station Kit</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$129.99</td>
+        </tr>
+        <tr>
+          <td class="cat-label">3D Printing</td>
+          <td>HATCHBOX PETG Filament 1.75mm 1kg Spool<span class="item-note">Standard 1kg spool. 300g increment not commercially available.</span></td>
+          <td>PETG 3D Printer Filament, 1.75mm, 1kg Spool</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td>$25.00</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Welding Equipment</td>
+          <td>Battery Spot Welder 21KW 3500A Capacitor Energy Storage<span class="item-note">Domestic seller availability under review</span></td>
+          <td>21KW Capacitor Energy Storage Spot Welder, 3500A</td>
+          <td><span class="ndaa-pending">Pending PMA-263 Review</span></td>
+          <td><span class="price-quote">See Quote</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cat-note">Catalog pricing reflects publicly available retail pricing on the date of quote submission. All listed prices are subject to Contracting Officer fair and reasonable determination prior to order approval. Prices are updated to reflect current public catalog pricing at time of each task order.</p>
+</section>
+
+<!-- ==================== SECTION 5: SECURITY & COMPLIANCE ==================== -->
+<section class="sec" id="security">
+  <div class="ey">
+    <span class="ey-line"></span>
+    <span class="ey-lbl">Security &amp; Compliance</span>
+  </div>
+  <div class="sec-h"><span class="t">Security &amp;</span><span class="w">Compliance</span></div>
+  <div class="sec-grid">
+    <div class="sec-col">
+      <h3>Platform Security Standards</h3>
+      <ul>
+        <li>TLS 1.2 or higher encryption in transit for all platform communications</li>
+        <li>Multi-Factor Authentication (MFA) required for all registered Government accounts</li>
+        <li>Role-based access control limiting visibility to authorized users only</li>
+        <li>Documented vulnerability management and incident response procedures</li>
+        <li>Audit-ready order and delivery records maintained for all transactions</li>
+      </ul>
+    </div>
+    <div class="sec-col">
+      <h3>NDAA Compliance Framework</h3>
+      <ul>
+        <li>All components listed only after Government nomination and PMA-263 validation</li>
+        <li>Compliance evidence packages prepared per current DoD guidance</li>
+        <li>SRA Portal submission via DoD-approved ECA credentials</li>
+        <li>Government retains final compliance validation authority at all times</li>
+        <li>Supply chain traceability documentation maintained for all fulfilled parts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 6: SUPPLY CHAIN PARTNERS ==================== -->
+<section class="sec eco-s" id="partners">
+  <div class="ey">
+    <span class="ey-line"></span>
+    <span class="ey-lbl">Supply Chain Partners</span>
+  </div>
+  <div class="sec-h"><span class="t">Supply Chain</span><span class="w">Partners</span></div>
+  <div class="eco-grid">
+    <div class="ecard">
+      <span class="ecat">Avionics &amp; Flight Control</span>
+      <div class="ename">ARK Electronics</div>
+      <span class="estat ok">Preferred OEM Fulfillment Partner</span>
+      <p class="eval">NDAA-compliant flight control systems. Confirmed preferred fulfillment partner status. Direct OEM sourcing with warranty and RMA support for Government sales.</p>
+    </div>
+    <div class="ecard">
+      <span class="ecat">FPV Components &amp; Video Systems</span>
+      <div class="ename">Rotor Riot</div>
+      <span class="estat">Authorized Retail Source</span>
+      <p class="eval">NDAA-compliant FPV components including Fat Shark video systems and Blue UAS certified parts.</p>
+    </div>
+    <div class="ecard">
+      <span class="ecat">Motors, Batteries &amp; Accessories</span>
+      <div class="ename">Lumenier</div>
+      <span class="estat">Authorized Retail Source</span>
+      <p class="eval">NDAA-compliant motors, batteries, remote ID modules, and antenna systems.</p>
+    </div>
+    <div class="ecard">
+      <span class="ecat">Hardware &amp; Fasteners</span>
+      <div class="ename">McMaster-Carr</div>
+      <span class="estat">Hardware Source</span>
+      <p class="eval">Domestic hardware and fastener sourcing for precision UAS assembly applications.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 7: CONTACT & REGISTRATION ==================== -->
+<!-- Form action endpoint: Connect to your backend form handler (e.g., Formspree, Netlify Forms, or custom API) -->
+<section class="sec con-s" id="contact">
+  <div class="ey">
+    <span class="ey-line"></span>
+    <span class="ey-lbl">Registration</span>
+  </div>
+  <div class="sec-h"><span class="t">Register Your</span><span class="w">Command</span></div>
+  <p class="sec-sub">Government users may register their command at no cost to receive MFA-authenticated access to order history, delivery tracking, and reporting. Registration is not required to browse the approved parts catalog. All listed components and pricing are publicly accessible without login.</p>
+  <div class="con-grid">
+    <div>
+      <div class="con-rows">
+        <div class="con-row">
+          <span class="con-key">Email</span>
+          <span class="con-val"><a href="mailto:contracts@heightenedsenses.net">contracts@heightenedsenses.net</a></span>
+        </div>
+        <div class="con-row">
+          <span class="con-key">Phone</span>
+          <span class="con-val"><a href="tel:4439445958">(443) 944-5958</a></span>
+        </div>
+        <div class="con-row">
+          <span class="con-key">Addr</span>
+          <span class="con-val">187 Marina Wynd Way, Sneads Ferry, NC 28460</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!-- Form action: Replace "#" with your form processing endpoint -->
+      <form class="cform" action="#" method="POST">
+        <div class="f2">
+          <div class="fg">
+            <label class="fl" for="fname">First Name</label>
+            <input class="fi" type="text" id="fname" name="fname" placeholder="Your First Name">
+          </div>
+          <div class="fg">
+            <label class="fl" for="lname">Last Name</label>
+            <input class="fi" type="text" id="lname" name="lname" placeholder="Your Last Name">
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl" for="org">Command / Organization</label>
+          <input class="fi" type="text" id="org" name="org" placeholder="Unit / Agency / Organization">
+        </div>
+        <div class="fg">
+          <label class="fl" for="email">Government Email Address</label>
+          <input class="fi" type="email" id="email" name="email" placeholder="you@agency.mil">
+        </div>
+        <div class="fg">
+          <label class="fl" for="inquiry">Inquiry Type</label>
+          <select class="fi" id="inquiry" name="inquiry">
+            <option value="" selected>Select...</option>
+            <option value="registration">Account Registration</option>
+            <option value="availability">Part Availability Inquiry</option>
+            <option value="compliance">Compliance Documentation</option>
+            <option value="contract">Contract Vehicle Inquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl" for="message">Requirements / Message</label>
+          <textarea class="fi" id="message" name="message" placeholder="Share requirements, part numbers, or program details..."></textarea>
+        </div>
+        <button class="fbtn" type="submit">Submit Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 8: FOOTER ==================== -->
+<footer>
+  <div class="ft">
+    <a href="https://heightenedsenses.net/#home">
+      <img src="https://heightenedsenses.net/assets/logo-full.png" alt="Heightened Senses LLC" class="logo-img">
+    </a>
+    <div class="fcreds">
+      <span>SDVOSB</span>
+      <span>FAA Part 107 Certified</span>
+      <span>NDAA-Compliant Supply Chain</span>
+      <span>Blue UAS Platform Partner</span>
+      <span>Disaster Response Registry</span>
+    </div>
+    <div class="fcopy">
+      UEI: SSZREV67GJK5<br>
+      CAGE: 9XFG8<br>
+      EIN: 93-2185308<br>
+      SAM Active &mdash; Exp. Jan 2027
+    </div>
+  </div>
+  <div class="fb">
+    <span>&copy; 2026 Heightened Senses, LLC &middot; Sneads Ferry, NC 28460</span>
+  </div>
+</footer>
+
+</body>
+</html>
