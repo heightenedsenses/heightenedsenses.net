@@ -130,6 +130,13 @@ select.fi option{background:var(--bg3);color:var(--white)}
 textarea.fi{min-height:100px;resize:vertical}
 .fbtn{font-family:var(--fh);font-size:14px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:13px 32px;background:var(--amber);color:#080808;border:none;cursor:pointer;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);width:100%;margin-top:6px}
 .fbtn:hover{opacity:.88}
+.fbtn:disabled{opacity:.5;cursor:not-allowed}
+.fi.error{border-color:rgba(232,144,30,.6)}
+.field-error{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,144,30,.7);margin-top:2px;display:none}
+.fg.has-error .field-error{display:block}
+.form-status{margin-top:16px;padding:16px 20px;font-size:13px;font-weight:300;line-height:1.6;display:none}
+.form-status.success{display:block;background:rgba(61,224,192,.06);border:1px solid var(--cb2);color:var(--teal)}
+.form-status.error{display:block;background:rgba(232,144,30,.06);border:1px solid rgba(232,144,30,.25);color:rgba(232,144,30,.8)}
 
 /* FOOTER */
 footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:28px var(--pad)}
@@ -186,6 +193,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <a href="https://heightenedsenses.net/#capabilities">Capabilities</a>
     <a href="https://heightenedsenses.net/#ecosystem">Ecosystem</a>
     <a href="https://heightenedsenses.net/#contact">Contact</a>
+    <a href="https://heightenedsenses.net/government-uas-fulfillment">Gov Fulfillment</a>
     <a href="#contact" class="nav-cta">Request Access</a>
   </div>
 </nav>
@@ -607,42 +615,58 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       </div>
     </div>
     <div>
-      <!-- Form action: Replace "#" with your form processing endpoint -->
-      <form class="cform" action="#" method="POST">
+      <!--
+        FORM CONFIGURATION:
+        This form submits via Formspree. To activate:
+        1. Go to https://formspree.io and create a free account
+        2. Create a new form and copy your form ID (e.g., xyzabcde)
+        3. Replace YOUR_FORMSPREE_ID below with your actual ID
+        Submissions will be forwarded to your Formspree-linked email.
+        Free tier: 50 submissions/month. Paid plans available.
+      -->
+      <form class="cform" id="regForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
         <div class="f2">
-          <div class="fg">
-            <label class="fl" for="fname">First Name</label>
-            <input class="fi" type="text" id="fname" name="fname" placeholder="Your First Name">
+          <div class="fg" id="fg-fname">
+            <label class="fl" for="fname">First Name *</label>
+            <input class="fi" type="text" id="fname" name="fname" placeholder="Your First Name" required>
+            <span class="field-error">Required</span>
           </div>
-          <div class="fg">
-            <label class="fl" for="lname">Last Name</label>
-            <input class="fi" type="text" id="lname" name="lname" placeholder="Your Last Name">
+          <div class="fg" id="fg-lname">
+            <label class="fl" for="lname">Last Name *</label>
+            <input class="fi" type="text" id="lname" name="lname" placeholder="Your Last Name" required>
+            <span class="field-error">Required</span>
           </div>
         </div>
-        <div class="fg">
-          <label class="fl" for="org">Command / Organization</label>
-          <input class="fi" type="text" id="org" name="org" placeholder="Unit / Agency / Organization">
+        <div class="fg" id="fg-org">
+          <label class="fl" for="org">Command / Organization *</label>
+          <input class="fi" type="text" id="org" name="org" placeholder="Unit / Agency / Organization" required>
+          <span class="field-error">Required</span>
         </div>
-        <div class="fg">
-          <label class="fl" for="email">Government Email Address</label>
-          <input class="fi" type="email" id="email" name="email" placeholder="you@agency.mil">
+        <div class="fg" id="fg-email">
+          <label class="fl" for="email">Government Email Address *</label>
+          <input class="fi" type="email" id="email" name="email" placeholder="you@agency.mil" required>
+          <span class="field-error">Valid email required</span>
         </div>
-        <div class="fg">
-          <label class="fl" for="inquiry">Inquiry Type</label>
-          <select class="fi" id="inquiry" name="inquiry">
-            <option value="" selected>Select...</option>
-            <option value="registration">Account Registration</option>
-            <option value="availability">Part Availability Inquiry</option>
-            <option value="compliance">Compliance Documentation</option>
-            <option value="contract">Contract Vehicle Inquiry</option>
-            <option value="other">Other</option>
+        <div class="fg" id="fg-inquiry">
+          <label class="fl" for="inquiry">Inquiry Type *</label>
+          <select class="fi" id="inquiry" name="inquiry" required>
+            <option value="" selected disabled>Select...</option>
+            <option value="Account Registration">Account Registration</option>
+            <option value="Part Availability Inquiry">Part Availability Inquiry</option>
+            <option value="Compliance Documentation">Compliance Documentation</option>
+            <option value="Contract Vehicle Inquiry">Contract Vehicle Inquiry</option>
+            <option value="Other">Other</option>
           </select>
+          <span class="field-error">Please select an inquiry type</span>
         </div>
         <div class="fg">
           <label class="fl" for="message">Requirements / Message</label>
           <textarea class="fi" id="message" name="message" placeholder="Share requirements, part numbers, or program details..."></textarea>
         </div>
-        <button class="fbtn" type="submit">Submit Request</button>
+        <input type="hidden" name="_subject" value="Gov UAS Fulfillment: New Registration Request">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <button class="fbtn" type="submit" id="submitBtn">Submit Request</button>
+        <div class="form-status" id="formStatus"></div>
       </form>
     </div>
   </div>
@@ -672,6 +696,82 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <span>&copy; 2026 Heightened Senses, LLC &middot; Sneads Ferry, NC 28460</span>
   </div>
 </footer>
+
+<script>
+(function(){
+  var form = document.getElementById('regForm');
+  var btn = document.getElementById('submitBtn');
+  var status = document.getElementById('formStatus');
+  var required = ['fname','lname','org','email','inquiry'];
+
+  function clearErrors(){
+    required.forEach(function(id){
+      var fg = document.getElementById('fg-'+id);
+      if(fg) fg.classList.remove('has-error');
+      var inp = document.getElementById(id);
+      if(inp) inp.classList.remove('error');
+    });
+    status.className = 'form-status';
+    status.textContent = '';
+  }
+
+  function validate(){
+    var valid = true;
+    clearErrors();
+    required.forEach(function(id){
+      var inp = document.getElementById(id);
+      var fg = document.getElementById('fg-'+id);
+      if(!inp || !fg) return;
+      var val = inp.value.trim();
+      if(!val || (inp.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val))){
+        fg.classList.add('has-error');
+        inp.classList.add('error');
+        valid = false;
+      }
+    });
+    return valid;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!validate()) return;
+
+    btn.disabled = true;
+    btn.textContent = 'SUBMITTING...';
+
+    var data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {'Accept':'application/json'}
+    }).then(function(r){
+      if(r.ok){
+        status.className = 'form-status success';
+        status.textContent = 'Request received. We will respond with access credentials and next steps within one business day.';
+        form.reset();
+      } else {
+        throw new Error('Server returned ' + r.status);
+      }
+    }).catch(function(){
+      status.className = 'form-status error';
+      status.textContent = 'Submission failed. Please email contracts@heightenedsenses.net directly or call (443) 944-5958.';
+    }).finally(function(){
+      btn.disabled = false;
+      btn.textContent = 'SUBMIT REQUEST';
+    });
+  });
+
+  required.forEach(function(id){
+    var inp = document.getElementById(id);
+    if(inp) inp.addEventListener('input', function(){
+      var fg = document.getElementById('fg-'+id);
+      if(fg) fg.classList.remove('has-error');
+      inp.classList.remove('error');
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
