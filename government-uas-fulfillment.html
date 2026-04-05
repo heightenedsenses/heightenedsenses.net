@@ -48,6 +48,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .nav-links a:hover{color:#fff}
 .nav-cta{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:8px 18px;background:var(--amber);color:#080808;border:none;cursor:pointer;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);white-space:nowrap;flex-shrink:0;text-decoration:none;display:inline-block}
 .nav-cta:hover{opacity:.88}
+/* HAMBURGER BUTTON (hidden on desktop, visible on mobile) */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:1002;-webkit-tap-highlight-color:transparent}
+.nav-hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .3s ease}
+.nav-hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.active span:nth-child(2){opacity:0}
+.nav-hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* MOBILE OVERLAY */
+.nav-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:999;opacity:0;transition:opacity .3s ease}
+.nav-overlay.active{opacity:1}
 /* HERO */
 .hero{position:relative;min-height:72vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px var(--pad) 64px;overflow:hidden;background:var(--bg)}
 .hero-dots{position:absolute;inset:0;z-index:0;background-image:radial-gradient(circle,rgba(61,224,192,.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
@@ -139,11 +148,16 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 /* BADGES */
 .badges{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:30px;justify-content:center}
 .bdg{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;background:rgba(61,224,192,.05);border:1px solid var(--cb);color:rgba(255,255,255,.50);white-space:nowrap}
-/* RESPONSIVE */
+/* RESPONSIVE — TABLET */
 @media(max-width:900px){
   :root{--pad:32px}
-  .nav-links{display:none}
-  .nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .nav-links{display:none;flex-direction:column;position:fixed;top:56px;left:0;right:0;background:rgba(5,9,6,.98);padding:20px 0;gap:0;border-bottom:1px solid rgba(255,255,255,.08);z-index:1001;max-height:calc(100vh - 56px);overflow-y:auto}
+  .nav-links.active{display:flex}
+  .nav-links a{padding:14px 24px;font-size:14px;letter-spacing:.14em;border-bottom:1px solid rgba(255,255,255,.05);color:rgba(255,255,255,.85)}
+  .nav-links a:last-child{border-bottom:none}
+  .nav-links a:hover,.nav-links a:active{color:#fff;background:rgba(255,255,255,.04)}
+  .nav-links .nav-cta{display:block;margin:16px 24px 8px;text-align:center;padding:12px 18px;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)}
   .hero{padding:100px 32px 48px;min-height:auto}
   .hero h1{font-size:clamp(32px,9vw,52px)}
   .hiw-grid{grid-template-columns:1fr}
@@ -157,8 +171,11 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .fcopy{text-align:center}
   .fcreds{justify-content:center}
 }
+/* RESPONSIVE — MOBILE */
 @media(max-width:600px){
   :root{--pad:18px}
+  nav{height:52px}
+  .nav-links{top:52px;max-height:calc(100vh - 52px)}
   .hero{padding:90px 18px 36px}
   .hero h1{font-size:clamp(28px,10vw,42px)}
   .hero-subtitle{font-size:9px}
@@ -182,6 +199,11 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <a href="https://heightenedsenses.net/government-uas-fulfillment">Gov Fulfillment</a>
     <a href="#contact" class="nav-cta">Request Access</a>
   </div>
+  <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 <!-- ==================== SECTION 2: HERO ==================== -->
 <section class="hero" id="home">
@@ -731,6 +753,19 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       inp.classList.remove('error');
     });
   });
+})();
+/* MOBILE NAV TOGGLE */
+(function(){
+  var h=document.querySelector('.nav-hamburger'),n=document.querySelector('.nav-links');
+  if(!h||!n)return;
+  var o=document.createElement('div');o.className='nav-overlay';document.body.appendChild(o);
+  function close(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');h.setAttribute('aria-expanded','false');document.body.style.overflow='';setTimeout(function(){o.style.display='none'},300)}
+  function toggle(){var open=h.classList.contains('active');if(open){close()}else{h.classList.add('active');n.classList.add('active');h.setAttribute('aria-expanded','true');o.style.display='block';o.offsetHeight;o.classList.add('active');document.body.style.overflow='hidden'}}
+  h.addEventListener('click',toggle);
+  o.addEventListener('click',close);
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  window.addEventListener('resize',function(){if(window.innerWidth>900)close()});
 })();
 </script>
 </body>
