@@ -290,8 +290,8 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .fi,.fsel,.fta{font-size:16px;padding:11px 12px}
   .fsub{width:100%;text-align:center;padding:14px 20px;align-self:stretch}
   footer{padding:22px 18px}
-  .ft{flex-direction:column;align-items:flex-start;gap:14px}
-  .fcopy{text-align:left}
+  .ft{flex-direction:column;align-items:center;gap:14px}
+  .fcopy{text-align:center}
   .fb{flex-direction:column;align-items:center;gap:8px;text-align:center}
   .fcreds{flex-direction:column;align-items:center;gap:0}
   .fcreds span{padding:5px 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.06);width:100%;text-align:center}
@@ -585,7 +585,7 @@ document.getElementById('cform').addEventListener('submit', function(e) {
   var el = document.getElementById('em');
   if (el) {
     var e = atob(el.getAttribute('data-a')) + '@' + atob(el.getAttribute('data-b'));
-    el.innerHTML = '<a href="mailto:' + e + '" style="color:inherit;">' + e + '</a>';
+    el.innerHTML = '<a href="mailto:' + e + '">' + e + '</a>';
   }
 })();
 /* MOBILE NAV TOGGLE */
