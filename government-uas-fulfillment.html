@@ -960,9 +960,58 @@ function submitOrder() {
   lines.push('POC Name: ');
   lines.push('POC Email: ');
   lines.push('Delivery Address: MCB Camp Lejeune, NC');
-  var subject = encodeURIComponent('Order Request - Government UAS Fulfillment (' + orderItems.length + ' items)');
-  var bodyEnc = encodeURIComponent(lines.join('\n'));
-  window.location.href = 'mailto:contracts@heightenedsenses.net?subject=' + subject + '&body=' + bodyEnc;
+  var text = lines.join('\n');
+  navigator.clipboard.writeText(text).then(function() {
+    showCopyConfirm(total);
+  }).catch(function() {
+    showCopyFallback(text, total);
+  });
+}
+
+function showCopyConfirm(total) {
+  var modal = document.getElementById('orderModal');
+  var inner = modal.querySelector('.order-modal');
+  inner.innerHTML = '<div class="order-modal-h">Order Copied to Clipboard</div>' +
+    '<div style="background:rgba(61,224,192,.08);border:1px solid rgba(61,224,192,.28);padding:20px;margin-bottom:20px">' +
+    '<p style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px">Order request copied successfully</p>' +
+    '<p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.82);line-height:1.7;margin-bottom:16px">Your order for <strong style="color:#fff">$' + total.toFixed(2) + '</strong> has been copied to your clipboard. Complete the following steps:</p>' +
+    '<p style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.8">' +
+    '1. Open your email client<br>' +
+    '2. Create a new message to <strong style="color:var(--teal)">contracts@heightenedsenses.net</strong><br>' +
+    '3. Paste (Ctrl+V) the order into the email body<br>' +
+    '4. Fill in your Command, POC Name, and POC Email at the bottom<br>' +
+    '5. Send</p></div>' +
+    '<div class="order-modal-actions">' +
+    '<button class="modal-close-btn" onclick="closeCopyModal()">Close</button>' +
+    '<a href="mailto:contracts@heightenedsenses.net?subject=Order%20Request%20-%20Government%20UAS%20Fulfillment" class="order-submit-btn" style="text-decoration:none;text-align:center">Open Email Client</a></div>';
+  modal.classList.add('active');
+}
+
+function showCopyFallback(text, total) {
+  var modal = document.getElementById('orderModal');
+  var inner = modal.querySelector('.order-modal');
+  inner.innerHTML = '<div class="order-modal-h">Your Order Request</div>' +
+    '<p style="font-size:13px;font-weight:300;color:rgba(255,255,255,.65);margin-bottom:12px">Copy the text below and email it to <strong style="color:var(--teal)">contracts@heightenedsenses.net</strong></p>' +
+    '<textarea style="width:100%;min-height:200px;font-family:var(--fm);font-size:11px;background:rgba(255,255,255,.04);border:1px solid rgba(61,224,192,.15);color:rgba(255,255,255,.82);padding:12px;resize:vertical" readonly>' + text + '</textarea>' +
+    '<div class="order-modal-actions" style="margin-top:16px">' +
+    '<button class="modal-close-btn" onclick="closeCopyModal()">Close</button></div>';
+  modal.classList.add('active');
+  var ta = inner.querySelector('textarea');
+  ta.select();
+}
+
+function closeCopyModal() {
+  var modal = document.getElementById('orderModal');
+  modal.classList.remove('active');
+  // Rebuild modal structure for future order reviews
+  var inner = modal.querySelector('.order-modal');
+  inner.innerHTML = '<div class="order-modal-h">Order Review</div>' +
+    '<table><thead><tr><th>Item</th><th>Qty</th><th>Unit Price</th><th>Line Total</th><th></th></tr></thead>' +
+    '<tbody id="orderModalBody"></tbody></table>' +
+    '<div class="modal-total">Estimated Total: <strong id="modalTotal">$0.00</strong></div>' +
+    '<div class="order-modal-actions">' +
+    '<button class="modal-close-btn" onclick="closeOrderModal()">Close</button>' +
+    '<button class="order-submit-btn" onclick="submitOrder()">Submit Order Request</button></div>';
 }
 
 /* FORM HANDLING */
