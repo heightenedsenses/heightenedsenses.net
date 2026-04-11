@@ -757,7 +757,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       <div class="con-rows">
         <div class="con-row">
           <span class="con-key">Email</span>
-          <span class="con-val"><a href="/cdn-cgi/l/email-protection#26454948525447455255664e434f414e524348434255434855435508484352"><span class="__cf_email__" data-cfemail="31525e5f45435052454271595458565945545f545542545f4254421f5f5445">[email&#160;protected]</span></a></span>
+          <span class="con-val"><a href="mailto:contracts@heightenedsenses.net">contracts@heightenedsenses.net</a></span>
         </div>
         <div class="con-row">
           <span class="con-key">Phone</span>
@@ -874,7 +874,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ORDER SYSTEM */
 var orderItems = [];
 
@@ -1093,4 +1093,13 @@ function closeCopyModal() {
   o.addEventListener('click',close);
   n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
-  window.ad
+  window.addEventListener('resize',function(){if(window.innerWidth>900)close()});
+})();
+
+/* CLOSE MODAL ON OVERLAY CLICK */
+document.getElementById('orderModal').addEventListener('click', function(e) {
+  if (e.target === this) closeOrderModal();
+});
+</script>
+</body>
+</html>
