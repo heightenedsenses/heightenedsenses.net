@@ -47,13 +47,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .nav-links a:hover{color:#fff}
 .nav-cta{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:8px 18px;background:var(--amber);color:#080808;border:none;cursor:pointer;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{opacity:.88}
-/* HAMBURGER BUTTON (hidden on desktop, visible on mobile) */
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:1002;-webkit-tap-highlight-color:transparent}
 .nav-hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .3s ease}
 .nav-hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nav-hamburger.active span:nth-child(2){opacity:0}
 .nav-hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-/* MOBILE OVERLAY */
 .nav-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:999;opacity:0;transition:opacity .3s ease}
 .nav-overlay.active{opacity:1}
 /* HERO */
@@ -193,9 +191,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 .fb a{color:rgba(255,255,255,.40);transition:color .2s}.fb a:hover{color:var(--teal)}
 /* SCROLLBAR */
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--cb2)}
-/* =============================================
-   TABLET — max-width: 900px
-============================================= */
+/* TABLET */
 @media(max-width:900px){
   :root{--pad:32px}
   .nav-hamburger{display:flex;margin-left:auto}
@@ -224,9 +220,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .con-grid{grid-template-columns:1fr;gap:40px}
   .f2{grid-template-columns:1fr 1fr}
 }
-/* =============================================
-   MOBILE — max-width: 600px
-============================================= */
+/* MOBILE */
 @media(max-width:600px){
   :root{--pad:18px}
   html,body{max-width:100vw;overflow-x:hidden}
@@ -311,9 +305,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
   </div>
   <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </button>
 </nav>
 <!-- HERO -->
@@ -479,7 +471,8 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="eco-grid">
     <div class="ecard"><span class="ecat">Avionics and Flight Control</span><div class="ename">ARK Electronics</div><span class="estat ok">Preferred Partner Confirmed</span><p class="eval">Mission critical avionics and flight control solutions supporting modular, NDAA aligned UAS architectures. A strong fit for secure, mission configurable builds across defense, public safety, and critical infrastructure applications.</p></div>
     <div class="ecard"><span class="ecat">Secure Mesh Communications</span><div class="ename">Doodle Labs</div><span class="estat">Relationship in Development</span><p class="eval">Resilient wireless mesh networking for command and control, video, and data transport in distributed UAS operations. Strong ecosystem alignment for mobile, expeditionary, and multi node mission sets.</p></div>
-    <div class="ecard"><span class="ecat">Ground Control Systems</span><div class="ename">Desert Rotor</div><span class="estat">Relationship in Development</span><p class="eval">U.S.-manufactured portable and vehicle-mounted ground control stations using HOTAS layout &#8212; the intuitive interface standard in defense and manned aviation. Compatible with fixed-wing, multirotor, UGV, and USV platforms. Strong fit for expeditionary, command center, and multi-domain UAS operations.</p></div>
+    <!-- UPDATED: Desert Rotor — Fulfillment Partner Confirmed April 2026 -->
+    <div class="ecard"><span class="ecat">Ground Control Systems</span><div class="ename">Desert Rotor</div><span class="estat ok">Fulfillment Partner Confirmed</span><p class="eval">Authorized fulfillment partner for the MIRA X GCS &#8212; a Blue UAS Listed, U.S.-manufactured ground control station with HOTAS layout. Compatible with fixed-wing, multirotor, UGV, and USV platforms. Preferred fulfillment agreement signed April 2026. Available through Heightened Senses SDVOSB procurement vehicles.</p></div>
     <div class="ecard"><span class="ecat">Stabilized EO/IR Payloads</span><div class="ename">Trillium Engineering</div><span class="estat">Relationship in Development</span><p class="eval">Stabilized electro optical and infrared payloads designed for ISR, perimeter security, force protection, and overwatch missions. Well aligned with defense, maritime, and public safety operational requirements.</p></div>
     <div class="ecard"><span class="ecat">Radar and Airspace Awareness</span><div class="ename">MatrixSpace</div><span class="estat">Relationship in Development</span><p class="eval">Compact radar and airspace awareness solutions supporting detection, cuing, and layered C-UAS and perimeter security operations. Strong fit for site security, emergency response, and infrastructure protection use cases.</p></div>
     <div class="ecard"><span class="ecat">Military Power Systems</span><div class="ename">Bren-Tronics</div><span class="estat">Relationship in Development</span><p class="eval">Field proven military power and charging solutions supporting expeditionary operations, sustainment, and portable mission systems. A strong complement for UAS, C-UAS, and extended field deployment requirements.</p></div>
@@ -587,7 +580,6 @@ document.getElementById('cform').addEventListener('submit', function(e) {
     el.innerHTML = '<a href="mailto:' + e + '">' + e + '</a>';
   }
 })();
-/* MOBILE NAV TOGGLE */
 (function(){
   var h=document.querySelector('.nav-hamburger'),n=document.querySelector('.nav-links');
   if(!h||!n)return;
