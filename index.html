@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Heightened Senses LLC</title>
-<meta name="description" content="SDVOSB UAS systems integration, C-UAS sensor deployment, and NDAA-compliant technology procurement.">
+<meta name="description" content="SDVOSB fulfillment channel for American-made uncrewed systems and C-UAS detection. NDAA-compliant procurement, integration, and airspace awareness.">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
@@ -126,8 +126,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .pd{font-size:13px;font-weight:300;color:var(--muted);line-height:1.72;margin-bottom:16px;flex:1}
 .pt{display:flex;flex-wrap:wrap;gap:5px}
 .tg{font-family:var(--fm);font-size:8px;letter-spacing:.11em;text-transform:uppercase;padding:3px 9px;border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.50);white-space:nowrap}
+/* C-UAS */
+.cuas-s{background:var(--bg)}
 /* CAPABILITIES */
-.cap-s{background:var(--bg)}
+.cap-s{background:var(--bg2)}
 .cap-grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .cap-intro{font-size:15px;font-weight:300;color:var(--muted);line-height:1.8;max-width:380px;margin-bottom:28px}
 .pkg-ey{display:flex;align-items:center;gap:12px;margin-bottom:16px}
@@ -147,7 +149,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .cap-name{font-family:var(--fh);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--white);margin-bottom:6px}
 .cap-desc{font-size:12px;font-weight:300;color:var(--muted);line-height:1.65}
 /* ECOSYSTEM */
-.eco-s{background:var(--bg2)}
+.eco-s{background:var(--bg)}
 .eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cb);border:1px solid var(--cb);margin-top:32px}
 .ecard{background:var(--bg3);padding:24px 20px;transition:background .2s}
 .ecard:hover{background:var(--bg4)}
@@ -157,7 +159,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .estat.ok{border-color:var(--cb2);color:var(--teal)}
 .eval{font-size:13px;font-weight:300;color:var(--muted);line-height:1.68}
 /* CONTACT */
-.con-s{background:var(--bg)}
+.con-s{background:var(--bg2)}
 .con-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .con-intro{font-size:15px;font-weight:300;color:var(--muted);line-height:1.8;max-width:420px;margin-bottom:28px}
 .con-rows{display:flex;flex-direction:column}
@@ -301,6 +303,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <a href="#home"><img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses LLC"></a>
   <div class="nav-links">
     <a href="#platforms">PLATFORMS</a>
+    <a href="#c-uas">C-UAS</a>
     <a href="#capabilities">CAPABILITIES</a>
     <a href="#ecosystem">ECOSYSTEM</a>
     <a href="#contact">CONTACT</a>
@@ -317,10 +320,10 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="hero-fade"></div>
   <div class="hero-l">
     <h1 class="hero-h1"><span class="t">HEIGHTENED</span><span class="w">SENSES</span></h1>
-    <p class="hero-body">UAS systems integration, C-UAS sensor deployment, and NDAA-compliant technology procurement for federal, defence, and public safety sectors &#8212; built on the mission-informed judgment of a combat-experienced United States Marine.</p>
+    <p class="hero-body">The SDVOSB fulfillment channel for American-made uncrewed systems and counter-UAS detection. NDAA-compliant procurement, integration, and airspace awareness for federal, defense, and public safety customers, built on the mission-informed judgment of a combat-experienced United States Marine.</p>
     <div class="badges">
       <span class="bdg">SBA-Certified SDVOSB</span>
-      <span class="bdg">Blue UAS Platform Partner</span>
+      <span class="bdg">Blue UAS Cleared Platforms</span>
       <span class="bdg">FAA Part 107 Certified</span>
       <span class="bdg">NDAA-Compliant Supply Chain</span>
       <span class="bdg">Disaster Response Registry</span>
@@ -343,8 +346,8 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 <!-- CRED BAR -->
 <div class="cred-bar">
   <div class="ci amb"><div class="cd"></div>Red Cat Authorized Reseller</div>
-  <div class="ci"><div class="cd"></div>Black Widow &#8212; Army Program of Record</div>
-  <div class="ci"><div class="cd"></div>FANG &#8212; Blue UAS Cleared Oct 2025</div>
+  <div class="ci"><div class="cd"></div>Black Widow &#183; Army Program of Record</div>
+  <div class="ci"><div class="cd"></div>FANG &#183; Blue UAS Cleared Oct 2025</div>
   <div class="ci"><div class="cd"></div>ARK Electronics Preferred Partner</div>
   <div class="ci"><div class="cd"></div>ATAK Compatible Systems</div>
 </div>
@@ -359,8 +362,8 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="sr"></div>
   <div class="about-grid">
     <div>
-      <p class="ab">With a desire to continue <strong>&#8220;Service after Service&#8221;</strong>, Heightened Senses, LLC was founded by a <strong>Purple Heart recipient and USMC Gunnery Sergeant</strong> with multi-disciplinary operational backgrounds spanning infantry, surveillance and countersurveillance, and intelligence roles. We are a trusted UAS systems integrator, C-UAS sensor deployer, and NDAA-compliant technology procurement accelerator &#8212; specializing in the federal, defence, and public safety sectors.</p>
-      <p class="ab">We function as a <strong>trusted integrator and procurement accelerator</strong> &#8212; sourcing from verified U.S. manufacturers, reducing supply chain friction, and aligning systems to mission requirements. Not just hardware. Mission-informed judgment at every engagement.</p>
+      <p class="ab">With a desire to continue <strong>&#8220;Service after Service&#8221;</strong>, Heightened Senses, LLC was founded by a <strong>Purple Heart recipient and USMC Gunnery Sergeant</strong> with multi-disciplinary operational backgrounds spanning infantry, surveillance and countersurveillance, and intelligence roles. We are a trusted UAS systems integrator, C-UAS detection specialist, and NDAA-compliant technology procurement accelerator, specializing in the federal, defense, and public safety sectors.</p>
+      <p class="ab">We function as a <strong>trusted integrator and procurement accelerator</strong>: sourcing from verified U.S. manufacturers, reducing supply chain friction, and aligning systems to mission requirements. Not just hardware. Mission-informed judgment at every engagement.</p>
     </div>
     <div class="about-r">
       <div class="cg">
@@ -393,7 +396,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="ey">
     <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
     <div class="ey-line"></div>
-    <span class="ey-lbl">Red Cat Holdings &#8212; ARACHNID Family</span>
+    <span class="ey-lbl">Red Cat Holdings &#183; ARACHNID Family</span>
   </div>
   <h2 class="sh"><span class="w">AUTHORIZED </span><span class="a">PLATFORMS</span></h2>
   <div class="sr"></div>
@@ -403,7 +406,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       <div class="pcon">
         <div class="pn">Black Widow&#8482;</div>
         <div class="ps">Tactical ISR Quadrotor &#183; Army SRR Program of Record</div>
-        <p class="pd">U.S.-manufactured short-range reconnaissance sUAS. EO/IR dual sensor, 45+ min endurance, GPS-denied capable via Palantir VNav, Doodle Labs mesh radio integrated, ATAK compatible.</p>
+        <p class="pd">U.S.-manufactured short-range reconnaissance sUAS. EO/IR dual sensor, 45+ min endurance, GPS-denied capable via Palantir VNav, resilient mesh radio integrated, ATAK compatible.</p>
         <div class="pt"><span class="tg">45+ Min</span><span class="tg">5 Mi Range</span><span class="tg">FLIR EO/IR</span><span class="tg">ATAK</span><span class="tg">GPS-Denied</span><span class="tg">AI Target Rec.</span></div>
       </div>
     </div>
@@ -427,6 +430,39 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     </div>
   </div>
 </div>
+<!-- C-UAS -->
+<div class="cuas-s sec" id="c-uas">
+  <div class="ey">
+    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
+    <div class="ey-line"></div>
+    <span class="ey-lbl">Counter-UAS</span>
+  </div>
+  <h2 class="sh"><span class="w">C-UAS DETECTION &amp; </span><span class="a">AIRSPACE AWARENESS</span></h2>
+  <div class="sr"></div>
+  <div class="cap-grid-wrap">
+    <div>
+      <p class="cap-intro">Layered passive detection architectures built for the current federal authority environment. Detection-first systems are deployable by state, local, tribal, and territorial agencies today, and align with federal grant programs supporting drone detection acquisition. Federal customers are supported through authorized OEM fulfillment channels.</p>
+      <p class="cap-intro">Priority mission sets: corrections facilities, critical infrastructure, event and venue security, public safety agencies, and federal installations. We design, install, maintain, and train. Detection first, compliance always.</p>
+      <div class="pkg-ey">
+        <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
+        <div class="pkg-line"></div>
+        <span class="pkg-lbl">Detection Layers</span>
+      </div>
+      <div class="pkg-list">
+        <div class="pkg-row"><div class="pkg-code">RF</div><div class="pkg-body"><div class="pkg-name">RF Spectrum Sensing</div><p class="pkg-desc">Passive detection and characterization of UAS control and video links across the RF environment. No emissions. Deployable now by state and local agencies.</p></div></div>
+        <div class="pkg-row"><div class="pkg-code">RDR</div><div class="pkg-body"><div class="pkg-name">Compact Radar</div><p class="pkg-desc">Non-cooperative detection and tracking of small UAS, cuing EO/IR sensors and feeding a unified common operating picture.</p></div></div>
+        <div class="pkg-row"><div class="pkg-code">EO</div><div class="pkg-body"><div class="pkg-name">EO/IR Confirmation</div><p class="pkg-desc">Visual classification and confirmation of detected tracks for informed response decisions, day and night.</p></div></div>
+        <div class="pkg-row"><div class="pkg-code">RID</div><div class="pkg-body"><div class="pkg-name">Remote ID Monitoring</div><p class="pkg-desc">Broadcast Remote ID sensing integrated into the airspace picture for identification and pattern-of-life awareness.</p></div></div>
+      </div>
+    </div>
+    <div class="cap-cells">
+      <div class="cap-cell"><span class="cap-icon">&#128225;</span><div class="cap-name">C-UAS Program Design</div><p class="cap-desc">Site assessment, layered sensor architecture, and program design aligned to current federal and state authorities.</p></div>
+      <div class="cap-cell"><span class="cap-icon">&#128220;</span><div class="cap-name">Policy &amp; OPLAN Support</div><p class="cap-desc">Policy development and operations-plan support for agencies pursuing detection programs and certification pathways under current federal frameworks, including standing plans for fixed sites.</p></div>
+      <div class="cap-cell"><span class="cap-icon">&#127919;</span><div class="cap-name">Proficiency Training Support</div><p class="cap-desc">Operator and program proficiency training support for detection systems and airspace awareness operations.</p></div>
+      <div class="cap-cell"><span class="cap-icon">&#128176;</span><div class="cap-name">Grant Funding Alignment</div><p class="cap-desc">Support identifying and aligning detection acquisitions to federal grant programs available to state and local agencies.</p></div>
+    </div>
+  </div>
+</div>
 <!-- CAPABILITIES -->
 <div class="cap-s sec" id="capabilities">
   <div class="ey">
@@ -438,26 +474,26 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="sr"></div>
   <div class="cap-grid-wrap">
     <div>
-      <p class="cap-intro">Every capability is grounded in operational experience. We integrate, advise, and deliver &#8212; with supply chain integrity and mission alignment at every step.</p>
+      <p class="cap-intro">Every capability is grounded in operational experience. We integrate, advise, and deliver, with supply chain integrity and mission alignment at every step.</p>
       <div class="pkg-ey">
         <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
         <div class="pkg-line"></div>
         <span class="pkg-lbl">Mission Packages</span>
       </div>
       <div class="pkg-list">
-        <div class="pkg-row"><div class="pkg-code">RSA</div><div class="pkg-body"><div class="pkg-name">Rapid Situational Awareness</div><p class="pkg-desc">Black Widow &#183; EO/IR &#183; Doodle Labs / ATAK. Immediate overhead awareness at dynamic incident scenes for law enforcement, fire, and emergency management.</p></div></div>
+        <div class="pkg-row"><div class="pkg-code">RSA</div><div class="pkg-body"><div class="pkg-name">Rapid Situational Awareness</div><p class="pkg-desc">Black Widow &#183; EO/IR &#183; Secure Mesh / ATAK. Immediate overhead awareness at dynamic incident scenes for law enforcement, fire, and emergency management.</p></div></div>
         <div class="pkg-row"><div class="pkg-code">PIM</div><div class="pkg-body"><div class="pkg-name">Persistent Infrastructure Monitor</div><p class="pkg-desc">Trichon &#183; EO/IR + Photogrammetry &#183; Persistent MANET. Recurring inspection and digital twin generation for utilities, pipelines, transportation, and ports.</p></div></div>
-        <div class="pkg-row"><div class="pkg-code">IPA</div><div class="pkg-body"><div class="pkg-name">Integrated Perimeter Awareness</div><p class="pkg-desc">Black Widow &#183; Trillium EO/IR + MatrixSpace Radar. Persistent aerial and ground-based situational awareness with unified common operating picture for critical infrastructure.</p></div></div>
+        <div class="pkg-row"><div class="pkg-code">IPA</div><div class="pkg-body"><div class="pkg-name">Integrated Perimeter Awareness</div><p class="pkg-desc">Black Widow &#183; Stabilized EO/IR + Compact Radar. Persistent aerial and ground-based situational awareness with unified common operating picture for critical infrastructure.</p></div></div>
       </div>
     </div>
     <div class="cap-cells">
-      <div class="cap-cell"><span class="cap-icon">&#128752;</span><div class="cap-name">UAS Integration</div><p class="cap-desc">End-to-end platform integration and mission configuration. We align systems to requirements &#8212; not requirements to systems.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#128225;</span><div class="cap-name">C-UAS Sensing</div><p class="cap-desc">MatrixSpace compact radar integration for airspace awareness, drone detection, and counter-UAS advisory support.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#128274;</span><div class="cap-name">Secure Comms</div><p class="cap-desc">Doodle Labs mesh radio integration. Frequency-stepping for EW resilience. ATAK ecosystem native.</p></div>
+      <div class="cap-cell"><span class="cap-icon">&#128752;</span><div class="cap-name">UAS Integration</div><p class="cap-desc">End-to-end platform integration and mission configuration. We align systems to requirements, not requirements to systems.</p></div>
+      <div class="cap-cell"><span class="cap-icon">&#128225;</span><div class="cap-name">C-UAS Detection</div><p class="cap-desc">Layered passive detection integration: RF spectrum sensing, compact radar, and EO/IR cuing for airspace awareness and counter-UAS program support.</p></div>
+      <div class="cap-cell"><span class="cap-icon">&#128274;</span><div class="cap-name">Secure Comms</div><p class="cap-desc">Secure mesh networking integration. Frequency-agile resilience for contested RF environments. ATAK ecosystem native.</p></div>
       <div class="cap-cell"><span class="cap-icon">&#127758;</span><div class="cap-name">Aerial Data Services</div><p class="cap-desc">FAA Part 107 compliant operations. Photogrammetry, digital twins, orthomosaic products, and infrastructure inspection.</p></div>
       <div class="cap-cell"><span class="cap-icon">&#128230;</span><div class="cap-name">NDAA Procurement</div><p class="cap-desc">Compliant sourcing from verified U.S. manufacturers. Supply chain aggregation to reduce procurement friction and accelerate delivery.</p></div>
       <div class="cap-cell"><span class="cap-icon">&#127963;</span><div class="cap-name">Federal Advisory</div><p class="cap-desc">ASDA compliance consulting, GSA Revision 3 transition support, and Blue UAS certification pathway advisory. WAWF / PIEE invoicing support.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#9889;</span><div class="cap-name">Power &amp; Sustainment</div><p class="cap-desc">Military-grade battery systems (Bren-Tronics), ruggedized energy storage (Packet Digital), and sustainment spares sourcing.</p></div>
+      <div class="cap-cell"><span class="cap-icon">&#9889;</span><div class="cap-name">Power &amp; Sustainment</div><p class="cap-desc">Military-grade battery systems, ruggedized energy storage, and sustainment spares sourcing from American manufacturers.</p></div>
       <div class="cap-cell"><span class="cap-icon">&#9992;</span><div class="cap-name">Avionics &amp; Controls</div><p class="cap-desc">ARK Electronics NDAA-compliant flight controllers across DoD-aligned UAS builds. Hard requirement met across the ecosystem.</p></div>
     </div>
   </div>
@@ -472,16 +508,12 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <h2 class="sh"><span class="w">STRATEGIC TECHNOLOGY </span><span class="a">ECOSYSTEM</span></h2>
   <div class="sr"></div>
   <div class="eco-grid">
+    <div class="ecard"><span class="ecat">FPV and ISR UAS Platforms</span><div class="ename">Red Cat</div><span class="estat ok">Authorized Reseller Confirmed</span><p class="eval">Authorized SDVOSB reseller of Red Cat's U.S.-manufactured FPV and ISR uncrewed systems, including the FANG 7-inch FPV line and the Teal and Black Widow ISR sUAS. NDAA-compliant, Blue UAS aligned platforms delivered to defense and public safety customers through Heightened Senses set-aside procurement vehicles.</p></div>
     <div class="ecard"><span class="ecat">Avionics and Flight Control</span><div class="ename">ARK Electronics</div><span class="estat ok">Preferred Partner Confirmed</span><p class="eval">Mission critical avionics and flight control solutions supporting modular, NDAA aligned UAS architectures. A strong fit for secure, mission configurable builds across defense, public safety, and critical infrastructure applications.</p></div>
-    <div class="ecard"><span class="ecat">Secure Mesh Communications</span><div class="ename">Doodle Labs</div><span class="estat">Relationship in Development</span><p class="eval">Resilient wireless mesh networking for command and control, video, and data transport in distributed UAS operations. Strong ecosystem alignment for mobile, expeditionary, and multi node mission sets.</p></div>
-    <!-- UPDATED: Desert Rotor — Fulfillment Partner Confirmed April 2026 -->
-    <div class="ecard"><span class="ecat">Ground Control Systems</span><div class="ename">Desert Rotor</div><span class="estat ok">Fulfillment Partner Confirmed</span><p class="eval">Authorized fulfillment partner for the MIRA X GCS &#8212; a Blue UAS Listed, U.S.-manufactured ground control station with HOTAS layout. Compatible with fixed-wing, multirotor, UGV, and USV platforms. Preferred fulfillment agreement signed April 2026. Available through Heightened Senses SDVOSB procurement vehicles.</p></div>
+    <div class="ecard"><span class="ecat">Ground Control Systems</span><div class="ename">Desert Rotor</div><span class="estat ok">Fulfillment Partner Confirmed</span><p class="eval">Authorized fulfillment partner for the MIRA X GCS, a Blue UAS Listed, U.S.-manufactured ground control station with HOTAS layout. Compatible with fixed-wing, multirotor, UGV, and USV platforms. Preferred fulfillment agreement signed April 2026. Available through Heightened Senses SDVOSB procurement vehicles.</p></div>
     <div class="ecard"><span class="ecat">Stabilized EO/IR Payloads</span><div class="ename">Trillium Engineering</div><span class="estat">Relationship in Development</span><p class="eval">Stabilized electro optical and infrared payloads designed for ISR, perimeter security, force protection, and overwatch missions. Well aligned with defense, maritime, and public safety operational requirements.</p></div>
     <div class="ecard"><span class="ecat">Radar and Airspace Awareness</span><div class="ename">MatrixSpace</div><span class="estat">Relationship in Development</span><p class="eval">Compact radar and airspace awareness solutions supporting detection, cuing, and layered C-UAS and perimeter security operations. Strong fit for site security, emergency response, and infrastructure protection use cases.</p></div>
     <div class="ecard"><span class="ecat">Military Power Systems</span><div class="ename">Bren-Tronics</div><span class="estat">Relationship in Development</span><p class="eval">Field proven military power and charging solutions supporting expeditionary operations, sustainment, and portable mission systems. A strong complement for UAS, C-UAS, and extended field deployment requirements.</p></div>
-    <div class="ecard"><span class="ecat">Ruggedized Energy Storage</span><div class="ename">Packet Digital</div><span class="estat">Relationship in Development</span><p class="eval">Advanced energy storage and intelligent battery solutions designed to support endurance driven mission profiles and rugged operational environments. Well suited for scalable power architecture across uncrewed and edge systems.</p></div>
-    <div class="ecard"><span class="ecat">Propulsion and Motor Control</span><div class="ename">Vertiq</div><span class="estat">Relationship in Development</span><p class="eval">Integrated propulsion and motor control solutions optimized for compact, high performance UAS platforms and custom development efforts. Strong potential for advanced integration programs requiring precision, efficiency, and modularity.</p></div>
-    <div class="ecard"><span class="ecat">Electric Propulsion</span><div class="ename">ePropelled</div><span class="estat">Relationship in Development</span><p class="eval">Aerospace focused electric propulsion solutions engineered for performance, efficiency, and scalable platform development. Strong alignment for endurance focused UAS applications and next generation propulsion integration.</p></div>
   </div>
 </div>
 <!-- CONTACT -->
@@ -517,7 +549,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
             <option value="">Select...</option>
             <option>Platform Procurement</option>
             <option>UAS Integration</option>
-            <option>C-UAS / Sensing</option>
+            <option>C-UAS Detection / Airspace Awareness</option>
             <option>Federal Advisory</option>
             <option>Teaming Inquiry</option>
             <option>Capability Demonstration</option>
@@ -542,7 +574,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses LLC">
     <div class="fcreds">
       <span>SDVOSB</span><span>FAA Part 107 Certified</span><span>NDAA-Compliant Supply Chain</span>
-      <span>Blue UAS Platform Partner</span><span>Disaster Response Registry</span>
+      <span>Blue UAS Cleared Platforms</span><span>Disaster Response Registry</span>
     </div>
     <div class="fcopy">&#169; 2026 Heightened Senses, LLC<br>Sneads Ferry, NC 28460</div>
   </div>
