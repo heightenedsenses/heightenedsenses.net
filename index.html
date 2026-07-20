@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <meta name="theme-color" content="#070D14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800;900&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -21,7 +21,7 @@
 --teal:#3de0c0;--amber:#e8901e;--white:#ffffff;
 --muted:rgba(255,255,255,.60);--muted2:rgba(255,255,255,.32);
 --cb:rgba(61,224,192,.15);--cb2:rgba(61,224,192,.28);--wb:rgba(255,255,255,.07);
---fh:'Barlow Condensed',sans-serif;--fb:'Barlow',sans-serif;--fm:'Share Tech Mono',monospace;
+--fh:'Inter Tight',sans-serif;--fb:'Inter',sans-serif;--fm:'IBM Plex Mono',monospace;
 --pad:72px;
 }
 html{scroll-behavior:smooth}
@@ -30,15 +30,15 @@ a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 /* SHARED */
 .ey{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.ey-line{width:40px;height:1px;background:linear-gradient(90deg,#e8901e,#3de0c0);flex-shrink:0}
-.ey-lbl{font-family:var(--fm);font-size:10px;letter-spacing:.22em;text-transform:uppercase;background:linear-gradient(90deg,#e8901e,#3de0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ey-line{width:40px;height:1px;background:var(--cb2);flex-shrink:0}
+.ey-lbl{font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
 .ey-icon{width:28px;height:28px;flex-shrink:0}
 .ey-icon img{width:100%;height:100%;object-fit:contain;mix-blend-mode:screen}
-.sh{font-family:var(--fh);font-size:clamp(32px,4.5vw,52px);font-weight:800;text-transform:uppercase;line-height:.95;margin-bottom:6px}
+.sh{font-family:var(--fh);font-size:clamp(28px,4vw,44px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1;margin-bottom:6px}
 .sh .w{color:var(--white)}.sh .a{color:var(--amber)}
-.sr{width:40px;height:2px;background:linear-gradient(90deg,#e8901e,#3de0c0);margin:16px 0 28px}
+.sr{width:48px;height:2px;background:var(--amber);margin:16px 0 28px}
 .sec{padding:64px var(--pad);border-top:1px solid rgba(255,255,255,.04)}
-.btn-a{font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:12px 28px;background:var(--amber);color:#080808;border:none;cursor:pointer;display:inline-block;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)}
+.btn-a{font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:13px 28px;background:var(--amber);color:#080808;border:none;border-radius:2px;cursor:pointer;display:inline-block;transition:opacity .2s}
 .btn-a:hover{opacity:.88}
 .btn-g{font-family:var(--fh);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:12px 24px;background:transparent;color:rgba(255,255,255,.65);border:none;cursor:pointer;display:inline-block;transition:color .2s}
 .btn-g:hover{color:#fff}
@@ -46,9 +46,9 @@ img{display:block;max-width:100%}
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;padding:0 18px;height:56px;background:rgba(5,9,6,.98);border-bottom:1px solid rgba(255,255,255,.06)}
 .logo-img{height:32px;width:auto;mix-blend-mode:screen;filter:brightness(1.08)}
 .nav-links{display:flex;align-items:center;gap:24px;margin-left:auto}
-.nav-links a{font-family:var(--fh);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78);transition:color .15s;white-space:nowrap}
+.nav-links a{font-family:var(--fh);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.78);transition:color .15s;white-space:nowrap}
 .nav-links a:hover{color:#fff}
-.nav-cta{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:8px 18px;background:var(--amber);color:#080808;border:none;cursor:pointer;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);white-space:nowrap;flex-shrink:0}
+.nav-cta{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 18px;background:var(--amber);color:#080808;border:none;border-radius:2px;cursor:pointer;transition:opacity .2s;white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{opacity:.88}
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:1002;-webkit-tap-highlight-color:transparent}
 .nav-hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .3s ease}
@@ -59,10 +59,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .nav-overlay.active{opacity:1}
 /* HERO */
 .hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px var(--pad) 60px;overflow:hidden;background:var(--bg) url('assets/hero-bg-alt.webp') right center/cover no-repeat;gap:20px}
-.hero-dots{position:absolute;inset:0;z-index:0;background-image:radial-gradient(circle,rgba(61,224,192,.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
 .hero-fade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--bg) 0%,rgba(8,14,9,.4) 32%,transparent 52%,var(--bg) 100%);pointer-events:none}
 .hero-l{position:relative;z-index:3;max-width:560px}
-.hero-h1{font-family:var(--fh);font-weight:900;line-height:.87;font-size:clamp(56px,8vw,106px);text-transform:uppercase;margin-bottom:20px}
+.hero-h1{font-family:var(--fh);font-weight:900;line-height:.94;letter-spacing:-.02em;font-size:clamp(46px,6.5vw,86px);text-transform:uppercase;margin-bottom:20px}
 .hero-h1 .t{color:var(--teal);display:block}
 .hero-h1 .w{color:var(--white);display:block}
 .hero-body{font-size:15px;font-weight:300;color:rgba(255,255,255,.68);line-height:1.72;max-width:440px;margin-bottom:24px}
@@ -70,15 +69,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .bdg{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;background:rgba(61,224,192,.05);border:1px solid var(--cb);color:rgba(255,255,255,.50);white-space:nowrap}
 .hero-acts{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
 .hero-r{position:relative;z-index:2;display:flex;align-items:center;justify-content:center}
-.rs{position:relative;width:100%;max-width:520px;aspect-ratio:1/.9;display:flex;align-items:center;justify-content:center}
-.rc{position:absolute;width:82%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(14,28,18,.9) 0%,rgba(8,14,9,.5) 65%,transparent 100%);top:50%;left:50%;transform:translate(-50%,-50%)}
-.rr-w{position:absolute;width:82%;aspect-ratio:1;top:50%;left:50%;transform:translate(-50%,-50%)}
-.rr{position:absolute;border-radius:50%;border:1px solid rgba(100,110,95,.18);top:50%;left:50%;transform:translate(-50%,-50%)}
-.rr:nth-child(1){width:100%;height:100%}.rr:nth-child(2){width:75%;height:75%}.rr:nth-child(3){width:50%;height:50%}.rr:nth-child(4){width:25%;height:25%}
-.hero-tag{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;white-space:nowrap;padding:10px 22px;border-top:1px solid var(--cb);z-index:3}
+.rs{position:relative;width:100%;max-width:640px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.rc{position:absolute;inset:0 -6% 22%;background:radial-gradient(ellipse at center,rgba(61,224,192,.09) 0%,transparent 68%);pointer-events:none}
+.hero-tag{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;white-space:nowrap;padding:14px 26px 0;border-top:1px solid var(--cb);margin-top:22px;z-index:3}
 .ht1{font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
-.ht2{font-family:var(--fm);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(90deg,#e8901e,#3de0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-img{position:relative;width:100%;object-fit:contain;mix-blend-mode:lighten;-webkit-mask-image:radial-gradient(ellipse 52% 56% at 50% 48%,#000 45%,transparent 62%);mask-image:radial-gradient(ellipse 52% 56% at 50% 48%,#000 45%,transparent 62%)}
+.ht2{font-family:var(--fm);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+.hero-img{position:relative;width:100%;object-fit:contain;filter:drop-shadow(0 16px 34px rgba(0,0,0,.55))}
 /* CRED BAR */
 .cred-bar{background:var(--bg2);border-top:1px solid var(--cb);border-bottom:1px solid var(--cb);padding:0 24px;display:flex;align-items:stretch;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .ci{font-family:var(--fh);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:9px;padding:14px 24px;border-right:1px solid var(--cb);flex-shrink:0}
@@ -101,26 +97,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .hc{position:absolute;width:16px;height:16px;z-index:3}
 .hc.tl{top:-1px;left:-1px;border-top:2px solid var(--teal);border-left:2px solid var(--teal)}
 .hc.tr{top:-1px;right:-1px;border-top:2px solid var(--teal);border-right:2px solid var(--teal)}
-.hc.bl{bottom:-1px;left:-1px;border-bottom:2px solid var(--amber);border-left:2px solid var(--amber)}
-.hc.br{bottom:-1px;right:-1px;border-bottom:2px solid var(--amber);border-right:2px solid var(--amber)}
+.hc.bl{bottom:-1px;left:-1px;border-bottom:2px solid var(--teal);border-left:2px solid var(--teal)}
+.hc.br{bottom:-1px;right:-1px;border-bottom:2px solid var(--teal);border-right:2px solid var(--teal)}
 .hs-img{width:100%;object-fit:cover;object-position:center top;aspect-ratio:1/1;filter:grayscale(15%) contrast(1.05) brightness(.93);border:1px solid var(--cb)}
 .hs-ov{position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,rgba(8,14,9,.92),transparent);pointer-events:none;z-index:1}
 .hs-cap{text-align:center;padding-top:12px}
 .hs-name{font-family:var(--fh);font-size:19px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--white);display:block;margin-bottom:5px}
-.hs-title{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(90deg,#e8901e,#3de0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.hs-title{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block}
 /* PLATFORMS */
 .plat-s{background:var(--bg2)}
 .plat-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--wb)}
 .pc{background:var(--bg3);border-right:1px solid var(--wb);display:flex;flex-direction:column;position:relative;transition:background .2s;overflow:hidden}
 .pc:last-child{border-right:none}.pc:hover{background:var(--bg4)}
-.pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--amber));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .35s}
 .pc:hover::after{transform:scaleX(1)}
 .pi{position:relative;width:100%;height:180px;background:#050b06;overflow:hidden;border-bottom:1px solid var(--wb)}
 .pi img{width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten;filter:brightness(.92) contrast(1.05);transition:filter .3s,transform .4s}
 .pc:hover .pi img{filter:brightness(1.02) contrast(1.08);transform:scale(1.03)}
 .pb{position:absolute;top:10px;right:10px;font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;background:var(--amber);color:#080808;padding:4px 9px;z-index:2}
 .pcon{padding:20px 20px 24px;flex:1;display:flex;flex-direction:column}
-.pn{font-family:var(--fh);font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--white);margin-bottom:4px}
+.pn{font-family:var(--fh);font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;color:var(--white);margin-bottom:4px}
 .ps{font-family:var(--fm);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--amber);margin-bottom:12px;line-height:1.5}
 .pd{font-size:13px;font-weight:300;color:var(--muted);line-height:1.72;margin-bottom:16px;flex:1}
 .pt{display:flex;flex-wrap:wrap;gap:5px}
@@ -132,8 +128,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .cap-grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .cap-intro{font-size:15px;font-weight:300;color:var(--muted);line-height:1.8;max-width:380px;margin-bottom:28px}
 .pkg-ey{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.pkg-line{width:40px;height:1px;background:linear-gradient(90deg,#e8901e,#3de0c0);flex-shrink:0}
-.pkg-lbl{font-family:var(--fm);font-size:10px;letter-spacing:.22em;text-transform:uppercase;background:linear-gradient(90deg,#e8901e,#3de0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pkg-line{width:40px;height:1px;background:var(--cb2);flex-shrink:0}
+.pkg-lbl{font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
 .pkg-list{border:1px solid var(--cb)}
 .pkg-row{display:grid;grid-template-columns:48px 1fr;border-bottom:1px solid var(--cb)}
 .pkg-row:last-child{border-bottom:none}
@@ -144,7 +140,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .cap-cells{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--cb)}
 .cap-cell{padding:20px 18px;border-right:1px solid var(--cb);border-bottom:1px solid var(--cb)}
 .cap-cell:nth-child(2n){border-right:none}.cap-cell:nth-last-child(-n+2){border-bottom:none}
-.cap-icon{font-size:18px;margin-bottom:8px;display:block}
+.cap-icon{width:22px;height:22px;color:var(--teal);margin-bottom:10px;display:block}
+.cap-icon svg{width:100%;height:100%;display:block}
 .cap-name{font-family:var(--fh);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--white);margin-bottom:6px}
 .cap-desc{font-size:12px;font-weight:300;color:var(--muted);line-height:1.65}
 /* ECOSYSTEM */
@@ -178,7 +175,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .fsel{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%233de0c0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
 .fsel option{background:#0d160f}
 .fta{resize:vertical;min-height:110px}
-.fsub{font-family:var(--fh);font-size:14px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:13px 32px;background:var(--amber);color:#080808;border:none;cursor:pointer;margin-top:8px;align-self:flex-start;transition:opacity .2s;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)}
+.fsub{font-family:var(--fh);font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:13px 32px;background:var(--amber);color:#080808;border:none;border-radius:2px;cursor:pointer;margin-top:8px;align-self:flex-start;transition:opacity .2s}
 .fsub:hover{opacity:.88}
 .fsuc{display:none;text-align:center;padding:44px 20px;border:1px solid var(--cb);flex-direction:column;align-items:center;gap:14px}
 .fsuc.on{display:flex}
@@ -205,14 +202,14 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .nav-links a{padding:14px 24px;font-size:14px;letter-spacing:.14em;border-bottom:1px solid rgba(255,255,255,.05);color:rgba(255,255,255,.85)}
   .nav-links a:last-child{border-bottom:none}
   .nav-links a:hover,.nav-links a:active{color:#fff;background:rgba(255,255,255,.04)}
-  .nav-links .nav-cta{display:block;margin:16px 24px 8px;text-align:center;padding:12px 18px;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)}
+  .nav-links .nav-cta{display:block;margin:16px 24px 8px;text-align:center;padding:12px 18px}
   .hero{grid-template-columns:1fr;padding:90px 32px 56px;min-height:auto;gap:36px}
   .hero-fade{background:linear-gradient(to bottom,var(--bg) 0%,transparent 30%,transparent 70%,var(--bg) 100%)}
   .hero-l{max-width:100%}
-  .hero-h1{font-size:clamp(48px,11vw,80px)}
+  .hero-h1{font-size:clamp(40px,9vw,64px)}
   .hero-body{max-width:100%;font-size:15px}
   .hero-r{justify-content:center}
-  .rs{max-width:360px}
+  .rs{max-width:520px}
   .about-grid{grid-template-columns:1fr;gap:36px}
   .hs-block{width:55%}
   .plat-grid{grid-template-columns:1fr;border:none;gap:1px;background:var(--wb)}
@@ -234,19 +231,19 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .hero{grid-template-columns:1fr;padding:76px 18px 44px;gap:28px;min-height:auto}
   .hero-fade{background:linear-gradient(to bottom,var(--bg) 0%,transparent 25%,transparent 75%,var(--bg) 100%)}
   .hero-l{max-width:100%}
-  .hero-h1{font-size:clamp(42px,13vw,64px);margin-bottom:16px}
+  .hero-h1{font-size:clamp(36px,11vw,54px);margin-bottom:16px}
   .hero-body{font-size:14px;max-width:100%;margin-bottom:20px}
   .badges{gap:6px;margin-bottom:24px}
   .bdg{font-size:8.5px;padding:4px 10px}
   .hero-acts{flex-direction:column;align-items:stretch;gap:10px;width:100%}
   .btn-a,.btn-g{width:100%;text-align:center;padding:14px 16px;display:block}
   .hero-r{justify-content:center}
-  .rs{max-width:280px;width:100%}
-  .hero-tag{white-space:normal;padding:8px 10px;bottom:-14px;width:100%}
+  .rs{max-width:100%;width:100%}
+  .hero-tag{white-space:normal;padding:10px 8px 0;width:100%;margin-top:14px}
   .ht1{font-size:11px}
   .ht2{font-size:7.5px}
   .sec{padding:44px 18px}
-  .sh{font-size:clamp(26px,7.5vw,38px)}
+  .sh{font-size:clamp(24px,7vw,34px)}
   .sr{margin:14px 0 24px}
   .cred-bar{padding:0 18px}
   .ci{padding:12px 18px;font-size:9.5px;gap:7px}
@@ -318,7 +315,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 </nav>
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-dots"></div>
   <div class="hero-fade"></div>
   <div class="hero-l">
     <h1 class="hero-h1"><span class="t">HEIGHTENED</span><span class="w">SENSES</span></h1>
@@ -338,9 +334,8 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="hero-r">
     <div class="rs">
       <div class="rc"></div>
-      <div class="rr-w"><div class="rr"></div><div class="rr"></div><div class="rr"></div><div class="rr"></div></div>
-      <img class="hero-img" src="assets/black-widow-hero.png" alt="Black Widow ISR sUAS, U.S. Army Short Range Reconnaissance Program of Record">
-      <div class="hero-tag"><span class="ht1">Black Widow&#8482; &#183; Army SRR Program of Record</span><span class="ht2">U.S.-Manufactured sUAS &#183; SDVOSB Set-Aside Procurement</span></div>
+      <img class="hero-img" src="assets/arachnid-family.webp" onerror="this.onerror=null;this.src='assets/hero-composite.png'" alt="ARACHNID family of U.S.-manufactured uncrewed systems: ISR sUAS, FPV, and ground control">
+      <div class="hero-tag"><span class="ht1">ARACHNID&#8482; Family of Systems</span><span class="ht2">ISR + FPV + GCS &#183; U.S.-Manufactured &#183; SDVOSB Set-Aside</span></div>
     </div>
   </div>
 </section>
@@ -460,10 +455,10 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       <img src="assets/perimeter.webp" alt="Layered perimeter detection visualization" style="width:100%;border:1px solid var(--cb);margin-top:20px" loading="lazy">
     </div>
     <div class="cap-cells">
-      <div class="cap-cell"><span class="cap-icon">&#128225;</span><div class="cap-name">C-UAS Program Design</div><p class="cap-desc">Site assessment, layered sensor architecture, and program design aligned to current federal and state authorities.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#128220;</span><div class="cap-name">Policy &amp; OPLAN Support</div><p class="cap-desc">Policy development and operations-plan support for agencies pursuing detection programs and certification pathways under current federal frameworks, including standing plans for fixed sites.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#127919;</span><div class="cap-name">Proficiency Training Support</div><p class="cap-desc">Operator and program proficiency training support for detection systems and airspace awareness operations.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#128176;</span><div class="cap-name">Grant Funding Alignment</div><p class="cap-desc">Support identifying and aligning detection acquisitions to federal grant programs available to state and local agencies.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span><div class="cap-name">C-UAS Program Design</div><p class="cap-desc">Site assessment, layered sensor architecture, and program design aligned to current federal and state authorities.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10.5 12h5M10.5 15.5h5"/></svg></span><div class="cap-name">Policy &amp; OPLAN Support</div><p class="cap-desc">Policy development and operations-plan support for agencies pursuing detection programs and certification pathways under current federal frameworks, including standing plans for fixed sites.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/></svg></span><div class="cap-name">Proficiency Training Support</div><p class="cap-desc">Operator and program proficiency training support for detection systems and airspace awareness operations.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M8.6 12.2l2.3 2.3 4.5-4.7"/></svg></span><div class="cap-name">Grant Funding Alignment</div><p class="cap-desc">Support identifying and aligning detection acquisitions to federal grant programs available to state and local agencies.</p></div>
     </div>
   </div>
 </div>
@@ -491,14 +486,14 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       </div>
     </div>
     <div class="cap-cells">
-      <div class="cap-cell"><span class="cap-icon">&#128752;</span><div class="cap-name">UAS Integration</div><p class="cap-desc">End-to-end platform integration and mission configuration. We align systems to requirements, not requirements to systems.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#128225;</span><div class="cap-name">C-UAS Detection</div><p class="cap-desc">Layered passive detection integration: RF spectrum sensing, compact radar, and EO/IR cuing for airspace awareness and counter-UAS program support.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#128274;</span><div class="cap-name">Secure Comms</div><p class="cap-desc">Secure mesh networking integration. Frequency-agile resilience for contested RF environments. ATAK ecosystem native.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#127758;</span><div class="cap-name">Aerial Data Services</div><p class="cap-desc">FAA Part 107 compliant operations. Photogrammetry, digital twins, orthomosaic products, and infrastructure inspection.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#128230;</span><div class="cap-name">NDAA Procurement</div><p class="cap-desc">Compliant sourcing from verified U.S. manufacturers. Supply chain aggregation to reduce procurement friction and accelerate delivery.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#127963;</span><div class="cap-name">Federal Advisory</div><p class="cap-desc">ASDA compliance consulting, GSA Revision 3 transition support, and Blue UAS certification pathway advisory. WAWF / PIEE invoicing support.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#9889;</span><div class="cap-name">Power &amp; Sustainment</div><p class="cap-desc">Military-grade battery systems, ruggedized energy storage, and sustainment spares sourcing from American manufacturers.</p></div>
-      <div class="cap-cell"><span class="cap-icon">&#9992;</span><div class="cap-name">Avionics &amp; Controls</div><p class="cap-desc">ARK Electronics NDAA-compliant flight controllers across DoD-aligned UAS builds. Hard requirement met across the ecosystem.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/><rect x="9.6" y="9.6" width="4.8" height="4.8"/><path d="M6.8 6.8l2.8 2.8M17.2 6.8l-2.8 2.8M6.8 17.2l2.8-2.8M17.2 17.2l-2.8-2.8"/></svg></span><div class="cap-name">UAS Integration</div><p class="cap-desc">End-to-end platform integration and mission configuration. We align systems to requirements, not requirements to systems.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><path d="M12 12l6.3-6.3"/><path d="M19 12a7 7 0 1 1-4.9-6.7"/></svg></span><div class="cap-name">C-UAS Detection</div><p class="cap-desc">Layered passive detection integration: RF spectrum sensing, compact radar, and EO/IR cuing for airspace awareness and counter-UAS program support.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.8v5.2c0 4.3-2.9 7.3-7 9-4.1-1.7-7-4.7-7-9V5.8z"/><rect x="9.6" y="10.6" width="4.8" height="3.8"/><path d="M10.6 10.6V9.4a1.4 1.4 0 0 1 2.8 0v1.2"/></svg></span><div class="cap-name">Secure Comms</div><p class="cap-desc">Secure mesh networking integration. Frequency-agile resilience for contested RF environments. ATAK ecosystem native.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l8 4.2-8 4.2-8-4.2z"/><path d="M4 12l8 4.2 8-4.2"/><path d="M4 16.3l8 4.2 8-4.2"/></svg></span><div class="cap-name">Aerial Data Services</div><p class="cap-desc">FAA Part 107 compliant operations. Photogrammetry, digital twins, orthomosaic products, and infrastructure inspection.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></span><div class="cap-name">NDAA Procurement</div><p class="cap-desc">Compliant sourcing from verified U.S. manufacturers. Supply chain aggregation to reduce procurement friction and accelerate delivery.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M6 21V9.5h12V21"/><path d="M4 9.5L12 4l8 5.5"/><path d="M9.5 21v-4h5v4"/></svg></span><div class="cap-name">Federal Advisory</div><p class="cap-desc">ASDA compliance consulting, GSA Revision 3 transition support, and Blue UAS certification pathway advisory. WAWF / PIEE invoicing support.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="16" height="8" rx="1"/><path d="M21 10.8v2.4"/><path d="M11.8 9.6L9.6 12.4h3l-2.2 2.8"/></svg></span><div class="cap-name">Power &amp; Sustainment</div><p class="cap-desc">Military-grade battery systems, ruggedized energy storage, and sustainment spares sourcing from American manufacturers.</p></div>
+      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10"/><rect x="10.3" y="10.3" width="3.4" height="3.4"/><path d="M9.5 7V4.5M14.5 7V4.5M9.5 19.5V17M14.5 19.5V17M7 9.5H4.5M7 14.5H4.5M19.5 9.5H17M19.5 14.5H17"/></svg></span><div class="cap-name">Avionics &amp; Controls</div><p class="cap-desc">ARK Electronics NDAA-compliant flight controllers across DoD-aligned UAS builds. Hard requirement met across the ecosystem.</p></div>
     </div>
   </div>
 </div>
