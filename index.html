@@ -75,10 +75,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .rr-w{position:absolute;width:82%;aspect-ratio:1;top:50%;left:50%;transform:translate(-50%,-50%)}
 .rr{position:absolute;border-radius:50%;border:1px solid rgba(100,110,95,.18);top:50%;left:50%;transform:translate(-50%,-50%)}
 .rr:nth-child(1){width:100%;height:100%}.rr:nth-child(2){width:75%;height:75%}.rr:nth-child(3){width:50%;height:50%}.rr:nth-child(4){width:25%;height:25%}
-.rs-st{position:absolute;width:82%;aspect-ratio:1;border-radius:50%;overflow:hidden;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1;background:conic-gradient(from 270deg,rgba(140,15,10,.52) 0deg,rgba(165,25,15,.62) 45deg,rgba(170,28,15,.55) 90deg,rgba(100,10,8,.28) 135deg,transparent 180deg,transparent 360deg)}
-.rs-sw-w{position:absolute;width:82%;aspect-ratio:1;border-radius:50%;overflow:hidden;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2}
-.rs-sw{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0deg,transparent 255deg,rgba(180,30,15,.42) 308deg,rgba(215,42,20,.82) 355deg,transparent 360deg);animation:rspin 5s linear infinite}
-@keyframes rspin{to{transform:rotate(360deg)}}
+.hero-tag{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;white-space:nowrap;padding:10px 22px;border-top:1px solid var(--cb);z-index:3}
+.ht1{font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
+.ht2{font-family:var(--fm);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(90deg,#e8901e,#3de0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-img{position:relative;width:100%;object-fit:contain;mix-blend-mode:lighten;-webkit-mask-image:radial-gradient(ellipse 52% 56% at 50% 48%,#000 45%,transparent 62%);mask-image:radial-gradient(ellipse 52% 56% at 50% 48%,#000 45%,transparent 62%)}
 /* CRED BAR */
 .cred-bar{background:var(--bg2);border-top:1px solid var(--cb);border-bottom:1px solid var(--cb);padding:0 24px;display:flex;align-items:stretch;overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -243,6 +242,9 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .btn-a,.btn-g{width:100%;text-align:center;padding:14px 16px;display:block}
   .hero-r{justify-content:center}
   .rs{max-width:280px;width:100%}
+  .hero-tag{white-space:normal;padding:8px 10px;bottom:-14px;width:100%}
+  .ht1{font-size:11px}
+  .ht2{font-size:7.5px}
   .sec{padding:44px 18px}
   .sh{font-size:clamp(26px,7.5vw,38px)}
   .sr{margin:14px 0 24px}
@@ -337,9 +339,8 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     <div class="rs">
       <div class="rc"></div>
       <div class="rr-w"><div class="rr"></div><div class="rr"></div><div class="rr"></div><div class="rr"></div></div>
-      <div class="rs-st"></div>
-      <div class="rs-sw-w"><div class="rs-sw"></div></div>
-      <img class="hero-img" src="assets/hero-composite.png" alt="ARACHNID Family of Systems">
+      <img class="hero-img" src="assets/hero-composite.png" alt="U.S.-manufactured small uncrewed aircraft systems">
+      <div class="hero-tag"><span class="ht1">U.S.-Manufactured sUAS &#183; ISR + FPV</span><span class="ht2">Federal &amp; Public Safety Procurement &#183; SDVOSB Set-Aside</span></div>
     </div>
   </div>
 </section>
