@@ -58,7 +58,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .nav-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:999;opacity:0;transition:opacity .3s ease}
 .nav-overlay.active{opacity:1}
 /* HERO */
-.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px var(--pad) 60px;overflow:hidden;background:var(--bg);gap:20px}
+.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px var(--pad) 60px;overflow:hidden;background:var(--bg) url('assets/hero-bg-alt.webp') right center/cover no-repeat;gap:20px}
 .hero-dots{position:absolute;inset:0;z-index:0;background-image:radial-gradient(circle,rgba(61,224,192,.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
 .hero-fade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--bg) 0%,rgba(8,14,9,.4) 32%,transparent 52%,var(--bg) 100%);pointer-events:none}
 .hero-l{position:relative;z-index:3;max-width:560px}
@@ -127,7 +127,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .pt{display:flex;flex-wrap:wrap;gap:5px}
 .tg{font-family:var(--fm);font-size:8px;letter-spacing:.11em;text-transform:uppercase;padding:3px 9px;border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.50);white-space:nowrap}
 /* C-UAS */
-.cuas-s{background:var(--bg)}
+.cuas-s{background:linear-gradient(rgba(8,14,9,.78),rgba(8,14,9,.78)),var(--bg) url('assets/cuas-bg.webp') center/cover no-repeat}
 /* CAPABILITIES */
 .cap-s{background:var(--bg2)}
 .cap-grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -430,6 +430,8 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
     </div>
   </div>
 </div>
+<!-- DIVIDER -->
+<div style="height:64px;background:url('assets/divider.webp') center/cover no-repeat" aria-hidden="true"></div>
 <!-- C-UAS -->
 <div class="cuas-s sec" id="c-uas">
   <div class="ey">
@@ -454,6 +456,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
         <div class="pkg-row"><div class="pkg-code">EO</div><div class="pkg-body"><div class="pkg-name">EO/IR Confirmation</div><p class="pkg-desc">Visual classification and confirmation of detected tracks for informed response decisions, day and night.</p></div></div>
         <div class="pkg-row"><div class="pkg-code">RID</div><div class="pkg-body"><div class="pkg-name">Remote ID Monitoring</div><p class="pkg-desc">Broadcast Remote ID sensing integrated into the airspace picture for identification and pattern-of-life awareness.</p></div></div>
       </div>
+      <img src="assets/perimeter.webp" alt="Layered perimeter detection visualization" style="width:100%;border:1px solid var(--cb);margin-top:20px" loading="lazy">
     </div>
     <div class="cap-cells">
       <div class="cap-cell"><span class="cap-icon">&#128225;</span><div class="cap-name">C-UAS Program Design</div><p class="cap-desc">Site assessment, layered sensor architecture, and program design aligned to current federal and state authorities.</p></div>
