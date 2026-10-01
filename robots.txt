@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://heightenedsenses.net/sitemap.xml

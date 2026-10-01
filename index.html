@@ -3,823 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heightened Senses LLC</title>
-<meta name="description" content="Platform agnostic, system agnostic, centric to the warfighter and public safety professional. SDVOSB authorized reseller and integrator of NDAA-compliant uncrewed systems and counter-UAS, with country of origin documented for every item quoted. Prime contractor to the U.S. Air Force. NDAA-compliant platforms, installation, operator training, and compliance advisory.">
-<link rel="shortcut icon" href="favicon.ico">
+<title>UAS &amp; Counter-UAS Integration | Heightened Senses</title>
+<meta name="description" content="UAS and counter-UAS integration, procurement, training, and advisory for federal, public safety, and enterprise buyers. SBA-certified SDVOSB and U.S. Air Force prime contractor.">
+<link rel="canonical" href="https://heightenedsenses.net/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Heightened Senses">
+<meta property="og:title" content="UAS &amp; Counter-UAS Integration | Heightened Senses">
+<meta property="og:description" content="UAS and counter-UAS integration, procurement, training, and advisory for federal, public safety, and enterprise buyers. SBA-certified SDVOSB and U.S. Air Force prime contractor.">
+<meta property="og:url" content="https://heightenedsenses.net/">
+<meta property="og:image" content="https://heightenedsenses.net/assets/logo-full.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <meta name="theme-color" content="#070D14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
---bg:#070D14;--bg2:#0B131D;--bg3:#101A26;--bg4:#152232;
---teal:#3FB6D8;--amber:#E8A33D;--white:#ffffff;
---muted:#A9B7C4;--muted2:#8FA0B0;
---cb:rgba(63,182,216,.15);--cb2:rgba(63,182,216,.28);--wb:rgba(255,255,255,.07);--line:#1C2836;--grad:linear-gradient(135deg,#3FB6D8 0%,#E8A33D 100%);--text:#D8E1EA;
---fh:'Barlow Condensed',sans-serif;--fb:'Inter',sans-serif;--fm:'IBM Plex Mono',monospace;
---pad:72px;
-}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:var(--fb);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-/* SHARED */
-.ey{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.ey-line{width:40px;height:1px;background:var(--cb2);flex-shrink:0}
-.ey-lbl{font-family:var(--fm);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
-.ey-icon{width:28px;height:28px;flex-shrink:0}
-.ey-icon img{width:100%;height:100%;object-fit:contain;mix-blend-mode:screen}
-.sh{font-family:var(--fh);font-size:clamp(32px,4.4vw,50px);font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:1.02;margin-bottom:6px}
-.sh .w{color:var(--white)}.sh .a{color:var(--amber)}
-.sr{width:56px;height:3px;background:var(--grad);border-radius:2px;margin:16px 0 28px}
-.sec{padding:64px var(--pad);border-top:1px solid rgba(255,255,255,.04)}
-.btn-a{font-family:var(--fh);font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;background:var(--grad);color:#08121A;border:none;border-radius:4px;cursor:pointer;display:inline-block;transition:opacity .2s}
-.btn-a:hover{opacity:.88}
-.btn-g{font-family:var(--fh);font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 26px;background:transparent;color:var(--teal);border:1px solid var(--teal);border-radius:4px;cursor:pointer;display:inline-block;transition:color .2s}
-.btn-g:hover{color:#fff}
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;padding:0 18px;height:56px;background:rgba(5,9,14,.98);border-bottom:1px solid rgba(255,255,255,.06)}
-.logo-img{height:32px;width:auto;mix-blend-mode:screen;filter:brightness(1.08)}
-.nav-links{display:flex;align-items:center;gap:24px;margin-left:auto}
-.nav-links a{font-family:var(--fh);font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.78);transition:color .15s;white-space:nowrap}
-.nav-links a:hover{color:#fff}
-.nav-cta{font-family:var(--fh);font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 18px;background:var(--grad);color:#08121A;border:none;border-radius:4px;cursor:pointer;transition:opacity .2s;white-space:nowrap;flex-shrink:0}
-.nav-cta:hover{opacity:.88}
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:1002;-webkit-tap-highlight-color:transparent}
-.nav-hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .3s ease}
-.nav-hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-hamburger.active span:nth-child(2){opacity:0}
-.nav-hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.nav-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:999;opacity:0;transition:opacity .3s ease}
-.nav-overlay.active{opacity:1}
-/* HERO */
-.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px var(--pad) 60px;overflow:hidden;background:radial-gradient(1000px 500px at 80% -10%,rgba(63,182,216,.10),transparent),radial-gradient(700px 400px at 10% 110%,rgba(232,163,61,.06),transparent),var(--bg) url('assets/hero-bg-alt.webp') right center/cover no-repeat;gap:20px}
-.hero-fade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--bg) 0%,rgba(7,13,20,.4) 32%,transparent 52%,var(--bg) 100%);pointer-events:none}
-.hero-l{position:relative;z-index:3;max-width:560px}
-.hero-h1{font-family:var(--fh);font-weight:700;line-height:.96;letter-spacing:.01em;font-size:clamp(52px,7vw,96px);text-transform:uppercase;margin-bottom:20px}
-.hero-h1 .t{color:var(--white);display:block}
-.hero-h1 .w{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
-.hero-body{font-size:15.5px;font-weight:400;color:var(--muted);line-height:1.72;max-width:440px;margin-bottom:24px}
-.badges{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:30px}
-.bdg{font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.02em;padding:7px 14px;background:var(--bg2);border:1px solid var(--line);border-radius:999px;color:var(--text);white-space:nowrap}
-.bdg.gold{border-color:rgba(232,163,61,.5);color:var(--amber)}
-.hero-acts{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
-.hero-r{position:relative;z-index:2;display:flex;align-items:center;justify-content:center}
-.rs{position:relative;width:100%;max-width:640px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.rc{position:absolute;inset:0 -6% 22%;background:radial-gradient(ellipse at center,rgba(63,182,216,.09) 0%,transparent 68%);pointer-events:none}
-.hero-tag{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;white-space:nowrap;padding:14px 26px 0;border-top:1px solid var(--cb);margin-top:22px;z-index:3}
-.ht1{font-family:var(--fh);font-size:16px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--white)}
-.ht2{font-family:var(--fm);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
-.hero-img{position:relative;width:100%;object-fit:contain;filter:drop-shadow(0 16px 34px rgba(0,0,0,.55))}
-/* CRED BAR */
-.cred-bar{background:var(--bg2);border-top:1px solid var(--cb);border-bottom:1px solid var(--cb);padding:0 24px;display:flex;align-items:stretch;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.ci{font-family:var(--fh);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:9px;padding:14px 24px;border-right:1px solid var(--cb);flex-shrink:0}
-.ci:last-child{border-right:none}
-.cd{width:5px;height:5px;border-radius:50%;flex-shrink:0;background:var(--teal)}
-.ci.amb .cd{background:var(--amber)}
-/* ABOUT */
-.about-s{background:var(--bg)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.ab{font-size:15px;font-weight:400;color:var(--muted);line-height:1.8;margin-bottom:20px}
-.ab strong{color:var(--white);font-weight:600}
-.about-r{display:flex;flex-direction:column;align-items:center;gap:20px}
-.cg{width:100%;border:1px solid var(--line);border-radius:10px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
-.cc{padding:16px 18px;border-right:1px solid var(--cb);border-bottom:1px solid var(--cb)}
-.cc:nth-child(2n){border-right:none}.cc:nth-last-child(-n+2){border-bottom:none}
-.cc-l{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;display:block}
-.cc-v{font-size:14px;font-weight:600;color:var(--white);line-height:1.2}
-.hs-block{width:68%;display:flex;flex-direction:column;align-items:center}
-.hs-frame{position:relative;width:100%}
-.hc{position:absolute;width:16px;height:16px;z-index:3}
-.hc.tl{top:-1px;left:-1px;border-top:2px solid var(--teal);border-left:2px solid var(--teal)}
-.hc.tr{top:-1px;right:-1px;border-top:2px solid var(--teal);border-right:2px solid var(--teal)}
-.hc.bl{bottom:-1px;left:-1px;border-bottom:2px solid var(--teal);border-left:2px solid var(--teal)}
-.hc.br{bottom:-1px;right:-1px;border-bottom:2px solid var(--teal);border-right:2px solid var(--teal)}
-.hs-img{width:100%;object-fit:cover;object-position:center top;aspect-ratio:1/1;filter:grayscale(15%) contrast(1.05) brightness(.93);border:1px solid var(--cb)}
-.hs-ov{position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,rgba(7,13,20,.92),transparent);pointer-events:none;z-index:1}
-.hs-cap{text-align:center;padding-top:12px}
-.hs-name{font-family:var(--fh);font-size:22px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--white);display:block;margin-bottom:5px}
-.hs-title{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block}
-/* PLATFORMS */
-.plat-s{background:var(--bg2)}
-.plat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.pc{background:var(--bg2);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;position:relative;transition:background .2s;overflow:hidden}
-.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:.7;z-index:3}
-.pc:hover{background:var(--bg3)}
-.pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .35s}
-.pc:hover::after{transform:scaleX(1)}
-.pi{position:relative;width:100%;height:180px;background:#050A10;overflow:hidden;border-bottom:1px solid var(--wb)}
-.pi img{width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten;filter:brightness(.92) contrast(1.05);transition:filter .3s,transform .4s}
-.pc:hover .pi img{filter:brightness(1.02) contrast(1.08);transform:scale(1.03)}
-.pb{position:absolute;top:12px;right:12px;font-family:var(--fh);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--bg3);border:1px solid var(--line);color:var(--teal);padding:4px 10px;border-radius:6px;z-index:2}
-.pcon{padding:20px 20px 24px;flex:1;display:flex;flex-direction:column}
-.pn{font-family:var(--fh);font-size:24px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:var(--white);margin-bottom:4px}
-.ps{font-family:var(--fm);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--amber);margin-bottom:12px;line-height:1.5}
-.pd{font-size:13px;font-weight:400;color:var(--muted);line-height:1.72;margin-bottom:16px;flex:1}
-.pt{display:flex;flex-wrap:wrap;gap:5px}
-.tg{font-family:var(--fm);font-size:11px;letter-spacing:.11em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);white-space:nowrap}
-/* C-UAS */
-.cuas-s{background:linear-gradient(rgba(7,13,20,.78),rgba(7,13,20,.78)),var(--bg) url('assets/cuas-bg.webp') center/cover no-repeat}
-.legal{border-left:3px solid var(--amber);background:var(--bg2);border-radius:0 8px 8px 0;padding:18px 22px;color:var(--text);font-size:14px;line-height:1.7;margin-top:22px;max-width:880px}
-/* CAPABILITIES */
-.cap-s{background:var(--bg2)}
-.cap-grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.cap-intro{font-size:15px;font-weight:400;color:var(--muted);line-height:1.8;max-width:380px;margin-bottom:28px}
-.pkg-ey{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.pkg-line{width:40px;height:1px;background:var(--cb2);flex-shrink:0}
-.pkg-lbl{font-family:var(--fm);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
-.pkg-list{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg2)}
-.pkg-row{display:grid;grid-template-columns:48px 1fr;border-bottom:1px solid var(--cb)}
-.pkg-row:last-child{border-bottom:none}
-.pkg-code{display:flex;align-items:flex-start;justify-content:center;padding:18px 0;font-family:var(--fh);font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);border-right:1px solid var(--line)}
-.pkg-body{padding:18px}
-.pkg-name{font-family:var(--fh);font-size:18px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--white);margin-bottom:5px}
-.pkg-desc{font-size:13px;font-weight:400;color:var(--muted);line-height:1.7}
-.cap-cells{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg2)}
-.cap-cell{padding:20px 18px;border-right:1px solid var(--cb);border-bottom:1px solid var(--cb)}
-.cap-cell:nth-child(2n){border-right:none}.cap-cell:nth-last-child(-n+2){border-bottom:none}
-.cap-icon{width:22px;height:22px;color:var(--teal);margin-bottom:10px;display:block}
-.cap-icon svg{width:100%;height:100%;display:block}
-.cap-name{font-family:var(--fh);font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--white);margin-bottom:6px}
-.cap-desc{font-size:12px;font-weight:400;color:var(--muted);line-height:1.65}
-/* ADVISORY */
-.adv-s{background:var(--bg)}
-.adv-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;align-items:start}
-.adv-intro{font-size:15px;font-weight:400;color:var(--muted);line-height:1.8;margin-bottom:22px}
-.adv-intro strong{color:var(--white);font-weight:600}
-.adv-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.adv-card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:24px 22px;position:relative;overflow:hidden}
-.adv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:.7}
-.adv-card .k{font-family:var(--fm);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:8px}
-.adv-card h3{font-family:var(--fh);font-size:19px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:var(--white);margin-bottom:8px;line-height:1.1}
-.adv-card p{font-size:13px;color:var(--muted);line-height:1.7}
-.adv-served{border:1px solid var(--line);border-radius:10px;background:var(--bg2);padding:22px 24px;margin-top:22px}
-.adv-served h4{font-family:var(--fh);font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--white);margin-bottom:12px}
-.adv-served ul{list-style:none}
-.adv-served li{padding:8px 0 8px 26px;position:relative;color:var(--muted);font-size:13.5px;line-height:1.6;border-bottom:1px solid var(--line)}
-.adv-served li:last-child{border-bottom:none}
-.adv-served li::before{content:"\2713";position:absolute;left:0;color:var(--amber);font-weight:700}
-@media(max-width:900px){.adv-grid{grid-template-columns:1fr;gap:28px}}
-@media(max-width:600px){.adv-cards{grid-template-columns:1fr;gap:14px}.adv-card{padding:20px 18px}}
-/* PAST PERFORMANCE */
-.pp-s{background:var(--bg2)}
-.pp-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
-.pp-card{border:1px solid var(--line);border-radius:10px;background:var(--bg2);padding:32px 32px 28px;position:relative;overflow:hidden}
-.pp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
-.pp-agency{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:block}
-.pp-title{font-family:var(--fh);font-size:28px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:var(--white);line-height:1.1;margin-bottom:6px}
-.pp-role{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;display:block}
-.pp-desc{font-size:13px;font-weight:400;color:var(--muted);line-height:1.72;margin-bottom:18px}
-.pp-meta{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.pp-m{padding:12px 14px;border-right:1px solid var(--cb);border-bottom:1px solid var(--cb)}
-.pp-m:nth-child(2n){border-right:none}.pp-m:nth-last-child(-n+2){border-bottom:none}
-.pp-ml{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:4px}
-.pp-mv{font-size:13px;font-weight:600;color:var(--white)}
-.pp-side{display:flex;flex-direction:column;gap:14px}
-.pp-stat{border:1px solid var(--line);border-radius:10px;padding:20px 22px;background:var(--bg2)}
-.pp-sv{font-family:var(--fh);font-size:34px;font-weight:700;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}
-.pp-sl{font-family:var(--fm);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.pp-note{font-family:var(--fb);font-size:13px;line-height:1.7;color:var(--muted);margin-top:6px}
-@media(max-width:900px){.pp-grid{grid-template-columns:1fr;gap:28px}}
-@media(max-width:600px){.pp-card{padding:20px 16px}.pp-title{font-size:19px}.pp-meta{grid-template-columns:1fr}.pp-m{border-right:none}.pp-m:nth-last-child(-n+2){border-bottom:1px solid var(--cb)}.pp-m:last-child{border-bottom:none}}
-/* HOW TO BUY */
-.buy-s{background:var(--bg)}
-.buy-intro{font-size:15px;font-weight:400;color:var(--muted);line-height:1.8;max-width:820px;margin-bottom:32px}
-.buy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.step{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:26px 24px}
-.step .num{font-family:var(--fh);font-weight:700;font-size:34px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.step h3{font-family:var(--fh);text-transform:uppercase;font-size:18px;font-weight:600;letter-spacing:.03em;margin:10px 0 8px;color:var(--white)}
-.step p{color:var(--muted);font-size:13px;font-weight:400;line-height:1.7}
-@media(max-width:900px){.buy-grid{grid-template-columns:1fr 1fr;gap:16px}}
-@media(max-width:600px){.buy-grid{grid-template-columns:1fr;gap:14px}.step{padding:20px 18px}}
-/* ECOSYSTEM */
-.eco-s{background:var(--bg)}
-.eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
-.ecard{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:28px 24px;position:relative;overflow:hidden;transition:background .2s}
-.ecard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:.7}
-.ecard:hover{background:var(--bg3)}
-.ecat{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:7px;display:block}
-.ename{font-family:var(--fh);font-size:22px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--white);margin-bottom:7px}
-.estat{display:inline-block;font-family:var(--fm);font-size:11px;letter-spacing:.13em;text-transform:uppercase;padding:4px 11px;margin-bottom:12px;border:1px solid var(--line);border-radius:999px;color:var(--muted2)}
-.estat.ok{border-color:var(--cb2);color:var(--teal)}
-.eval{font-size:13px;font-weight:400;color:var(--muted);line-height:1.68}
-/* CONTACT */
-.con-s{background:var(--bg2)}
-.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.con-intro{font-size:15px;font-weight:400;color:var(--muted);line-height:1.8;max-width:420px;margin-bottom:28px}
-.con-rows{display:flex;flex-direction:column}
-.con-row{display:grid;grid-template-columns:68px 1fr;padding:13px 0;border-bottom:1px solid var(--cb);align-items:baseline}
-.con-row:first-child{border-top:1px solid var(--cb)}
-.con-key{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
-.con-val{font-size:13px;font-weight:400;color:var(--white)}
-.con-val a{color:var(--white);transition:color .2s}.con-val a:hover{color:var(--teal)}
-.con-val.ambl a{color:var(--amber)}.con-val.ambl a:hover{color:var(--white)}
-.cform{display:flex;flex-direction:column}
-.f2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:13px}
-.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
-.fl{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
-.fi,.fsel,.fta{background:rgba(255,255,255,.04);border:1px solid var(--cb);color:var(--white);font-family:var(--fb);font-size:14px;font-weight:400;padding:11px 13px;outline:none;transition:border-color .2s;width:100%}
-.fi::placeholder,.fta::placeholder{color:rgba(255,255,255,.45)}
-.fi:focus,.fsel:focus,.fta:focus{border-color:rgba(63,182,216,.40)}
-.fsel{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%233FB6D8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
-.fsel option{background:#0B131D}
-.fta{resize:vertical;min-height:110px}
-.fsub{font-family:var(--fh);font-size:16px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 32px;background:var(--grad);color:#08121A;border:none;border-radius:4px;cursor:pointer;margin-top:8px;align-self:flex-start;transition:opacity .2s}
-.fsub:hover{opacity:.88}
-.fnote{font-size:13px;line-height:1.6;color:var(--muted);margin-bottom:14px}
-.ferr{font-size:12.5px;color:#FF9A85;min-height:0}
-.fi[aria-invalid="true"]{border-color:#FF9A85}
-.fstat{font-size:13.5px;line-height:1.6;color:var(--text);margin-top:12px}
-.fi:focus-visible,.fsub:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
-.fsuc{display:none;text-align:center;padding:44px 20px;border:1px solid var(--cb);flex-direction:column;align-items:center;gap:14px}
-.fsuc.on{display:flex}
-.fsuc-ic{font-size:36px;color:var(--teal)}
-.fsuc-t{font-family:var(--fh);font-size:30px;font-weight:600;text-transform:uppercase;color:var(--teal)}
-.fsuc-b{font-size:14px;color:var(--muted);font-weight:400;line-height:1.7}
-/* FOOTER */
-footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:28px var(--pad)}
-.ft{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:14px}
-.fcreds{display:flex;flex-wrap:wrap;font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);justify-content:center}
-.fcreds span{padding:0 12px;border-right:1px solid rgba(255,255,255,.08)}.fcreds span:last-child{border-right:none}
-.fcopy{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right;line-height:1.6}
-.fb{border-top:1px solid rgba(255,255,255,.05);padding-top:14px;display:flex;justify-content:center;flex-wrap:wrap;gap:16px;font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.fb a{color:var(--muted);transition:color .2s}.fb a:hover{color:var(--teal)}
-/* SCROLLBAR */
-::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--cb2)}
-/* TABLET */
-@media(max-width:900px){
-  :root{--pad:32px}
-  .nav-hamburger{display:flex;margin-left:auto}
-  .nav-links{margin-left:0}
-  .nav-links{display:none;flex-direction:column;position:fixed;top:56px;left:0;right:0;background:rgba(5,9,14,.98);padding:20px 0;gap:0;border-bottom:1px solid rgba(255,255,255,.08);z-index:1001;max-height:calc(100vh - 56px);overflow-y:auto}
-  .nav-links.active{display:flex}
-  .nav-links a{padding:14px 24px;font-size:14px;letter-spacing:.14em;border-bottom:1px solid rgba(255,255,255,.05);color:rgba(255,255,255,.85)}
-  .nav-links a:last-child{border-bottom:none}
-  .nav-links a:hover,.nav-links a:active{color:#fff;background:rgba(255,255,255,.04)}
-  .nav-links .nav-cta{display:block;margin:16px 24px 8px;text-align:center;padding:12px 18px}
-  .hero{grid-template-columns:1fr;padding:90px 32px 56px;min-height:auto;gap:36px}
-  .hero-fade{background:linear-gradient(to bottom,rgba(7,13,20,.94) 0%,rgba(7,13,20,.72) 42%,rgba(7,13,20,.42) 72%,var(--bg) 100%)}
-  .hero-l{max-width:100%}
-  .hero-h1{font-size:clamp(40px,9vw,64px)}
-  .hero-body{max-width:100%;font-size:15px}
-  .hero-r{justify-content:center}
-  .rs{max-width:520px}
-  .about-grid{grid-template-columns:1fr;gap:36px}
-  .hs-block{width:55%}
-  .plat-grid{grid-template-columns:1fr;gap:16px}
-  .pc::after{display:none}
-  .pi{height:200px}
-  .cap-grid-wrap{grid-template-columns:1fr;gap:36px}
-  .eco-grid{grid-template-columns:1fr 1fr;gap:16px}
-  .con-grid{grid-template-columns:1fr;gap:40px}
-  .f2{grid-template-columns:1fr 1fr}
-}
-/* MOBILE */
-@media(max-width:600px){
-  :root{--pad:18px}
-  html,body{max-width:100vw;overflow-x:hidden}
-  nav{padding:0 18px;height:52px}
-  .nav-links{top:52px;max-height:calc(100vh - 52px)}
-  .logo-img{height:26px}
-  .hero{grid-template-columns:1fr;padding:76px 18px 44px;gap:28px;min-height:auto}
-  .hero-fade{background:linear-gradient(to bottom,rgba(7,13,20,.95) 0%,rgba(7,13,20,.78) 45%,rgba(7,13,20,.45) 75%,var(--bg) 100%)}
-  .hero-l{max-width:100%}
-  .hero-h1{font-size:clamp(36px,11vw,54px);margin-bottom:16px}
-  .hero-body{font-size:14px;max-width:100%;margin-bottom:20px}
-  .badges{gap:6px;margin-bottom:24px}
-  .bdg{font-size:12px;padding:6px 12px}
-  .hero-acts{flex-direction:column;align-items:stretch;gap:10px;width:100%}
-  .btn-a,.btn-g{width:100%;text-align:center;padding:14px 16px;display:block}
-  .hero-r{justify-content:center}
-  .rs{max-width:100%;width:100%}
-  .hero-tag{white-space:normal;padding:10px 8px 0;width:100%;margin-top:14px}
-  .ht1{font-size:11px}
-  .ht2{font-size:11px}
-  .sec{padding:44px 18px}
-  .sh{font-size:clamp(24px,7vw,34px)}
-  .sr{margin:14px 0 24px}
-  .cred-bar{padding:0 18px}
-  .ci{padding:12px 18px;font-size:11px;gap:7px}
-  .cd{width:4px;height:4px}
-  .about-grid{grid-template-columns:1fr;gap:28px}
-  .cg{grid-template-columns:1fr 1fr;width:100%}
-  .cc{padding:12px 12px}
-  .cc-l{font-size:11px;letter-spacing:.16em}
-  .cc-v{font-size:13px}
-  .hs-block{width:75%;max-width:260px}
-  .plat-grid{grid-template-columns:1fr;width:100%}
-  .pi{height:170px}
-  .pcon{padding:16px 16px 20px}
-  .pn{font-size:22px}
-  .ps{font-size:11px}
-  .pd{font-size:13px}
-  .pt{gap:4px}
-  .tg{font-size:11px;padding:3px 8px}
-  .cap-grid-wrap{grid-template-columns:1fr;gap:28px}
-  .cap-intro{max-width:100%;font-size:14px}
-  .pkg-body{padding:14px 14px}
-  .pkg-name{font-size:13px}
-  .pkg-desc{font-size:12px}
-  .cap-cells{grid-template-columns:1fr;width:100%}
-  .cap-cell{border-right:none;padding:18px 16px}
-  .cap-cell:nth-child(2n){border-right:none}
-  .cap-cell:nth-last-child(-n+2){border-bottom:1px solid var(--cb)}
-  .cap-cell:last-child{border-bottom:none}
-  .cap-desc{font-size:12px}
-  .eco-grid{grid-template-columns:1fr;width:100%;gap:14px}
-  .ecard{padding:20px 16px}
-  .ecat{font-size:11px}
-  .ename{font-size:20px}
-  .eval{font-size:12px}
-  .con-grid{grid-template-columns:1fr;gap:32px}
-  .con-intro{font-size:14px;max-width:100%}
-  .con-row{grid-template-columns:56px 1fr;padding:11px 0}
-  .con-key{font-size:11px}
-  .con-val{font-size:13px;word-break:break-word}
-  .f2{grid-template-columns:1fr}
-  .fi,.fsel,.fta{font-size:16px;padding:11px 12px}
-  .fsub{width:100%;text-align:center;padding:14px 20px;align-self:stretch}
-  footer{padding:22px 18px}
-  .ft{flex-direction:column;align-items:center;gap:14px}
-  .fcopy{text-align:center}
-  .fb{flex-direction:column;align-items:center;gap:8px;text-align:center}
-  .fcreds{flex-direction:column;align-items:center;gap:0}
-  .fcreds span{padding:5px 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.06);width:100%;text-align:center}
-  .fcreds span:last-child{border-bottom:none}
-}
-</style>
+<link rel="stylesheet" href="assets/hs-site.css">
+<script>
+(function(){var m={'#platforms':'uas.html','#capabilities':'uas.html','#advisory':'training-advisory.html','#past-performance':'federal-experience.html','#how-to-buy':'how-to-buy.html','#ecosystem':'about.html#partners','#partners':'about.html#partners','#about':'about.html','#contact':'contact.html','#c-uas':'c-uas.html'};var t=m[location.hash];if(t)location.replace(t);})();
+</script>
 </head>
 <body>
-<!-- NAV -->
-<nav id="main-nav">
-  <a href="#home"><img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses LLC"></a>
-  <div class="nav-links">
-    <a href="#platforms">PLATFORMS</a>
+<a class="skip" href="#main">Skip to main content</a>
+<nav id="main-nav" aria-label="Primary">
+  <a href="index.html"><img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses home" width="2000" height="420"></a>
+  <div class="nav-links" id="nav-links">
+    <a href="uas.html">UAS</a>
     <a href="c-uas.html">C-UAS</a>
-    <a href="#capabilities">CAPABILITIES</a>
-    <a href="#advisory">ADVISORY</a>
-    <a href="#past-performance">PAST PERFORMANCE</a>
-    <a href="#how-to-buy">HOW TO BUY</a>
-    <a href="#ecosystem">PARTNERS</a>
-    <a href="#contact">CONTACT</a>
-    <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
+    <a href="training-advisory.html">Training &amp; Advisory</a>
+    <a href="federal-experience.html">Federal Experience</a>
+    <a href="how-to-buy.html">How to Buy</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="nav-cta">Discuss Your Requirement</a>
   </div>
-  <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+  <button class="nav-hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
     <span></span><span></span><span></span>
   </button>
 </nav>
-<!-- HERO -->
-<section class="hero" id="home">
+<main id="main">
+<section class="hero" id="home" aria-labelledby="hero-h">
   <div class="hero-fade"></div>
   <div class="hero-l">
-    <h1 class="hero-h1"><span class="t">HEIGHTENED</span><span class="w">SENSES</span></h1>
-    <p class="hero-body">Platform agnostic. System agnostic. Centric to the warfighter and the public safety professional we are honored to serve. Reseller and integrator of NDAA-compliant uncrewed systems and counter-UAS, from manufacturers we are authorized to represent, backed by installation, training, and compliance advisory. Country of origin is documented for every item we quote. Prime contractor to the United States Air Force.</p>
+    <span class="crumb">UAS &amp; Counter-UAS Integration</span>
+    <h1 class="hero-h1 long" id="hero-h"><span class="t">Uncrewed &amp; Counter-UAS</span><span class="w">Integrated for your mission</span></h1>
+    <p class="hero-body">Heightened Senses supports federal, public safety, and enterprise buyers with technology selection, system integration, operator training, and procurement advisory.</p>
     <div class="badges">
       <span class="bdg gold">USAF Prime Contractor</span>
       <span class="bdg gold">SBA-Certified SDVOSB</span>
-      <span class="bdg">Blue UAS Cleared Platforms</span>
-      <span class="bdg">NDAA-Compliant Supply Chain</span>
-      <span class="bdg">FAA Part 107</span>
-      <span class="bdg">NIST SP 800-171 Assessed</span>
+      <span class="bdg">NDAA Compliance Advisory</span>
     </div>
     <div class="hero-acts">
-      <a href="#contact" class="btn-a">REQUEST A QUOTE</a>
-      <a href="#platforms" class="btn-g">VIEW PLATFORMS &#8595;</a>
+      <a href="contact.html" class="btn-a">Discuss Your Requirement</a>
+      <a href="federal-experience.html" class="btn-g">View Federal Experience</a>
     </div>
   </div>
   <div class="hero-r">
     <div class="rs">
       <div class="rc"></div>
-      <img class="hero-img" src="assets/arachnid-family.webp" onerror="this.onerror=null;this.src='assets/hero-composite.png'" alt="ARACHNID family of U.S.-manufactured uncrewed systems: ISR sUAS, FPV, and ground control">
-      <div class="hero-tag"><span class="ht1">ARACHNID&#8482; Family of Systems</span><span class="ht2">ISR + FPV + GCS &#183; U.S.-Manufactured &#183; Red Cat Holdings</span></div>
+      <img class="hero-img" src="assets/arachnid-family.webp" onerror="this.onerror=null;this.src='assets/hero-composite.png'" alt="Red Cat ARACHNID family of uncrewed systems: ISR sUAS, FPV, and ground control">
+      <div class="hero-tag"><span class="ht1">ARACHNID&#8482; Family of Systems</span><span class="ht2">ISR + FPV + GCS &#183; Red Cat Holdings</span></div>
     </div>
   </div>
 </section>
-<!-- CRED BAR -->
-<div class="cred-bar">
+<div class="cred-bar" aria-label="Authorizations">
   <div class="ci amb"><div class="cd"></div>USAF C-sUAS Radar Lease &#183; Prime</div>
   <div class="ci"><div class="cd"></div>Red Cat Authorized Reseller</div>
-  <div class="ci"><div class="cd"></div>Black Widow &#183; Army Program of Record</div>
-  <div class="ci"><div class="cd"></div>FANG &#183; Blue UAS Cleared Oct 2025</div>
-  <div class="ci"><div class="cd"></div>Ondas Sentinel C-UAS Reseller</div>
+  <div class="ci"><div class="cd"></div>Ondas Sentinel Authorized Reseller</div>
   <div class="ci"><div class="cd"></div>Robin Radar Authorized Reseller</div>
   <div class="ci"><div class="cd"></div>ARK Electronics Preferred Partner</div>
   <div class="ci"><div class="cd"></div>Desert Rotor Fulfillment Partner</div>
-  <div class="ci"><div class="cd"></div>ATAK Compatible Systems</div>
 </div>
-<!-- ABOUT -->
-<div class="about-s sec" id="about">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">About</span>
-  </div>
-  <h2 class="sh"><span class="w">MISSION-INFORMED</span><br><span class="a">INTEGRATION</span></h2>
+
+<section class="adv-s sec" aria-labelledby="sol-h">
+  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div><div class="ey-line"></div><span class="ey-lbl">Solutions</span></div>
+  <h2 class="sh" id="sol-h"><span class="w">THREE WAYS </span><span class="a">WE WORK</span></h2>
   <div class="sr"></div>
-  <div class="about-grid">
-    <div>
-      <p class="ab"><strong>Heightened Senses is platform agnostic and system agnostic. We are centric to the warfighter and the public safety professional we are honored to serve.</strong> The requirement selects the system. We do not carry a manufacturer's inventory into a room and look for a mission to fit it. We start with the operator, the threat, the authority environment, and the budget, and we recommend what actually serves them, including when the answer is a platform we do not sell.</p>
-      <p class="ab">Heightened Senses, LLC was founded in the spirit of <strong>&#8220;Service after Service&#8221;</strong> by a <strong>Purple Heart recipient and retired USMC Gunnery Sergeant</strong> whose career spanned infantry, surveillance and countersurveillance, and intelligence. We are an authorized reseller, systems integrator, and advisory practice for NDAA-compliant uncrewed systems and counter-UAS, with a specialty in NDAA compliance. We list <strong>only manufacturers that have authorized us to represent them</strong>, and nothing else. Those authorizations are the result of our standard, not a substitute for it.</p>
-      <p class="ab">We source compliant platforms, deliver them, and stay on the requirement through installation, operator training, and sustainment. We are a prime contractor to the United States Air Force, and we bring the same judgment to a single-aircraft public safety quote that we bring to a multi-year federal lease. Not just hardware. Mission-informed judgment at every engagement.</p>
-    </div>
-    <div class="about-r">
-      <div class="cg">
-        <div class="cc"><span class="cc-l">Legal Entity</span><div class="cc-v">Heightened Senses, LLC</div></div>
-        <div class="cc"><span class="cc-l">SBA Certification</span><div class="cc-v">SDVOSB Certified</div></div>
-        <div class="cc"><span class="cc-l">UEI</span><div class="cc-v">SSZREV67GJK5</div></div>
-        <div class="cc"><span class="cc-l">CAGE Code</span><div class="cc-v">9XFG8</div></div>
-        <div class="cc"><span class="cc-l">SAM Status</span><div class="cc-v">Active &#183; Apr 2027</div></div>
-        <div class="cc"><span class="cc-l">Founded</span><div class="cc-v">July 2023 &#183; NC</div></div>
-        <div class="cc"><span class="cc-l">Primary NAICS</span><div class="cc-v">336411 &#183; 334511 &#183; 425120</div></div>
-        <div class="cc"><span class="cc-l">NIST SP 800-171</span><div class="cc-v">SPRS Assessed &#183; DFARS 252.204-7019</div></div>
-        <div class="cc"><span class="cc-l">SDVOSB Cert Expiry</span><div class="cc-v">August 2028</div></div>
-        <div class="cc"><span class="cc-l">Invoicing</span><div class="cc-v">WAWF / PIEE</div></div>
-      </div>
-      <div class="hs-block">
-        <div class="hs-frame">
-          <div class="hc tl"></div><div class="hc tr"></div>
-          <div class="hc bl"></div><div class="hc br"></div>
-          <img class="hs-img" src="assets/headshot.png" alt="Paul Buck Chambers">
-          <div class="hs-ov"></div>
+  <div class="off-grid">
+    <article class="adv-card"><span class="k">Counter-UAS</span><h3>C-UAS Integration &amp; Airspace Awareness</h3><p>Define the site, sensing requirements, system interfaces, training needs, and sustainment plan for a detection and airspace awareness program.</p><a class="more" href="c-uas.html">Explore C-UAS Support</a></article>
+    <article class="adv-card"><span class="k">UAS</span><h3>UAS Procurement &amp; Mission Integration</h3><p>Match the mission to a suitable configuration and coordinate sourcing, integration, operator onboarding, and supporting product documentation.</p><a class="more" href="uas.html">Explore UAS Solutions</a></article>
+    <article class="adv-card"><span class="k">Services</span><h3>Training, Advisory &amp; Program Support</h3><p>Scope operator training, program design, procurement planning, and product-compliance review around a defined requirement and written deliverables.</p><a class="more" href="training-advisory.html">Explore Training &amp; Advisory</a></article>
+  </div>
+</section>
+
+<section class="buy-s sec" aria-labelledby="proc-h" style="background:var(--bg2)">
+  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div><div class="ey-line"></div><span class="ey-lbl">How We Work</span></div>
+  <h2 class="sh" id="proc-h"><span class="w">REQUIREMENT TO </span><span class="a">DELIVERY &amp; SUPPORT</span></h2>
+  <div class="sr"></div>
+  <div class="buy-grid">
+    <div class="step"><div class="num">01</div><h3>Define</h3><p>Establish the mission, site, constraints, purchasing needs, and available information.</p></div>
+    <div class="step"><div class="num">02</div><h3>Select</h3><p>Review suitable options and configuration-specific documentation.</p></div>
+    <div class="step"><div class="num">03</div><h3>Integrate</h3><p>Agree on scope, interfaces, installation, and acceptance requirements.</p></div>
+    <div class="step"><div class="num">04</div><h3>Train &amp; Support</h3><p>Define operator onboarding, proficiency needs, and sustainment responsibilities.</p></div>
+  </div>
+</section>
+
+<section class="adv-s sec" aria-labelledby="field-h">
+  <div class="field">
+    <figure>
+        <div class="frame">
+          <div class="hc tl"></div><div class="hc tr"></div><div class="hc bl"></div><div class="hc br"></div>
+          <picture>
+            <source type="image/webp" srcset="assets/ncarng-cuas-demo-2026-07-800.webp 800w, assets/ncarng-cuas-demo-2026-07-1280.webp 1280w" sizes="(max-width:900px) 100vw, 680px">
+            <img src="assets/ncarng-cuas-demo-2026-07-800.jpg" srcset="assets/ncarng-cuas-demo-2026-07-800.jpg 800w, assets/ncarng-cuas-demo-2026-07-1280.jpg 1280w" sizes="(max-width:900px) 100vw, 680px" width="1280" height="853" loading="lazy" decoding="async" alt="Participants reviewing an uncrewed aircraft and controller during an outdoor field demonstration.">
+          </picture>
         </div>
-        <div class="hs-cap">
-          <span class="hs-name">Paul &#8220;Buck&#8221; Chambers</span>
-          <span class="hs-title">Founder &#183; GySgt USMC (Ret.)</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- PLATFORMS -->
-<div class="plat-s sec" id="platforms">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">Red Cat Holdings &#183; ARACHNID Family</span>
-  </div>
-  <h2 class="sh"><span class="w">AUTHORIZED </span><span class="a">PLATFORMS</span></h2>
-  <div class="sr"></div>
-  <div class="plat-grid">
-    <div class="pc">
-      <div class="pi"><span class="pb">Blue UAS Cleared</span><img src="assets/black-widow.jpg" alt="Black Widow"></div>
-      <div class="pcon">
-        <div class="pn">Black Widow&#8482;</div>
-        <div class="ps">Tactical ISR Quadrotor &#183; Army SRR Program of Record</div>
-        <p class="pd">U.S.-manufactured short-range reconnaissance sUAS. EO/IR dual sensor, 45+ min endurance, GPS-denied capable via Palantir VNav, resilient mesh radio integrated, ATAK compatible.</p>
-        <div class="pt"><span class="tg">45+ Min</span><span class="tg">5 Mi Range</span><span class="tg">FLIR EO/IR</span><span class="tg">ATAK</span><span class="tg">GPS-Denied</span><span class="tg">AI Target Rec.</span></div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pi"><span class="pb">Blue UAS Cleared</span><img src="assets/fang.png" alt="FANG FPV" style="object-position:center 40%"></div>
-      <div class="pcon">
-        <div class="pn">FANG&#8482; FPV</div>
-        <div class="ps">FPV Drone System &#183; NDAA Compliant</div>
-        <p class="pd">Low-cost, NDAA-compliant FPV family. Retrievable and reusable. Blue UAS Cleared October 2025. Integrates with ATAK ecosystem.</p>
-        <div class="pt"><span class="tg">NDAA Compliant</span><span class="tg">FPV</span><span class="tg">Retrievable</span><span class="tg">ATAK</span><span class="tg">Low Cost</span></div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pi"><span class="pb">ISR + Mapping</span><img src="assets/TRICHON.png" alt="Trichon" style="object-position:center 30%"></div>
-      <div class="pcon">
-        <div class="pn">Trichon&#8482;</div>
-        <div class="ps">Military-Grade Hybrid VTOL Tri-Copter</div>
-        <p class="pd">Extended endurance hybrid VTOL. Tool-free payload swap. Supports ISR, mapping, and photogrammetry missions. Transitions between hover and forward flight for maximum range.</p>
-        <div class="pt"><span class="tg">VTOL</span><span class="tg">Extended Endurance</span><span class="tg">Photogrammetry</span><span class="tg">Payload Swap</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- DIVIDER -->
-<div style="height:64px;background:url('assets/divider.webp') center/cover no-repeat" aria-hidden="true"></div>
-<!-- C-UAS -->
-<div class="cuas-s sec" id="c-uas">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">Counter-UAS</span>
-  </div>
-  <h2 class="sh"><span class="w">C-UAS DETECTION &amp; </span><span class="a">AIRSPACE AWARENESS</span></h2>
-  <div class="sr"></div>
-  <div class="cap-grid-wrap">
+        <figcaption>North Carolina Army National Guard C-UAS demonstration, July 2026. Heightened Senses coordinated and supported this OEM counter-UAS demonstration. Vets to Drones, visible in the photo, is a separate nonprofit organization.</figcaption>
+      </figure>
     <div>
-      <p class="cap-intro">Layered passive detection architectures built for the current federal authority environment. Detection-first systems are deployable by state, local, tribal, and territorial agencies today, and align with federal grant programs supporting drone detection acquisition. Federal customers are supported through authorized OEM fulfillment channels.</p>
-      <p class="cap-intro">Priority mission sets: corrections facilities, critical infrastructure, event and venue security, public safety agencies, and federal installations. We design, install, maintain, and train. Detection first, compliance always.</p>
-      <div class="pkg-ey">
-        <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-        <div class="pkg-line"></div>
-        <span class="pkg-lbl">Detection Layers</span>
-      </div>
-      <div class="pkg-list">
-        <div class="pkg-row"><div class="pkg-code">RF</div><div class="pkg-body"><div class="pkg-name">RF Spectrum Sensing</div><p class="pkg-desc">Passive detection and characterization of UAS control and video links across the RF environment. No emissions. Deployable now by state and local agencies.</p></div></div>
-        <div class="pkg-row"><div class="pkg-code">RDR</div><div class="pkg-body"><div class="pkg-name">Compact Radar</div><p class="pkg-desc">Non-cooperative detection and tracking of small UAS, cuing EO/IR sensors and feeding a unified common operating picture.</p></div></div>
-        <div class="pkg-row"><div class="pkg-code">EO</div><div class="pkg-body"><div class="pkg-name">EO/IR Confirmation</div><p class="pkg-desc">Visual classification and confirmation of detected tracks for informed response decisions, day and night.</p></div></div>
-        <div class="pkg-row"><div class="pkg-code">RID</div><div class="pkg-body"><div class="pkg-name">Remote ID Monitoring</div><p class="pkg-desc">Broadcast Remote ID sensing integrated into the airspace picture for identification and pattern-of-life awareness.</p></div></div>
-      </div>
-      <img src="assets/cuas-detect.webp" alt="Counter-UAS detection visualization: small UAS contact identified and tracked" style="width:100%;border:1px solid var(--cb);margin-top:20px" loading="lazy" onerror="this.style.display='none'">
-    </div>
-    <div class="cap-cells">
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span><div class="cap-name">C-UAS Program Design</div><p class="cap-desc">Site assessment, layered sensor architecture, and program design aligned to current federal and state authorities.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10.5 12h5M10.5 15.5h5"/></svg></span><div class="cap-name">Policy &amp; OPLAN Support</div><p class="cap-desc">Policy development and operations-plan support for agencies pursuing detection programs and certification pathways under current federal frameworks, including standing plans for fixed sites.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/></svg></span><div class="cap-name">Proficiency Training Support</div><p class="cap-desc">Operator and program proficiency training support for detection systems and airspace awareness operations.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M8.6 12.2l2.3 2.3 4.5-4.7"/></svg></span><div class="cap-name">Grant Funding Alignment</div><p class="cap-desc">Support identifying and aligning detection acquisitions to federal grant programs available to state and local agencies.</p></div>
+      <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div><div class="ey-line"></div><span class="ey-lbl">In the Field</span></div>
+      <h3 id="field-h">Field Demonstrations</h3>
+      <p>Before a buyer commits, we arrange time with the system in the field so operators can handle the equipment and see how it performs in their own conditions.</p>
+      <p>We coordinate the OEM, the site, and the agenda, then stay on the requirement through selection, integration, and training.</p>
+      <a class="more" href="contact.html?type=C-UAS%20Integration%20%2F%20Airspace%20Awareness">Request a Demonstration</a>
     </div>
   </div>
-  <div style="margin-top:40px">
-    <div class="pkg-ey">
-      <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-      <div class="pkg-line"></div>
-      <span class="pkg-lbl">Fielded C-UAS Systems &#183; Ondas Sentinel</span>
-    </div>
-    <div class="pkg-list">
-      <div class="pkg-row"><div class="pkg-code">DB4</div><div class="pkg-body"><div class="pkg-name">Dronebuster&#174; Block 4</div><p class="pkg-desc">American-made handheld counter-sUAS mitigation system with optional PNT attack capability. Fielded across the Department of Defense and allied forces.</p></div></div>
-      <div class="pkg-row"><div class="pkg-code">DB5</div><div class="pkg-body"><div class="pkg-name">Dronebuster&#174; DB5</div><p class="pkg-desc">Next-generation handheld counter-sUAS system with advanced 5.2 GHz disrupt capability for evolving threat frequencies.</p></div></div>
-      <div class="pkg-row"><div class="pkg-code">DTM</div><div class="pkg-body"><div class="pkg-name">DTIM Kits</div><p class="pkg-desc">Single-operator, full-spectrum kits pairing passive detection, tracking, and identification with Dronebuster mitigation for complete detect-through-defeat capability.</p></div></div>
-      <div class="pkg-row"><div class="pkg-code">DTI</div><div class="pkg-body"><div class="pkg-name">DTI System</div><p class="pkg-desc">Wearable, portable passive system to detect, track, and identify aerial threats. Non-emitting and deployable today by federal, state, and local customers within a layered detection architecture.</p></div></div>
-      <div class="pkg-row"><div class="pkg-code">VEH</div><div class="pkg-body"><div class="pkg-name">Dronebuster&#174; Vehicle Kits</div><p class="pkg-desc">Vehicle-mounted counter-sUAS systems delivering detection and mitigation on the move for convoys, patrols, and mobile response operations.</p></div></div>
-      <div class="pkg-row"><div class="pkg-code">SWT</div><div class="pkg-body"><div class="pkg-name">Sawtooth Modular C-UAS Platform</div><p class="pkg-desc">Modular, mission-adaptable fixed-site platform integrating sensors and effectors for critical infrastructure, site and event security, and border and perimeter defense. Available in purchase and leasing models.</p></div></div>
-    </div>
-    <div class="legal">Mitigation systems are available to authorized federal customers today. State, local, tribal, and territorial availability of mitigation systems is subject to the federal Authorized Systems List process. Passive detection systems, including DTI, are deployable by state and local agencies now.</div>
-  </div>
-</div>
-<!-- CAPABILITIES -->
-<div class="cap-s sec" id="capabilities">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">What We Do</span>
-  </div>
-  <h2 class="sh"><span class="w">CORE </span><span class="a">CAPABILITIES</span></h2>
+</section>
+
+<section class="pp-s sec" aria-labelledby="pp-h">
+  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div><div class="ey-line"></div><span class="ey-lbl">Federal Experience</span></div>
+  <h2 class="sh" id="pp-h"><span class="w">PRIME CONTRACT </span><span class="a">PERFORMANCE</span></h2>
   <div class="sr"></div>
-  <div class="cap-grid-wrap">
-    <div>
-      <p class="cap-intro">Every capability is grounded in operational experience. We integrate, advise, and deliver, with supply chain integrity and mission alignment at every step.</p>
-      <div class="pkg-ey">
-        <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-        <div class="pkg-line"></div>
-        <span class="pkg-lbl">Mission Packages</span>
-      </div>
-      <div class="pkg-list">
-        <div class="pkg-row"><div class="pkg-code">RSA</div><div class="pkg-body"><div class="pkg-name">Rapid Situational Awareness</div><p class="pkg-desc">Black Widow &#183; EO/IR &#183; Secure Mesh / ATAK. Immediate overhead awareness at dynamic incident scenes for law enforcement, fire, and emergency management.</p></div></div>
-        <div class="pkg-row"><div class="pkg-code">PIM</div><div class="pkg-body"><div class="pkg-name">Persistent Infrastructure Monitor</div><p class="pkg-desc">Trichon &#183; EO/IR + Photogrammetry &#183; Persistent MANET. Recurring inspection and digital twin generation for utilities, pipelines, transportation, and ports.</p></div></div>
-        <div class="pkg-row"><div class="pkg-code">IPA</div><div class="pkg-body"><div class="pkg-name">Integrated Perimeter Awareness</div><p class="pkg-desc">Black Widow &#183; Stabilized EO/IR + Compact Radar. Persistent aerial and ground-based situational awareness with unified common operating picture for critical infrastructure.</p></div></div>
-      </div>
-    </div>
-    <div class="cap-cells">
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/><rect x="9.6" y="9.6" width="4.8" height="4.8"/><path d="M6.8 6.8l2.8 2.8M17.2 6.8l-2.8 2.8M6.8 17.2l2.8-2.8M17.2 17.2l-2.8-2.8"/></svg></span><div class="cap-name">UAS Integration</div><p class="cap-desc">End-to-end platform integration and mission configuration. We align systems to requirements, not requirements to systems.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><path d="M12 12l6.3-6.3"/><path d="M19 12a7 7 0 1 1-4.9-6.7"/></svg></span><div class="cap-name">C-UAS Detection</div><p class="cap-desc">Layered passive detection integration: RF spectrum sensing, compact radar, and EO/IR cuing for airspace awareness and counter-UAS program support.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.8v5.2c0 4.3-2.9 7.3-7 9-4.1-1.7-7-4.7-7-9V5.8z"/><rect x="9.6" y="10.6" width="4.8" height="3.8"/><path d="M10.6 10.6V9.4a1.4 1.4 0 0 1 2.8 0v1.2"/></svg></span><div class="cap-name">Secure Comms</div><p class="cap-desc">Secure mesh networking integration. Frequency-agile resilience for contested RF environments. ATAK ecosystem native.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l8 4.2-8 4.2-8-4.2z"/><path d="M4 12l8 4.2 8-4.2"/><path d="M4 16.3l8 4.2 8-4.2"/></svg></span><div class="cap-name">Aerial Data Services</div><p class="cap-desc">FAA Part 107 compliant operations. Photogrammetry, digital twins, orthomosaic products, and infrastructure inspection.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></span><div class="cap-name">NDAA Procurement</div><p class="cap-desc">Compliant sourcing from verified U.S. manufacturers. Supply chain aggregation to reduce procurement friction and accelerate delivery.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M6 21V9.5h12V21"/><path d="M4 9.5L12 4l8 5.5"/><path d="M9.5 21v-4h5v4"/></svg></span><div class="cap-name">Advisory &amp; Compliance</div><p class="cap-desc">NDAA and ASDA determinations, program design, and procurement strategy for agencies and manufacturers. Independent of any product sale. <a href="#advisory" style="color:var(--teal)">See the advisory practice &#8595;</a></p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="16" height="8" rx="1"/><path d="M21 10.8v2.4"/><path d="M11.8 9.6L9.6 12.4h3l-2.2 2.8"/></svg></span><div class="cap-name">Power &amp; Sustainment</div><p class="cap-desc">Military-grade battery systems, ruggedized energy storage, and sustainment spares sourcing from American manufacturers.</p></div>
-      <div class="cap-cell"><span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10"/><rect x="10.3" y="10.3" width="3.4" height="3.4"/><path d="M9.5 7V4.5M14.5 7V4.5M9.5 19.5V17M14.5 19.5V17M7 9.5H4.5M7 14.5H4.5M19.5 9.5H17M19.5 14.5H17"/></svg></span><div class="cap-name">Avionics &amp; Controls</div><p class="cap-desc">ARK Electronics NDAA-compliant flight controllers across DoD-aligned UAS builds. Hard requirement met across the ecosystem.</p></div>
-    </div>
-  </div>
-</div>
-<!-- ADVISORY -->
-<div class="adv-s sec" id="advisory">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">Consultancy</span>
-  </div>
-  <h2 class="sh"><span class="w">ADVISORY </span><span class="a">PRACTICE</span></h2>
-  <div class="sr"></div>
-  <div class="adv-grid">
-    <div>
-      <p class="adv-intro"><strong>Heightened Senses is a consultancy as well as a contractor.</strong> Before we sell anything, we are often the people an agency calls to figure out what it actually needs, whether it is allowed to have it, and how to buy it without a protest or a compliance finding. We have done that work for federal installations, a state National Guard formation, a federal land management agency, municipal police departments, and a public school district building its first UAS program.</p>
-      <p class="adv-intro">Our specialty is <strong>NDAA compliance</strong>: what the American Security Drone Act and the FY2020 through FY2026 NDAA provisions actually prohibit, how the Blue UAS framework and the DIU cleared list work in practice, what the Authorized Systems List means for counter-UAS, and how to read a bill of materials for a covered component. We advise agencies buying and manufacturers entering the federal market, and we maintain a current-checked register of more than 900 federal, state, and local UAS and counter-UAS authorities to do it from.</p>
-      <div class="adv-served">
-        <h4>How we engage</h4>
-        <ul>
-          <li>Scoped engagements with a defined deliverable: a compliance determination, a program design, a procurement strategy, a policy package</li>
-          <li>Retained advisory for agencies and manufacturers who need a standing resource rather than a one-time answer</li>
-          <li>Embedded support inside a procurement, from market research response through award</li>
-          <li>Disclosed relationships. We tell you which manufacturers we represent before we advise. If the answer is a platform we do not carry, or no platform at all, that is the answer you get</li>
-        </ul>
-      </div>
-    </div>
-    <div class="adv-cards">
-      <div class="adv-card"><span class="k">Compliance</span><h3>NDAA &amp; ASDA Determinations</h3><p>Is this platform, component, or vendor compliant, and can you prove it to an auditor? Covered-entity analysis, bill of materials review, Blue UAS and DIU cleared-list status, GSA Revision 3 transition, and written determinations you can put in a contract file.</p></div>
-      <div class="adv-card"><span class="k">Manufacturers</span><h3>Federal Market Entry</h3><p>For UAS and component manufacturers: what compliance actually requires, how to structure a product line for federal buyers, how to get on the lists that matter, and how to build a channel that does not disintermediate you.</p></div>
-      <div class="adv-card"><span class="k">Programs</span><h3>UAS Program Design</h3><p>CONOPS, policy, standard operating procedures, training pipeline, Part 107 and waiver pathways, data handling, and the sustainment plan. Built for public safety agencies, installations, and organizations standing up a program from nothing.</p></div>
-      <div class="adv-card"><span class="k">Counter-UAS</span><h3>C-UAS Program Design</h3><p>Authority mapping under 10 U.S.C. § 130i and 6 U.S.C. § 124n, threat characterization, layered detection architecture, operations plans, and the certification pathway for state and local agencies under the SAFER SKIES framework. <a href="c-uas.html#training" style="color:var(--teal)">Full C-UAS practice &#8599;</a></p></div>
-      <div class="adv-card"><span class="k">Procurement</span><h3>Requirement &amp; Acquisition Strategy</h3><p>Market research and sources sought responses, set-aside strategy, acquisition planning, and quote preparation that makes a fair and reasonable price determination straightforward.</p></div>
-      <div class="adv-card"><span class="k">Reference</span><h3>Regulatory Baseline</h3><p>A maintained register of more than 900 federal, state, and local authorities, statutes, policies, and procurement rules for UAS and counter-UAS, current-checked and organized by decision. Available as a standalone advisory product for agencies and manufacturers.</p></div>
-    </div>
-  </div>
-</div>
-<!-- PAST PERFORMANCE -->
-<div class="pp-s sec" id="past-performance">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">Prime Contract Performance</span>
-  </div>
-  <h2 class="sh"><span class="w">PAST </span><span class="a">PERFORMANCE</span></h2>
-  <div class="sr"></div>
-  <div class="pp-grid">
+  <div class="teaser">
     <div class="pp-card">
-      <span class="pp-agency">United States Air Force &#183; 20th Fighter Wing &#183; Shaw AFB, SC</span>
+      <span class="pp-agency">United States Air Force &#183; Shaw AFB, SC</span>
       <div class="pp-title">Counter-sUAS Radar System Lease</div>
-      <span class="pp-role">Prime Contractor &#183; Contract FA480326P0068 &#183; Awarded September 2026</span>
-      <p class="pp-desc">Heightened Senses competed for this requirement under a total small business set-aside and won it as prime. We are delivering two Robin Radar IRIS 3D counter-sUAS radar systems under a lease, with site survey, installation, network integration, spectrum coordination, operator training, and sustainment support. The contract carries a one-year base period and two priced option years exercisable at the Government's discretion. Current stage: awarded, delivery in progress.</p>
-      <div class="pp-meta">
-        <div class="pp-m"><span class="pp-ml">Contracting Office</span><div class="pp-mv">20th Contracting Squadron</div></div>
-        <div class="pp-m"><span class="pp-ml">Scope</span><div class="pp-mv">Lease &#183; Install &#183; Train &#183; Sustain</div></div>
-        <div class="pp-m"><span class="pp-ml">Period</span><div class="pp-mv">One-year base plus two priced option years</div></div>
-        <div class="pp-m"><span class="pp-ml">Set-Aside</span><div class="pp-mv">Total Small Business</div></div>
-      </div>
+      <span class="pp-role">Prime Contractor &#183; Awarded September 2026 &#183; Delivery in Progress</span>
+      <p class="pp-desc">Two Robin Radar IRIS 3D counter-sUAS radar systems under lease, with site survey, installation, integration, operator training, and sustainment support.</p>
+      <a class="more" href="federal-experience.html">Contract Details</a>
     </div>
     <div class="pp-side">
-      <div class="pp-stat"><div class="pp-sv">PRIME</div><div class="pp-sl">Federal contractor of record, not a subcontractor</div></div>
-      <div class="pp-stat"><div class="pp-sv">BASE + 2</div><div class="pp-sl">One-year base period with two priced option years</div></div>
-      <div class="pp-stat"><div class="pp-sv">COMPETED</div><div class="pp-sl">Won as prime on a total small business set-aside</div></div>
-      <p class="pp-note">Additional quotes are in Government evaluation across Air Force, Space Force, Army, and Navy activities. We publish awards, not pursuits. Federal references available on request.</p>
+      <div class="pp-stat"><div class="pp-sv">PRIME</div><div class="pp-sl">Federal contractor of record</div></div>
+      <div class="pp-stat"><div class="pp-sv">COMPETED</div><div class="pp-sl">Total small business set-aside</div></div>
     </div>
   </div>
+</section>
+
+<div class="cta-band">
+  <h2 class="sh"><span class="w">DISCUSS YOUR </span><span class="a">REQUIREMENT</span></h2>
+  <p>Send the requirement and the timeframe. We acknowledge inquiries within one business day and confirm next steps after reviewing the requirement.</p>
+  <div class="hero-acts"><a href="contact.html" class="btn-a">Discuss Your Requirement</a><a href="tel:+14439445958" class="btn-g">(443) 944-5958</a></div>
 </div>
-<!-- HOW TO BUY -->
-<div class="buy-s sec" id="how-to-buy">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">Procurement Path</span>
-  </div>
-  <h2 class="sh"><span class="w">HOW TO </span><span class="a">BUY</span></h2>
-  <div class="sr"></div>
-  <p class="buy-intro">Heightened Senses is an SBA-Certified Service-Disabled Veteran-Owned Small Business. That gives a contracting officer a compliant path to award that supports the agency's small business and Veteran-owned goals in the same action, and it gives a public safety agency a vendor who has already been through a federal buy. One accountable contractor from quote through sustainment. You do not manage the manufacturer. We do.</p>
-  <div class="buy-grid">
-    <div class="step">
-      <div class="num">01</div>
-      <h3>SDVOSB Set-Aside &amp; Sole Source</h3>
-      <p>FAR 19.14 set-aside and sole-source authorities allow award to an SDVOSB without full and open competition where the requirement fits the applicable thresholds and the price is determined fair and reasonable. We build the quote and the documentation so that determination is easy to make.</p>
-    </div>
-    <div class="step">
-      <div class="num">02</div>
-      <h3>Simplified Acquisition</h3>
-      <p>Clean quotes structured for simplified acquisition procedures and purchase card thresholds. Requirements in, quote out, with lead times you can plan against. WAWF and PIEE invoicing supported.</p>
-    </div>
-    <div class="step">
-      <div class="num">03</div>
-      <h3>Lease Instead of Buy</h3>
-      <p>Multi-year lease with option years priced up front and sustainment included, for fixed-site systems. Puts capability on site without a capital acquisition. The Air Force chose this model for our radar contract at Shaw.</p>
-    </div>
-    <div class="step">
-      <div class="num">04</div>
-      <h3>State &amp; Local Purchase Orders</h3>
-      <p>Direct purchase orders for public safety agencies, with grant-funded acquisitions supported end to end including the documentation. Manufacturer list pricing as the baseline, formal quotations on request, and lease options on select fixed-site systems.</p>
-    </div>
-  </div>
-</div>
-<!-- ECOSYSTEM -->
-<div class="eco-s sec" id="ecosystem">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">Executed Partner Agreements</span>
-  </div>
-  <h2 class="sh"><span class="w">AUTHORIZED </span><span class="a">ECOSYSTEM</span></h2>
-  <div class="sr"></div>
-  <div class="eco-grid">
-    <div class="ecard"><span class="ecat">FPV and ISR UAS Platforms</span><div class="ename">Red Cat</div><span class="estat ok">Authorized Reseller</span><p class="eval">The ARACHNID family: FANG FPV, Black Widow ISR, Trichon hybrid VTOL. Black Widow is the Army's Short Range Reconnaissance program of record and FANG is Blue UAS cleared. We quote, deliver, and coordinate operator training through Red Cat's certified instructors, and Red Cat routes public safety inquiries to us directly.</p></div>
-    <div class="ecard"><span class="ecat">Counter-UAS Mitigation</span><div class="ename">Ondas Sentinel</div><span class="estat ok">Authorized Reseller</span><p class="eval">Dronebuster handheld, DTI passive detection, DTIM and vehicle kits, and the Sawtooth fixed-site platform. We have quoted this line to security forces squadrons across three Air Force commands and we know what the salient characteristics actually require. Mitigation to authorized federal customers; passive detection to everyone.</p></div>
-    <div class="ecard"><span class="ecat">C-UAS Radar Detection</span><div class="ename">Robin Radar</div><span class="estat ok">Authorized Reseller</span><p class="eval">IRIS 360-degree 3D drone detection radar with drone-versus-bird classification. We are the prime contractor fielding two IRIS systems for the U.S. Air Force on a lease with a one-year base period and two priced option years, with siting, installation, integration, training, and sustainment in our scope. Purchase or lease.</p></div>
-    <div class="ecard"><span class="ecat">Avionics and Flight Control</span><div class="ename">ARK Electronics</div><span class="estat ok">Preferred Partner</span><p class="eval">NDAA-compliant flight controllers, GNSS, and avionics for modular UAS builds. This is the component lane: when an installation or a program office needs Blue-compliant parts for an in-house build, we source them at volume and hold the relationship with the manufacturer.</p></div>
-    <div class="ecard"><span class="ecat">Ground Control Systems</span><div class="ename">Desert Rotor</div><span class="estat ok">Fulfillment Partner</span><p class="eval">MIRA X ground control station, Blue UAS listed, U.S.-manufactured, HOTAS layout. One controller across fixed-wing, multirotor, ground, and surface platforms. Fulfillment agreement in place since April 2026.</p></div>
-  </div>
-</div>
-<!-- CONTACT -->
-<div class="con-s sec" id="contact">
-  <div class="ey">
-    <div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div>
-    <div class="ey-line"></div>
-    <span class="ey-lbl">Get in Touch</span>
-  </div>
-  <h2 class="sh"><span class="w">REQUEST A </span><span class="a">QUOTE</span></h2>
-  <div class="sr"></div>
-  <div class="con-grid">
-    <div>
-      <p class="con-intro">Send the requirement, the site, the authority you operate under, and the funding source if you know it. We acknowledge inquiries within one business day and confirm next steps after reviewing the requirement. A recommendation, pricing, and lead times follow that review. If we are not the right fit, we will tell you.</p>
-      <div class="con-rows">
-        <div class="con-row"><span class="con-key">Email</span><span class="con-val" id="em" data-a="Y29udHJhY3Rz" data-b="aGVpZ2h0ZW5lZHNlbnNlcy5uZXQ="></span></div>
-        <div class="con-row"><span class="con-key">Phone</span><span class="con-val"><a href="tel:4439445958">(443) 944-5958</a></span></div>
-        <div class="con-row"><span class="con-key">Addr</span><span class="con-val">187 Marina Wynd Way, Sneads Ferry, NC 28460</span></div>
-        <div class="con-row"><span class="con-key">Cap St</span><span class="con-val ambl"><a href="capability-statement.html">View Capability Statement &#8599;</a>&nbsp;&nbsp;<a href="assets/Heightened_Senses_Capability_Statement.pdf" target="_blank" style="color:var(--muted);font-size:11px;">PDF &#8595;</a></span></div>
-      </div>
-    </div>
-    <div>
-      <form class="cform" id="cform" novalidate aria-describedby="fnote">
-        <p class="fnote" id="fnote">This form prepares an email to contracts@heightenedsenses.net in your email application. Nothing is sent until you send it from there. Fields marked * are required.</p>
-        <div class="f2">
-          <div class="fg" style="margin-bottom:0"><label class="fl" for="f-first">First Name *</label><input class="fi" id="f-first" name="first_name" type="text" autocomplete="given-name" required aria-describedby="f-first-err"><span class="ferr" id="f-first-err"></span></div>
-          <div class="fg" style="margin-bottom:0"><label class="fl" for="f-last">Last Name *</label><input class="fi" id="f-last" name="last_name" type="text" autocomplete="family-name" required aria-describedby="f-last-err"><span class="ferr" id="f-last-err"></span></div>
-        </div>
-        <div class="fg"><label class="fl" for="f-org">Organization *</label><input class="fi" id="f-org" name="organization" type="text" autocomplete="organization" placeholder="Agency / Company" required aria-describedby="f-org-err"><span class="ferr" id="f-org-err"></span></div>
-        <div class="fg"><label class="fl" for="f-email">Work Email *</label><input class="fi" id="f-email" name="email" type="email" autocomplete="email" placeholder="you@agency.gov" required aria-describedby="f-email-err"><span class="ferr" id="f-email-err"></span></div>
-        <div class="fg"><label class="fl" for="f-phone">Phone (optional)</label><input class="fi" id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div class="fg">
-          <label class="fl" for="f-type">Requirement Type *</label>
-          <select class="fsel fi" id="f-type" name="requirement_type" required aria-describedby="f-type-err">
-            <option value="">Select...</option>
-            <option>C-UAS Integration / Airspace Awareness</option>
-            <option>UAS Procurement / Integration</option>
-            <option>Training</option>
-            <option>Advisory / Program Support</option>
-            <option>OEM / Teaming</option>
-            <option>Other</option>
-          </select>
-          <span class="ferr" id="f-type-err"></span>
-        </div>
-        <div class="fg"><label class="fl" for="f-msg">Requirement Summary *</label><textarea class="fta fi" id="f-msg" name="message" placeholder="Requirement, site, timeframe, part numbers, or program details" required aria-describedby="f-msg-err"></textarea><span class="ferr" id="f-msg-err"></span></div>
-        <button type="submit" class="fsub">Prepare Email</button>
-        <p class="fstat" id="fstat" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- FOOTER -->
+</main>
 <footer>
   <div class="ft">
-    <img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses LLC">
+    <img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses" width="2000" height="420" loading="lazy">
     <div class="fcreds">
-      <span>SDVOSB</span><span>FAA Part 107 Certified</span><span>NDAA-Compliant Supply Chain</span>
-      <span>Blue UAS Cleared Platforms</span><span>Disaster Response Registry</span>
+      <span>SBA-Certified SDVOSB</span><span>U.S. Air Force Prime Contractor</span><span>FAA Part 107 Certified</span>
     </div>
     <div class="fcopy">&#169; 2026 Heightened Senses, LLC<br>Sneads Ferry, NC 28460</div>
   </div>
   <div class="fb">
     <span>UEI: SSZREV67GJK5</span>
     <span>CAGE: 9XFG8</span>
-    <span>EIN: 93-2185308</span>
-    <span>SAM Active &#183; Exp. Apr 2027</span>
-    <span><a href="#past-performance">Past Performance</a></span>
-    <span><a href="c-uas.html">Counter-UAS</a></span>
+    <span><a href="federal-experience.html">Federal Experience</a></span>
+    <span><a href="how-to-buy.html">How to Buy</a></span>
+    <span><a href="capability-statement.html">Capability Statement</a></span>
+    <span><a href="contact.html">Contact</a></span>
   </div>
 </footer>
-<script>
-window.addEventListener('scroll', function() {
-  var n = document.getElementById('main-nav');
-  if (n) n.style.background = window.scrollY > 40 ? 'rgba(4,8,13,.99)' : 'rgba(5,9,14,.97)';
-}, false);
-(function(){
-  var f = document.getElementById('cform');
-  if (!f) return;
-  var TO = 'contracts@heightenedsenses.net';
-  var checks = [
-    ['f-first', 'Enter your first name.'],
-    ['f-last', 'Enter your last name.'],
-    ['f-org', 'Enter your organization.'],
-    ['f-email', 'Enter a valid work email address.'],
-    ['f-type', 'Select a requirement type.'],
-    ['f-msg', 'Describe the requirement.']
-  ];
-  f.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var first = null;
-    checks.forEach(function(c) {
-      var el = document.getElementById(c[0]), err = document.getElementById(c[0] + '-err');
-      var v = el.value.trim();
-      var bad = !v || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
-      el.setAttribute('aria-invalid', bad ? 'true' : 'false');
-      err.textContent = bad ? c[1] : '';
-      if (bad && !first) first = el;
-    });
-    var st = document.getElementById('fstat');
-    if (first) { st.textContent = 'Please correct the highlighted fields.'; first.focus(); return; }
-    var g = function(id){ return document.getElementById(id).value.trim(); };
-    var subject = 'Requirement: ' + g('f-type') + ' | ' + g('f-org');
-    var body = 'Name: ' + g('f-first') + ' ' + g('f-last') + '\nOrganization: ' + g('f-org') +
-      '\nEmail: ' + g('f-email') + '\nPhone: ' + (g('f-phone') || 'Not provided') +
-      '\nRequirement type: ' + g('f-type') + '\n\nRequirement summary:\n' + g('f-msg') + '\n';
-    window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    st.textContent = 'Your email application should open with this message drafted. It is not sent until you send it there. If nothing opened, email ' + TO + ' or call (443) 944-5958. Your entries remain on this page.';
-  });
-})();
-(function(){
-  var el = document.getElementById('em');
-  if (el) {
-    var e = atob(el.getAttribute('data-a')) + '@' + atob(el.getAttribute('data-b'));
-    el.innerHTML = '<a href="mailto:' + e + '">' + e + '</a>';
-  }
-})();
-(function(){
-  var h=document.querySelector('.nav-hamburger'),n=document.querySelector('.nav-links');
-  if(!h||!n)return;
-  var o=document.createElement('div');o.className='nav-overlay';document.body.appendChild(o);
-  function close(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');h.setAttribute('aria-expanded','false');document.body.style.overflow='';setTimeout(function(){o.style.display='none'},300)}
-  function toggle(){var open=h.classList.contains('active');if(open){close()}else{h.classList.add('active');n.classList.add('active');h.setAttribute('aria-expanded','true');o.style.display='block';o.offsetHeight;o.classList.add('active');document.body.style.overflow='hidden'}}
-  h.addEventListener('click',toggle);
-  o.addEventListener('click',close);
-  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
-  window.addEventListener('resize',function(){if(window.innerWidth>900)close()});
-})();
-</script>
+<script src="assets/hs-site.js" defer></script>
 </body>
 </html>

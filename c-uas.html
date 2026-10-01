@@ -8,7 +8,9 @@
 <title>Counter-UAS Solutions | Heightened Senses LLC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/hs-nav.css">
+<link rel="canonical" href="https://heightenedsenses.net/c-uas.html">
 <style>
   :root{
     --bg:#070D14;
@@ -32,14 +34,10 @@
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
   section{padding:88px 0}
 
-  /* NAV */
-  nav{position:sticky;top:0;z-index:50;background:rgba(7,13,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto}
-  .nav-inner img{height:42px;width:auto}
-  .nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
-  .nav-links a{font-family:var(--head);font-weight:600;letter-spacing:.08em;font-size:.85rem;color:var(--text);text-transform:uppercase}
-  .nav-links a.cta{background:var(--grad);color:#08121A;padding:9px 18px;border-radius:4px}
-
+  body{padding-top:56px}
+  @media(max-width:420px){.pp-facts{grid-template-columns:1fr}.pp-facts>div,.idcell{min-width:0;overflow-wrap:anywhere}}
+  [id]{scroll-margin-top:80px}
+  :focus-visible{outline:2px solid var(--accent-2);outline-offset:3px}
   /* HERO */
   .hero{padding:110px 0 80px;background:
     radial-gradient(1000px 500px at 80% -10%,rgba(63,182,216,.10),transparent),
@@ -63,8 +61,8 @@
 
   /* CARDS */
   .grid{display:grid;gap:22px}
-  .grid.c3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-  .grid.c4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .grid.c3{grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+  .grid.c4{grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr))}
   .card{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:28px;position:relative;overflow:hidden}
   .card:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad);opacity:.7}
   .card .tag{display:inline-block;font-family:var(--head);font-weight:700;font-size:1rem;letter-spacing:.06em;background:var(--bg-3);border:1px solid var(--line);color:var(--accent);border-radius:6px;padding:4px 12px;margin-bottom:14px}
@@ -90,7 +88,7 @@
   .panel p{color:var(--muted);font-size:.95rem;margin-bottom:16px}
 
   /* HOW TO BUY */
-  .buy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .buy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:22px}
   .step{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:26px}
   .step .num{font-family:var(--head);font-weight:700;font-size:2rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .step h3{font-family:var(--head);text-transform:uppercase;font-size:1.15rem;margin:8px 0 8px}
@@ -135,40 +133,38 @@
   .contact-meta{margin-top:34px;display:flex;gap:34px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
   .contact-meta b{color:var(--text)}
 
-  footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.85rem}
-  .foot-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a href="index.html"><img src="assets/logo-full.png" alt="Heightened Senses LLC"></a>
-    <div class="nav-links">
-      <a href="#past-performance">Past Performance</a>
-      <a href="#systems">Systems</a>
-      <a href="#detection">Detection</a>
-      <a href="#radar">IRIS Radar</a>
-      <a href="#funding">Funding &amp; Authority</a>
-      <a href="#how-to-buy">How to Buy</a>
-      <a href="#training">Program &amp; Training</a>
-      <a class="cta" href="#contact">Request a Quote</a>
-    </div>
+<a class="skip" href="#main">Skip to main content</a>
+<nav id="main-nav" aria-label="Primary">
+  <a href="index.html"><img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses home" width="2000" height="420"></a>
+  <div class="nav-links" id="nav-links">
+    <a href="uas.html">UAS</a>
+    <a href="c-uas.html" aria-current="page">C-UAS</a>
+    <a href="training-advisory.html">Training &amp; Advisory</a>
+    <a href="federal-experience.html">Federal Experience</a>
+    <a href="how-to-buy.html">How to Buy</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="nav-cta">Discuss Your Requirement</a>
   </div>
+  <button class="nav-hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
     <div class="kicker">Counter-UAS · Prime Contractor to the United States Air Force</div>
-    <h1>American-Made<br><span class="grad">Counter-UAS</span> Systems</h1>
+    <h1>Layered<br><span class="grad">Counter-UAS</span> Integration</h1>
     <p class="lead">Platform agnostic. System agnostic. Centric to the warfighter and the public safety professional we are honored to serve. Heightened Senses designs, delivers, installs, and trains layered counter-UAS capability for federal installations and for state, local, tribal, and territorial agencies. We are the prime contractor on a counter-sUAS radar lease for the U.S. Air Force, an authorized reseller of Ondas Sentinel mitigation systems including the Dronebuster&reg; line fielded across the Department of Defense, and an authorized reseller of Robin Radar IRIS detection radar. The requirement selects the system. We select nothing for you that we would not field ourselves.</p>
     <div class="chips">
       <span class="chip gold">USAF Prime · C-sUAS Radar Lease</span>
       <span class="chip gold">SBA-Certified SDVOSB</span>
-      <span class="chip">American-Made Systems</span>
-      <span class="chip">NDAA-Compliant Supply Chain</span>
-      <span class="chip">Federal · State · Local · Tribal · Territorial</span>
+      <span class="chip">Country of Origin Documented</span>
+            <span class="chip">Federal · State · Local · Tribal · Territorial</span>
       <span class="chip">WAWF / PIEE Invoicing Supported</span>
     </div>
     <div class="btn-row">
@@ -252,7 +248,7 @@
         <span class="tag">DTI</span>
         <h3>DTI System</h3>
         <div class="sub">Passive Detect · Track · Identify</div>
-        <p>Wearable, portable passive system to detect, track, and identify aerial threats. Non-emitting and deployable today by federal, state, and local customers within a layered detection architecture.</p>
+        <p>Wearable, portable passive system to detect, track, and identify aerial threats. Non-emitting, for federal, state, and local customers within a layered detection architecture.</p>
       </div>
       <div class="card">
         <span class="tag">DTM</span>
@@ -274,7 +270,7 @@
       </div>
     </div>
     <div class="legal">
-      Mitigation systems are available to authorized federal customers today. State, local, tribal, and territorial availability of mitigation systems is governed by 6 U.S.C. § 124n as amended by the SAFER SKIES Act, including the federal Authorized Systems List, training, and certification requirements. Passive detection systems, including DTI and radar, are deployable by state and local agencies now. We will tell you which side of that line your requirement sits on before we quote it.
+      Mitigation systems are available to authorized federal customers today. State, local, tribal, and territorial availability of mitigation systems is governed by 6 U.S.C. § 124n as amended by the SAFER SKIES Act, including the federal Authorized Systems List, training, and certification requirements. Detection systems, including passive RF and active radar, are available to state and local agencies; what an agency may operate depends on the technology, the configuration, and its authority. We will tell you which side of that line your requirement sits on before we quote it.
     </div>
   </div>
 </section>
@@ -290,7 +286,7 @@
         <div class="abbr">RF</div>
         <div>
           <h3>RF Spectrum Sensing</h3>
-          <p>Passive detection and characterization of UAS control and video links. No emissions. Deployable now by state and local agencies.</p>
+          <p>Passive detection and characterization of UAS control and video links. No emissions.</p>
         </div>
       </div>
       <div class="layer">
@@ -329,7 +325,7 @@
         <li>Selected to support counter-UAS operations at the FIFA World Cup 2026, deployed by components of the U.S. Department of Homeland Security alongside state and local agencies</li>
         <li>Proven at scale: Dutch Ministry of Defence contract for 100 IRIS radars protecting domestic airspace</li>
         <li>IRIS Long-Range Mode extends instrumented detection range to 12 km, proven against fixed-wing drones and loitering munitions</li>
-        <li>Available on purchase or lease through Heightened Senses SDVOSB procurement vehicles, with full OEM warranty, software licensing, and engineering reach-back</li>
+        <li>Available on purchase or lease through Heightened Senses, with full OEM warranty, software licensing, and engineering reach-back</li>
         <li><strong style="color:var(--text)">Fielded by us, as prime, for the United States Air Force.</strong> Two IRIS 3D systems on lease at Shaw AFB, with installation, integration, and sustainment by Heightened Senses. See <a href="#past-performance">Past Performance</a>.</li>
       </ul>
       <a class="btn primary" href="#contact">Request IRIS Pricing</a>
@@ -344,7 +340,7 @@
       <div class="panel">
       <h3>Radar as the Backbone Layer</h3>
       <p>RF sensing goes quiet against autonomous and pre-programmed drones that emit nothing. Radar does not. IRIS provides non-cooperative detection that anchors the layered architecture, cuing EO/IR confirmation and feeding one unified airspace picture.</p>
-      <p>Deployable today by federal and state, local, tribal, and territorial customers, including law enforcement, public safety, and critical infrastructure authorities.</p>
+      <p>Available to federal and state, local, tribal, and territorial customers, including law enforcement, public safety, and critical infrastructure authorities, subject to each agency&#8217;s operating authority.</p>
       </div>
     </div>
   </div>
@@ -428,7 +424,7 @@
       </div>
       <div class="card">
         <h3>Authority Mapping</h3>
-        <p>Before we quote, we map your requirement to the authority you actually hold: 10 U.S.C. § 130i for covered DoD facilities, 6 U.S.C. § 124n and the SAFER SKIES framework for SLTT agencies, and the detection-only lane available to everyone now. We will tell you what you cannot legally do before you buy something that does it.</p>
+        <p>Before we quote, we map your requirement to the authority you actually hold: 10 U.S.C. § 130i for covered DoD facilities, 6 U.S.C. § 124n and the SAFER SKIES framework for SLTT agencies, and the detection-only options available to your agency. We will tell you what you cannot legally do before you buy something that does it.</p>
       </div>
       <div class="card">
         <h3>Policy &amp; OPLAN Support</h3>
@@ -440,7 +436,7 @@
       </div>
       <div class="card">
         <h3>Sustainment</h3>
-        <p>Spares, batteries, software licensing, and lifecycle sustainment sourced through NDAA-compliant American supply chains, quoted alongside the system, not discovered after fielding.</p>
+        <p>Spares, batteries, software licensing, and lifecycle sustainment sourced with documented, NDAA-compliant supply chains, quoted alongside the system, not discovered after fielding.</p>
       </div>
       <div class="card">
         <h3>Regulatory Baseline</h3>
@@ -469,12 +465,23 @@
 </section>
 
 <footer>
-  <div class="wrap foot-inner">
-    <span>&copy; 2026 Heightened Senses, LLC · Sneads Ferry, NC · SBA-Certified SDVOSB · Prime Contractor, U.S. Air Force</span>
-    <span>UEI: SSZREV67GJK5 · CAGE: 9XFG8 · SAM Active · Exp. Apr 2027</span>
-    <span><a href="index.html">heightenedsenses.net</a> · <a href="index.html#past-performance">Past Performance</a> · <a href="index.html#how-to-buy">How to Buy</a></span>
+  <div class="ft">
+    <img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses" width="2000" height="420" loading="lazy">
+    <div class="fcreds">
+      <span>SBA-Certified SDVOSB</span><span>U.S. Air Force Prime Contractor</span><span>FAA Part 107 Certified</span>
+    </div>
+    <div class="fcopy">&#169; 2026 Heightened Senses, LLC<br>Sneads Ferry, NC 28460</div>
+  </div>
+  <div class="fb">
+    <span>UEI: SSZREV67GJK5</span>
+    <span>CAGE: 9XFG8</span>
+    <span><a href="federal-experience.html">Federal Experience</a></span>
+    <span><a href="how-to-buy.html">How to Buy</a></span>
+    <span><a href="capability-statement.html">Capability Statement</a></span>
+    <span><a href="contact.html">Contact</a></span>
   </div>
 </footer>
+<script src="assets/hs-site.js" defer></script>
 
 <script>
 // Scroll-triggered playback: videos play when at least half visible, pause when scrolled away.
