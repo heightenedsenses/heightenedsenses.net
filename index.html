@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Heightened Senses LLC</title>
-<meta name="description" content="Platform agnostic, system agnostic, centric to the warfighter and public safety professional. SDVOSB authorized reseller and integrator for American-made uncrewed systems and counter-UAS. Prime contractor to the U.S. Air Force. NDAA-compliant platforms, installation, operator training, and compliance advisory.">
+<meta name="description" content="Platform agnostic, system agnostic, centric to the warfighter and public safety professional. SDVOSB authorized reseller and integrator of NDAA-compliant uncrewed systems and counter-UAS, with country of origin documented for every item quoted. Prime contractor to the U.S. Air Force. NDAA-compliant platforms, installation, operator training, and compliance advisory.">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
@@ -231,6 +231,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .fta{resize:vertical;min-height:110px}
 .fsub{font-family:var(--fh);font-size:16px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 32px;background:var(--grad);color:#08121A;border:none;border-radius:4px;cursor:pointer;margin-top:8px;align-self:flex-start;transition:opacity .2s}
 .fsub:hover{opacity:.88}
+.fnote{font-size:13px;line-height:1.6;color:var(--muted);margin-bottom:14px}
+.ferr{font-size:12.5px;color:#FF9A85;min-height:0}
+.fi[aria-invalid="true"]{border-color:#FF9A85}
+.fstat{font-size:13.5px;line-height:1.6;color:var(--text);margin-top:12px}
+.fi:focus-visible,.fsub:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 .fsuc{display:none;text-align:center;padding:44px 20px;border:1px solid var(--cb);flex-direction:column;align-items:center;gap:14px}
 .fsuc.on{display:flex}
 .fsuc-ic{font-size:36px;color:var(--teal)}
@@ -373,7 +378,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="hero-fade"></div>
   <div class="hero-l">
     <h1 class="hero-h1"><span class="t">HEIGHTENED</span><span class="w">SENSES</span></h1>
-    <p class="hero-body">Platform agnostic. System agnostic. Centric to the warfighter and the public safety professional we are honored to serve. Reseller and integrator for American-made uncrewed systems and counter-UAS, from manufacturers we are authorized to represent, backed by installation, training, and compliance advisory. Prime contractor to the United States Air Force.</p>
+    <p class="hero-body">Platform agnostic. System agnostic. Centric to the warfighter and the public safety professional we are honored to serve. Reseller and integrator of NDAA-compliant uncrewed systems and counter-UAS, from manufacturers we are authorized to represent, backed by installation, training, and compliance advisory. Country of origin is documented for every item we quote. Prime contractor to the United States Air Force.</p>
     <div class="badges">
       <span class="bdg gold">USAF Prime Contractor</span>
       <span class="bdg gold">SBA-Certified SDVOSB</span>
@@ -403,7 +408,6 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="ci"><div class="cd"></div>FANG &#183; Blue UAS Cleared Oct 2025</div>
   <div class="ci"><div class="cd"></div>Ondas Sentinel C-UAS Reseller</div>
   <div class="ci"><div class="cd"></div>Robin Radar Authorized Reseller</div>
-  <div class="ci"><div class="cd"></div>Freefly Systems Authorized Dealer</div>
   <div class="ci"><div class="cd"></div>ARK Electronics Preferred Partner</div>
   <div class="ci"><div class="cd"></div>Desert Rotor Fulfillment Partner</div>
   <div class="ci"><div class="cd"></div>ATAK Compatible Systems</div>
@@ -420,7 +424,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="about-grid">
     <div>
       <p class="ab"><strong>Heightened Senses is platform agnostic and system agnostic. We are centric to the warfighter and the public safety professional we are honored to serve.</strong> The requirement selects the system. We do not carry a manufacturer's inventory into a room and look for a mission to fit it. We start with the operator, the threat, the authority environment, and the budget, and we recommend what actually serves them, including when the answer is a platform we do not sell.</p>
-      <p class="ab">Heightened Senses, LLC was founded in the spirit of <strong>&#8220;Service after Service&#8221;</strong> by a <strong>Purple Heart recipient and retired USMC Gunnery Sergeant</strong> whose career spanned infantry, surveillance and countersurveillance, and intelligence. We are an authorized reseller, systems integrator, and advisory practice for American-made uncrewed systems and counter-UAS, with a specialty in NDAA compliance. We list <strong>only manufacturers that have authorized us to represent them</strong>, and nothing else. Those authorizations are the result of our standard, not a substitute for it.</p>
+      <p class="ab">Heightened Senses, LLC was founded in the spirit of <strong>&#8220;Service after Service&#8221;</strong> by a <strong>Purple Heart recipient and retired USMC Gunnery Sergeant</strong> whose career spanned infantry, surveillance and countersurveillance, and intelligence. We are an authorized reseller, systems integrator, and advisory practice for NDAA-compliant uncrewed systems and counter-UAS, with a specialty in NDAA compliance. We list <strong>only manufacturers that have authorized us to represent them</strong>, and nothing else. Those authorizations are the result of our standard, not a substitute for it.</p>
       <p class="ab">We source compliant platforms, deliver them, and stay on the requirement through installation, operator training, and sustainment. We are a prime contractor to the United States Air Force, and we bring the same judgment to a single-aircraft public safety quote that we bring to a multi-year federal lease. Not just hardware. Mission-informed judgment at every engagement.</p>
     </div>
     <div class="about-r">
@@ -462,7 +466,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="sr"></div>
   <div class="plat-grid">
     <div class="pc">
-      <div class="pi"><span class="pb">Blue UAS Certified</span><img src="assets/black-widow.jpg" alt="Black Widow"></div>
+      <div class="pi"><span class="pb">Blue UAS Cleared</span><img src="assets/black-widow.jpg" alt="Black Widow"></div>
       <div class="pcon">
         <div class="pn">Black Widow&#8482;</div>
         <div class="ps">Tactical ISR Quadrotor &#183; Army SRR Program of Record</div>
@@ -471,11 +475,11 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       </div>
     </div>
     <div class="pc">
-      <div class="pi"><span class="pb">Blue UAS Certified</span><img src="assets/fang.png" alt="FANG FPV" style="object-position:center 40%"></div>
+      <div class="pi"><span class="pb">Blue UAS Cleared</span><img src="assets/fang.png" alt="FANG FPV" style="object-position:center 40%"></div>
       <div class="pcon">
         <div class="pn">FANG&#8482; FPV</div>
         <div class="ps">FPV Drone System &#183; NDAA Compliant</div>
-        <p class="pd">Lowest-cost family of NDAA-compliant FPV drones on the market. Retrievable and reusable. Blue UAS Certified October 2025. Integrates with ATAK ecosystem.</p>
+        <p class="pd">Low-cost, NDAA-compliant FPV family. Retrievable and reusable. Blue UAS Cleared October 2025. Integrates with ATAK ecosystem.</p>
         <div class="pt"><span class="tg">NDAA Compliant</span><span class="tg">FPV</span><span class="tg">Retrievable</span><span class="tg">ATAK</span><span class="tg">Low Cost</span></div>
       </div>
     </div>
@@ -595,8 +599,8 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
         <ul>
           <li>Scoped engagements with a defined deliverable: a compliance determination, a program design, a procurement strategy, a policy package</li>
           <li>Retained advisory for agencies and manufacturers who need a standing resource rather than a one-time answer</li>
-          <li>Embedded support inside a procurement, from market research response through award, including the questions to the contracting officer that shape the requirement</li>
-          <li>Independent of any product sale. If the answer is a platform we do not carry, or no platform at all, that is the answer you get</li>
+          <li>Embedded support inside a procurement, from market research response through award</li>
+          <li>Disclosed relationships. We tell you which manufacturers we represent before we advise. If the answer is a platform we do not carry, or no platform at all, that is the answer you get</li>
         </ul>
       </div>
     </div>
@@ -605,7 +609,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       <div class="adv-card"><span class="k">Manufacturers</span><h3>Federal Market Entry</h3><p>For UAS and component manufacturers: what compliance actually requires, how to structure a product line for federal buyers, how to get on the lists that matter, and how to build a channel that does not disintermediate you.</p></div>
       <div class="adv-card"><span class="k">Programs</span><h3>UAS Program Design</h3><p>CONOPS, policy, standard operating procedures, training pipeline, Part 107 and waiver pathways, data handling, and the sustainment plan. Built for public safety agencies, installations, and organizations standing up a program from nothing.</p></div>
       <div class="adv-card"><span class="k">Counter-UAS</span><h3>C-UAS Program Design</h3><p>Authority mapping under 10 U.S.C. § 130i and 6 U.S.C. § 124n, threat characterization, layered detection architecture, operations plans, and the certification pathway for state and local agencies under the SAFER SKIES framework. <a href="c-uas.html#training" style="color:var(--teal)">Full C-UAS practice &#8599;</a></p></div>
-      <div class="adv-card"><span class="k">Procurement</span><h3>Requirement &amp; Acquisition Strategy</h3><p>Market research responses, sources sought, requirement shaping, set-aside strategy, and the questions that move a solicitation before it closes. We shaped the Air Force radar requirement from market research and then won it as prime.</p></div>
+      <div class="adv-card"><span class="k">Procurement</span><h3>Requirement &amp; Acquisition Strategy</h3><p>Market research and sources sought responses, set-aside strategy, acquisition planning, and quote preparation that makes a fair and reasonable price determination straightforward.</p></div>
       <div class="adv-card"><span class="k">Reference</span><h3>Regulatory Baseline</h3><p>A maintained register of more than 900 federal, state, and local authorities, statutes, policies, and procurement rules for UAS and counter-UAS, current-checked and organized by decision. Available as a standalone advisory product for agencies and manufacturers.</p></div>
     </div>
   </div>
@@ -624,18 +628,18 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
       <span class="pp-agency">United States Air Force &#183; 20th Fighter Wing &#183; Shaw AFB, SC</span>
       <div class="pp-title">Counter-sUAS Radar System Lease</div>
       <span class="pp-role">Prime Contractor &#183; Contract FA480326P0068 &#183; Awarded September 2026</span>
-      <p class="pp-desc">Heightened Senses shaped this requirement from the market research phase, then competed and won it as prime. We deliver two Robin Radar IRIS 3D counter-sUAS radar systems on a multi-year lease, with site survey, installation, network integration, spectrum coordination, operator training, and sustainment support for the 20th Security Forces Squadron. The award followed a total small business set-aside competition and was executed as a three-year vehicle.</p>
+      <p class="pp-desc">Heightened Senses competed for this requirement under a total small business set-aside and won it as prime. We are delivering two Robin Radar IRIS 3D counter-sUAS radar systems under a lease, with site survey, installation, network integration, spectrum coordination, operator training, and sustainment support. The contract carries a one-year base period and two priced option years exercisable at the Government's discretion. Current stage: awarded, delivery in progress.</p>
       <div class="pp-meta">
         <div class="pp-m"><span class="pp-ml">Contracting Office</span><div class="pp-mv">20th Contracting Squadron</div></div>
         <div class="pp-m"><span class="pp-ml">Scope</span><div class="pp-mv">Lease &#183; Install &#183; Train &#183; Sustain</div></div>
-        <div class="pp-m"><span class="pp-ml">Period</span><div class="pp-mv">Base year plus two option years</div></div>
+        <div class="pp-m"><span class="pp-ml">Period</span><div class="pp-mv">One-year base plus two priced option years</div></div>
         <div class="pp-m"><span class="pp-ml">Set-Aside</span><div class="pp-mv">Total Small Business</div></div>
       </div>
     </div>
     <div class="pp-side">
       <div class="pp-stat"><div class="pp-sv">PRIME</div><div class="pp-sl">Federal contractor of record, not a subcontractor</div></div>
-      <div class="pp-stat"><div class="pp-sv">3 YR</div><div class="pp-sl">Contract term with all option years awarded at signature</div></div>
-      <div class="pp-stat"><div class="pp-sv">SDVOSB</div><div class="pp-sl">Won on a set-aside where set-aside status alone does not win</div></div>
+      <div class="pp-stat"><div class="pp-sv">BASE + 2</div><div class="pp-sl">One-year base period with two priced option years</div></div>
+      <div class="pp-stat"><div class="pp-sv">COMPETED</div><div class="pp-sl">Won as prime on a total small business set-aside</div></div>
       <p class="pp-note">Additional quotes are in Government evaluation across Air Force, Space Force, Army, and Navy activities. We publish awards, not pursuits. Federal references available on request.</p>
     </div>
   </div>
@@ -685,12 +689,9 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="eco-grid">
     <div class="ecard"><span class="ecat">FPV and ISR UAS Platforms</span><div class="ename">Red Cat</div><span class="estat ok">Authorized Reseller</span><p class="eval">The ARACHNID family: FANG FPV, Black Widow ISR, Trichon hybrid VTOL. Black Widow is the Army's Short Range Reconnaissance program of record and FANG is Blue UAS cleared. We quote, deliver, and coordinate operator training through Red Cat's certified instructors, and Red Cat routes public safety inquiries to us directly.</p></div>
     <div class="ecard"><span class="ecat">Counter-UAS Mitigation</span><div class="ename">Ondas Sentinel</div><span class="estat ok">Authorized Reseller</span><p class="eval">Dronebuster handheld, DTI passive detection, DTIM and vehicle kits, and the Sawtooth fixed-site platform. We have quoted this line to security forces squadrons across three Air Force commands and we know what the salient characteristics actually require. Mitigation to authorized federal customers; passive detection to everyone.</p></div>
-    <div class="ecard"><span class="ecat">C-UAS Radar Detection</span><div class="ename">Robin Radar</div><span class="estat ok">Authorized Reseller</span><p class="eval">IRIS 360-degree 3D drone detection radar with drone-versus-bird classification. We are the prime contractor fielding two IRIS systems for the U.S. Air Force on a three-year lease, with siting, installation, integration, training, and sustainment in our scope. Purchase or lease.</p></div>
+    <div class="ecard"><span class="ecat">C-UAS Radar Detection</span><div class="ename">Robin Radar</div><span class="estat ok">Authorized Reseller</span><p class="eval">IRIS 360-degree 3D drone detection radar with drone-versus-bird classification. We are the prime contractor fielding two IRIS systems for the U.S. Air Force on a lease with a one-year base period and two priced option years, with siting, installation, integration, training, and sustainment in our scope. Purchase or lease.</p></div>
     <div class="ecard"><span class="ecat">Avionics and Flight Control</span><div class="ename">ARK Electronics</div><span class="estat ok">Preferred Partner</span><p class="eval">NDAA-compliant flight controllers, GNSS, and avionics for modular UAS builds. This is the component lane: when an installation or a program office needs Blue-compliant parts for an in-house build, we source them at volume and hold the relationship with the manufacturer.</p></div>
-    <div class="ecard"><span class="ecat">Heavy-Lift and Enterprise UAS</span><div class="ename">Freefly Systems</div><span class="estat ok">Authorized Dealer</span><p class="eval">Alta X heavy-lift multirotor and the Astro enterprise platform for mapping, inspection, and ISR payloads. Blue UAS listed. This is the platform for a payload the small quads cannot carry, and we can put it in front of a contracting officer as a set-aside buy.</p></div>
     <div class="ecard"><span class="ecat">Ground Control Systems</span><div class="ename">Desert Rotor</div><span class="estat ok">Fulfillment Partner</span><p class="eval">MIRA X ground control station, Blue UAS listed, U.S.-manufactured, HOTAS layout. One controller across fixed-wing, multirotor, ground, and surface platforms. Fulfillment agreement in place since April 2026.</p></div>
-    <!-- DRONESHIELD: STAGED, NOT LIVE. Do not remove the hidden attribute until (1) DroneShield has countersigned the Reseller Agreement and (2) DroneShield has completed its five-day website review under Section 2(b) and approved this card in writing. -->
-    <div class="ecard" hidden data-staged="droneshield"><span class="ecat">C-UAS Detection and Defeat</span><div class="ename">DroneShield</div><span class="estat ok">Authorized Reseller</span><p class="eval">Passive RF detection, portable and fixed-site sensors, and handheld and vehicle-mounted defeat systems. A second mitigation line alongside Ondas Sentinel, which is what platform agnostic looks like in a counter-UAS quote.</p></div>
   </div>
 </div>
 <!-- CONTACT -->
@@ -704,48 +705,41 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   <div class="sr"></div>
   <div class="con-grid">
     <div>
-      <p class="con-intro">Send the requirement, the site, the authority you operate under, and the funding source if you know it. We respond within one business day with a recommendation, pricing, lead times, and an execution plan. If we are not the right fit, we will tell you that within one business day too.</p>
+      <p class="con-intro">Send the requirement, the site, the authority you operate under, and the funding source if you know it. We acknowledge inquiries within one business day and confirm next steps after reviewing the requirement. A recommendation, pricing, and lead times follow that review. If we are not the right fit, we will tell you.</p>
       <div class="con-rows">
-        <div class="con-row"><span class="con-key">Email</span><span class="con-val" id="em" data-a="aW5mbw==" data-b="aGVpZ2h0ZW5lZHNlbnNlcy5uZXQ="></span></div>
+        <div class="con-row"><span class="con-key">Email</span><span class="con-val" id="em" data-a="Y29udHJhY3Rz" data-b="aGVpZ2h0ZW5lZHNlbnNlcy5uZXQ="></span></div>
         <div class="con-row"><span class="con-key">Phone</span><span class="con-val"><a href="tel:4439445958">(443) 944-5958</a></span></div>
         <div class="con-row"><span class="con-key">Addr</span><span class="con-val">187 Marina Wynd Way, Sneads Ferry, NC 28460</span></div>
         <div class="con-row"><span class="con-key">Cap St</span><span class="con-val ambl"><a href="capability-statement.html">View Capability Statement &#8599;</a>&nbsp;&nbsp;<a href="assets/Heightened_Senses_Capability_Statement.pdf" target="_blank" style="color:var(--muted);font-size:11px;">PDF &#8595;</a></span></div>
       </div>
     </div>
     <div>
-      <form class="cform" id="cform" novalidate>
+      <form class="cform" id="cform" novalidate aria-describedby="fnote">
+        <p class="fnote" id="fnote">This form prepares an email to contracts@heightenedsenses.net in your email application. Nothing is sent until you send it from there. Fields marked * are required.</p>
         <div class="f2">
-          <div class="fg" style="margin-bottom:0"><label class="fl">First Name</label><input class="fi" type="text" placeholder="Your First Name" required></div>
-          <div class="fg" style="margin-bottom:0"><label class="fl">Last Name</label><input class="fi" type="text" placeholder="Your Last Name" required></div>
+          <div class="fg" style="margin-bottom:0"><label class="fl" for="f-first">First Name *</label><input class="fi" id="f-first" name="first_name" type="text" autocomplete="given-name" required aria-describedby="f-first-err"><span class="ferr" id="f-first-err"></span></div>
+          <div class="fg" style="margin-bottom:0"><label class="fl" for="f-last">Last Name *</label><input class="fi" id="f-last" name="last_name" type="text" autocomplete="family-name" required aria-describedby="f-last-err"><span class="ferr" id="f-last-err"></span></div>
         </div>
-        <div class="fg"><label class="fl">Organization</label><input class="fi" type="text" placeholder="Agency / Company" required></div>
-        <div class="fg"><label class="fl">Email Address</label><input class="fi" type="email" placeholder="you@agency.gov" required></div>
+        <div class="fg"><label class="fl" for="f-org">Organization *</label><input class="fi" id="f-org" name="organization" type="text" autocomplete="organization" placeholder="Agency / Company" required aria-describedby="f-org-err"><span class="ferr" id="f-org-err"></span></div>
+        <div class="fg"><label class="fl" for="f-email">Work Email *</label><input class="fi" id="f-email" name="email" type="email" autocomplete="email" placeholder="you@agency.gov" required aria-describedby="f-email-err"><span class="ferr" id="f-email-err"></span></div>
+        <div class="fg"><label class="fl" for="f-phone">Phone (optional)</label><input class="fi" id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
         <div class="fg">
-          <label class="fl">Inquiry Type</label>
-          <select class="fsel fi" required>
+          <label class="fl" for="f-type">Requirement Type *</label>
+          <select class="fsel fi" id="f-type" name="requirement_type" required aria-describedby="f-type-err">
             <option value="">Select...</option>
-            <option>Platform Procurement</option>
-            <option>UAS Integration</option>
-            <option>C-UAS Detection / Airspace Awareness</option>
-            <option>Operator Training</option>
-            <option>NDAA Compliance Determination</option>
-            <option>UAS or C-UAS Program Design</option>
-            <option>Manufacturer Federal Market Entry</option>
-            <option>Procurement or Requirement Strategy</option>
-            <option>Teaming or Subcontracting</option>
-            <option>Capability Demonstration</option>
-            <option>OEM Channel Inquiry</option>
+            <option>C-UAS Integration / Airspace Awareness</option>
+            <option>UAS Procurement / Integration</option>
+            <option>Training</option>
+            <option>Advisory / Program Support</option>
+            <option>OEM / Teaming</option>
             <option>Other</option>
           </select>
+          <span class="ferr" id="f-type-err"></span>
         </div>
-        <div class="fg"><label class="fl">Requirements / Message</label><textarea class="fta fi" placeholder="Share requirements, part numbers, or program details..." required></textarea></div>
-        <button type="submit" class="fsub">SUBMIT REQUEST</button>
+        <div class="fg"><label class="fl" for="f-msg">Requirement Summary *</label><textarea class="fta fi" id="f-msg" name="message" placeholder="Requirement, site, timeframe, part numbers, or program details" required aria-describedby="f-msg-err"></textarea><span class="ferr" id="f-msg-err"></span></div>
+        <button type="submit" class="fsub">Prepare Email</button>
+        <p class="fstat" id="fstat" role="status" aria-live="polite"></p>
       </form>
-      <div class="fsuc" id="fsuc">
-        <div class="fsuc-ic">&#10003;</div>
-        <div class="fsuc-t">Request Received</div>
-        <p class="fsuc-b">Thank you. We will respond with sourcing options, lead times, and an execution plan within one business day.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -773,23 +767,40 @@ window.addEventListener('scroll', function() {
   var n = document.getElementById('main-nav');
   if (n) n.style.background = window.scrollY > 40 ? 'rgba(4,8,13,.99)' : 'rgba(5,9,14,.97)';
 }, false);
-document.getElementById('cform').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var inputs = this.querySelectorAll('[required]');
-  var valid = true;
-  for (var i = 0; i < inputs.length; i++) {
-    inputs[i].style.borderColor = '';
-    if (!inputs[i].value.trim()) { inputs[i].style.borderColor = 'rgba(220,60,30,.65)'; valid = false; }
-    if (inputs[i].type === 'email' && inputs[i].value && (!inputs[i].value.includes('@') || !inputs[i].value.includes('.'))) { inputs[i].style.borderColor = 'rgba(220,60,30,.65)'; valid = false; }
-  }
-  if (!valid) return;
-  var btn = this.querySelector('.fsub');
-  btn.textContent = 'SENDING...'; btn.style.opacity = '.6'; btn.disabled = true;
-  setTimeout(function() {
-    document.getElementById('cform').style.display = 'none';
-    document.getElementById('fsuc').classList.add('on');
-  }, 900);
-});
+(function(){
+  var f = document.getElementById('cform');
+  if (!f) return;
+  var TO = 'contracts@heightenedsenses.net';
+  var checks = [
+    ['f-first', 'Enter your first name.'],
+    ['f-last', 'Enter your last name.'],
+    ['f-org', 'Enter your organization.'],
+    ['f-email', 'Enter a valid work email address.'],
+    ['f-type', 'Select a requirement type.'],
+    ['f-msg', 'Describe the requirement.']
+  ];
+  f.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var first = null;
+    checks.forEach(function(c) {
+      var el = document.getElementById(c[0]), err = document.getElementById(c[0] + '-err');
+      var v = el.value.trim();
+      var bad = !v || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+      el.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      err.textContent = bad ? c[1] : '';
+      if (bad && !first) first = el;
+    });
+    var st = document.getElementById('fstat');
+    if (first) { st.textContent = 'Please correct the highlighted fields.'; first.focus(); return; }
+    var g = function(id){ return document.getElementById(id).value.trim(); };
+    var subject = 'Requirement: ' + g('f-type') + ' | ' + g('f-org');
+    var body = 'Name: ' + g('f-first') + ' ' + g('f-last') + '\nOrganization: ' + g('f-org') +
+      '\nEmail: ' + g('f-email') + '\nPhone: ' + (g('f-phone') || 'Not provided') +
+      '\nRequirement type: ' + g('f-type') + '\n\nRequirement summary:\n' + g('f-msg') + '\n';
+    window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    st.textContent = 'Your email application should open with this message drafted. It is not sent until you send it there. If nothing opened, email ' + TO + ' or call (443) 944-5958. Your entries remain on this page.';
+  });
+})();
 (function(){
   var el = document.getElementById('em');
   if (el) {
