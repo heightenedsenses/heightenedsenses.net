@@ -333,14 +333,11 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 }
 /* ===== MULTI-PAGE ADDITIONS (Sep 30, 2026) ===== */
 .hero.sub{min-height:auto;padding:120px var(--pad) 64px}
-.hero.photo{min-height:560px;grid-template-columns:1fr;padding:130px var(--pad) 72px;background:var(--bg)}
-.hero.photo .hero-photo{position:absolute;inset:0;z-index:0}
-.hero.photo .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
-.hero.photo .hero-fade{z-index:1;background:linear-gradient(90deg,rgba(7,13,20,.96) 0%,rgba(7,13,20,.86) 38%,rgba(7,13,20,.45) 68%,rgba(7,13,20,.25) 100%),linear-gradient(180deg,rgba(7,13,20,.55) 0%,transparent 30%,transparent 70%,var(--bg) 100%)}
-.hero.photo .hero-l{max-width:600px}
-.hero-cap{position:absolute;right:var(--pad);bottom:16px;z-index:3;font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
-@media(max-width:900px){.hero.photo{padding:100px 32px 56px;min-height:0}.hero.photo .hero-fade{background:linear-gradient(180deg,rgba(7,13,20,.9) 0%,rgba(7,13,20,.8) 60%,var(--bg) 100%)}.hero-cap{position:static;margin-top:20px}}
-@media(max-width:600px){.hero.photo{padding:84px 18px 40px}}
+.photo-frame{position:relative;width:100%;max-width:620px;padding:6px;border:1px solid var(--cb2);border-radius:10px;background:linear-gradient(135deg,rgba(63,182,216,.10),rgba(232,163,61,.06));box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.03)}
+.photo-frame img{display:block;width:100%;height:auto;border-radius:6px;filter:saturate(.92) contrast(1.04)}
+.photo-frame::after{content:'';position:absolute;inset:6px;border-radius:6px;background:linear-gradient(180deg,transparent 60%,rgba(7,13,20,.45) 100%);pointer-events:none}
+.photo-frame .hc{width:22px;height:22px;z-index:3}
+.photo-frame .hc.tl{top:-2px;left:-2px}.photo-frame .hc.tr{top:-2px;right:-2px}.photo-frame .hc.bl{bottom:-2px;left:-2px}.photo-frame .hc.br{bottom:-2px;right:-2px}
 @media(max-width:900px){.hero.sub{padding:96px 32px 48px}}
 @media(max-width:600px){.hero.sub{padding:80px 18px 40px}}
 .skip{position:absolute;left:12px;top:-60px;background:var(--teal);color:#06121a;padding:10px 16px;font-weight:600;z-index:2000;border-radius:4px}
