@@ -1,0 +1,38 @@
+# Heightened Senses, LLC
+
+> Service-Disabled Veteran-Owned Small Business (SDVOSB) in Sneads Ferry, North Carolina. Vendor-agnostic integrator, authorized reseller, operator trainer, and paid advisory practice for uncrewed aircraft systems (UAS) and counter-UAS (C-UAS). Serves U.S. federal, Department of War, public safety, critical-infrastructure, and allied-manufacturer clients. Not a manufacturer. U.S. Air Force prime contractor. CAGE 9XFG8. UEI SSZREV67GJK5.
+
+Founded July 2023 by Paul "Buck" Chambers, retired U.S. Marine Corps Gunnery Sergeant with a counterintelligence and HUMINT background, FAA Part 107 certificated.
+
+## What we do
+
+- UAS and C-UAS integration: requirement definition, system selection, delivery, installation, operator training, and sustainment.
+- NDAA Section 848, American Security Drone Act, and Blue UAS compliance determinations for agencies buying and manufacturers selling.
+- Paid advisory for U.S. and allied foreign manufacturers entering the U.S. federal, public safety, and critical-infrastructure markets: export control posture (ITAR, EAR, FMS), Buy American positioning, SDVOSB channel structure, teaming, and scoped introductions.
+- Operator, maintainer, and supervisor training on UAS and detection systems. We do not issue counter-UAS certifications; under 6 CFR Part 124 the FBI National Counter-UAS Training Center is the sole certifying authority.
+- Field demonstrations and multi-vendor evaluations on an installation or range.
+
+## Engagement model and fees
+
+- First discovery call is free. Every engagement runs on a one-page Statement of Work with a named deliverable, timeline, and fee.
+- Project advisory: typically $5,000 to $25,000 by scope, two to eight weeks, 50 percent on signature and 50 percent on delivery.
+- Go-to-market retainer: from $5,000 per month, three-month minimum.
+- On-site and field work: $2,000 to $2,500 per principal day, travel and lodging at cost. Government buyers receive fixed-price line items.
+- Advisory and supply are kept separate. Where we advise an agency on a requirement, we do not compete for the resulting procurement (2 CFR 200.319 and federal OCI principles).
+
+## Pages
+
+- [Home](https://heightenedsenses.net/): overview and positioning.
+- [UAS](https://heightenedsenses.net/uas.html): uncrewed aircraft platforms and integration.
+- [Counter-UAS](https://heightenedsenses.net/c-uas.html): detection, identification, and mitigation layers, authorities, and program design.
+- [Training & Advisory](https://heightenedsenses.net/training-advisory.html): engagement model, published fee ranges, advisory focus areas, FAQ.
+- [Federal Experience](https://heightenedsenses.net/federal-experience.html): contract past performance.
+- [How to Buy](https://heightenedsenses.net/how-to-buy.html): set-aside and procurement pathways.
+- [About](https://heightenedsenses.net/about.html): founder and authorized partner ecosystem.
+- [Capability Statement](https://heightenedsenses.net/capability-statement.html): one-page federal capability statement.
+- [Contact](https://heightenedsenses.net/contact.html): requirement intake form; (443) 944-5958; contracts@heightenedsenses.net.
+
+## Terminology
+
+- "Uncrewed" is used in place of "unmanned" throughout.
+- C-UAS, counter-UAS, and counter-drone are used interchangeably.
