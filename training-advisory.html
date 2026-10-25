@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Training &amp; Advisory | Heightened Senses</title>
+<title>UAS &amp; Counter-UAS Training, Advisory &amp; U.S. Market Entry | Heightened Senses</title>
 <meta name="description" content="Paid training and advisory with a written scope: operator training, UAS and C-UAS program planning, NDAA and ASDA compliance review, and U.S. market entry support for domestic and allied manufacturers. Published engagement fees.">
 <link rel="canonical" href="https://heightenedsenses.net/training-advisory.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Heightened Senses">
-<meta property="og:title" content="Training &amp; Advisory | Heightened Senses">
+<meta property="og:title" content="UAS &amp; Counter-UAS Training, Advisory &amp; U.S. Market Entry | Heightened Senses">
 <meta property="og:description" content="Paid training and advisory with a written scope: operator training, UAS and C-UAS program planning, NDAA and ASDA compliance review, and U.S. market entry support for domestic and allied manufacturers. Published engagement fees.">
 <meta property="og:url" content="https://heightenedsenses.net/training-advisory.html">
 <meta property="og:image" content="https://heightenedsenses.net/assets/logo-full.png">
@@ -21,6 +21,95 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/hs-site.css">
+<style>
+/* Page-scoped grid: 3 columns on desktop, 2 on tablet, 1 on phone. Replaces inline styles that blocked the mobile override. */
+.adv-cards.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.adv-cards.three{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.adv-cards.three{grid-template-columns:1fr}}
+.fees-intro{max-width:880px;color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:26px}
+.faq{max-width:880px}
+.faq details{border:1px solid var(--line);border-radius:8px;background:var(--bg2);margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 20px;font-family:var(--fh);font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--white);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--teal);font-size:22px;line-height:1;flex-shrink:0}
+.faq details[open] summary::after{content:"\2212"}
+.faq .ans{padding:0 20px 18px;color:var(--muted);font-size:14.5px;line-height:1.75}
+@media(max-width:600px){.faq summary{font-size:15px;padding:14px 16px}.faq .ans{padding:0 16px 16px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://heightenedsenses.net/#org",
+      "name": "Heightened Senses, LLC",
+      "alternateName": "Heightened Senses",
+      "url": "https://heightenedsenses.net/",
+      "logo": "https://heightenedsenses.net/assets/logo-full.png",
+      "description": "Service-Disabled Veteran-Owned Small Business (SDVOSB) providing uncrewed aircraft system (UAS) and counter-UAS integration, NDAA-compliant procurement, operator training, and paid advisory for federal, public safety, critical-infrastructure, and allied-manufacturer clients.",
+      "foundingDate": "2023-07",
+      "founder": {"@type": "Person", "name": "Paul Chambers", "alternateName": "Buck Chambers", "jobTitle": "Founder and Owner", "description": "Retired U.S. Marine Corps Gunnery Sergeant; counterintelligence and HUMINT background; FAA Part 107 certificated remote pilot."},
+      "address": {"@type": "PostalAddress", "addressLocality": "Sneads Ferry", "addressRegion": "NC", "postalCode": "28460", "addressCountry": "US"},
+      "telephone": "+1-443-944-5958",
+      "email": "contracts@heightenedsenses.net",
+      "sameAs": ["https://www.linkedin.com/in/pchambers-heightenedsenses/"],
+      "identifier": [
+        {"@type": "PropertyValue", "propertyID": "CAGE", "value": "9XFG8"},
+        {"@type": "PropertyValue", "propertyID": "UEI", "value": "SSZREV67GJK5"},
+        {"@type": "PropertyValue", "propertyID": "NAICS", "value": "336411, 334511, 541330, 541690, 541715, 611519"}
+      ],
+      "knowsAbout": ["Uncrewed aircraft systems", "Counter-UAS", "C-UAS integration", "NDAA Section 848 compliance", "American Security Drone Act", "Blue UAS", "Federal procurement", "SDVOSB set-asides", "ITAR and EAR export controls", "U.S. defense market entry for allied manufacturers", "Critical infrastructure drone detection", "UAS operator training"],
+      "areaServed": "US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://heightenedsenses.net/training-advisory.html",
+      "url": "https://heightenedsenses.net/training-advisory.html",
+      "name": "Training & Advisory | Heightened Senses",
+      "isPartOf": {"@id": "https://heightenedsenses.net/#org"},
+      "about": {"@id": "https://heightenedsenses.net/#service"},
+      "dateModified": "2026-10-25"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://heightenedsenses.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Training & Advisory", "item": "https://heightenedsenses.net/training-advisory.html"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://heightenedsenses.net/#service",
+      "name": "UAS and Counter-UAS Training and Advisory",
+      "serviceType": "Defense technology advisory, compliance review, and operator training",
+      "provider": {"@id": "https://heightenedsenses.net/#org"},
+      "areaServed": "US",
+      "audience": {"@type": "Audience", "audienceType": "Federal agencies, military installations, public safety agencies, critical infrastructure operators, U.S. and allied UAS and C-UAS manufacturers"},
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Engagement Model",
+        "itemListElement": [
+          {"@type": "Offer", "name": "Project Advisory (scoped deliverable)", "description": "NDAA or ASDA determination, sources-sought response, federal or U.S. market entry plan, C-UAS program design, or solicitation quote package. Two to eight weeks. 50 percent on signature, 50 percent on delivery.", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 5000, "maxPrice": 25000, "priceCurrency": "USD"}},
+          {"@type": "Offer", "name": "Go-to-Market Retainer", "description": "Ongoing U.S. market entry and GTM advisory for UAS, C-UAS, and sensor manufacturers. Three-month minimum.", "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 5000, "priceCurrency": "USD", "unitText": "per month"}},
+          {"@type": "Offer", "name": "On-Site and Field Work", "description": "Site surveys, demonstration support, operator training delivery, multi-vendor evaluations. Travel and lodging at cost.", "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 2000, "maxPrice": 2500, "priceCurrency": "USD", "unitText": "per principal day"}}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Does Heightened Senses charge for advisory work?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The first discovery call is free. After that, every engagement runs on a one-page Statement of Work with a named deliverable, timeline, and fee. Project advisory typically runs $5,000 to $25,000 by scope, go-to-market retainers start at $5,000 per month with a three-month minimum, and on-site work is $2,000 to $2,500 per principal day plus travel at cost."}},
+        {"@type": "Question", "name": "Can Heightened Senses help a non-U.S. drone or counter-drone company enter the U.S. market?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Heightened Senses advises allied foreign manufacturers on export control posture (ITAR, EAR, FMS), NDAA Section 848 and Buy American positioning, SDVOSB channel structure, teaming agreements, and scoped introductions into U.S. federal, public safety, and critical-infrastructure markets. Typical U.S. defense sales cycles run 12 to 24 months and the engagement is planned around that."}},
+        {"@type": "Question", "name": "Is Heightened Senses a manufacturer or a reseller?", "acceptedAnswer": {"@type": "Answer", "text": "Neither exclusively. Heightened Senses is a vendor-agnostic integrator, authorized reseller, trainer, and advisory practice. It is not a manufacturer. Manufacturers it represents are disclosed before any advisory work begins, and if the right answer is a platform it does not carry, that is the answer the client receives."}},
+        {"@type": "Question", "name": "If Heightened Senses advises my agency on a requirement, can it also bid on the procurement?", "acceptedAnswer": {"@type": "Answer", "text": "No. Advisory and supply are kept separate. Where Heightened Senses helps an agency develop a requirement, specification, or grant application, it does not compete for the resulting procurement, consistent with 2 CFR 200.319 and federal organizational conflict of interest principles, and it states that in writing at the start of the engagement."}},
+        {"@type": "Question", "name": "Does Heightened Senses certify counter-UAS operators?", "acceptedAnswer": {"@type": "Answer", "text": "No. Under 6 CFR Part 124, the FBI National Counter-UAS Training Center is the sole certifying authority for mitigation and detection-and-warning certification. Heightened Senses delivers system-level operator, maintainer, and supervisor training, exercise design, and OEM-authorized proficiency training that sits on top of that certification. It does not issue certifications and is not a certified training center."}},
+        {"@type": "Question", "name": "What is the difference between an NDAA determination and Blue UAS status?", "acceptedAnswer": {"@type": "Answer", "text": "An NDAA Section 848 and American Security Drone Act determination establishes whether a platform and its components are free of covered foreign entities and eligible for federal purchase. Blue UAS is a Defense Innovation Unit cleared list that is one route to that eligibility but not the only one. Heightened Senses produces written, sourced determinations by configuration that an agency can place in a contract file."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -78,14 +167,14 @@
   <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div><div class="ey-line"></div><span class="ey-lbl">Advisory Practice</span></div>
   <h2 class="sh" id="adv-h"><span class="w">ADVISORY </span><span class="a">FOCUS AREAS</span></h2>
   <div class="sr"></div>
-  <div class="adv-cards" style="grid-template-columns:repeat(3,1fr)">
-    <div class="adv-card"><span class="k">Compliance</span><h3>NDAA &amp; ASDA Determinations</h3><p>Covered-entity analysis, bill of materials review, Blue UAS cleared-list status, and written determinations for a contract file.</p></div>
-    <div class="adv-card"><span class="k">Manufacturers</span><h3>Federal Market Entry</h3><p>What compliance requires, how to structure a product line for federal buyers, and how to build a channel that does not disintermediate you.</p></div>
-    <div class="adv-card"><span class="k">Allied Manufacturers</span><h3>U.S. Market Entry for Non-U.S. OEMs</h3><p>Export control posture (ITAR, EAR, FMS), NDAA Section 848 and Buy American positioning, SDVOSB channel structure, teaming agreements, and a scoped introduction program for allied manufacturers entering U.S. federal and critical-infrastructure markets.</p></div>
-    <div class="adv-card"><span class="k">Programs</span><h3>UAS Program Design</h3><p>CONOPS, policy, SOPs, training pipeline, Part 107 and waiver pathways, data handling, and the sustainment plan.</p></div>
-    <div class="adv-card"><span class="k">Counter-UAS</span><h3>C-UAS Program Design</h3><p>Authority mapping, threat characterization, layered detection architecture, and operations plans. <a href="c-uas.html" style="color:var(--teal)">C-UAS page</a></p></div>
-    <div class="adv-card"><span class="k">Procurement</span><h3>Acquisition Strategy</h3><p>Market research and sources sought responses, set-aside strategy, acquisition planning, and quote preparation.</p></div>
-    <div class="adv-card"><span class="k">Reference</span><h3>Regulatory Baseline</h3><p>A maintained register of federal, state, and local UAS and counter-UAS authorities, organized by decision.</p></div>
+  <div class="adv-cards three">
+    <article class="adv-card"><span class="k">Compliance</span><h3>NDAA &amp; ASDA Determinations</h3><p>Covered-entity analysis, bill of materials review, Blue UAS cleared-list status, and written determinations for a contract file.</p></article>
+    <article class="adv-card"><span class="k">Manufacturers</span><h3>Federal Market Entry</h3><p>What compliance requires, how to structure a product line for federal buyers, and how to build a channel that does not disintermediate you.</p></article>
+    <article class="adv-card"><span class="k">Allied Manufacturers</span><h3>U.S. Market Entry for Non-U.S. OEMs</h3><p>Export control posture (ITAR, EAR, FMS), NDAA Section 848 and Buy American positioning, SDVOSB channel structure, teaming agreements, and a scoped introduction program for allied manufacturers entering U.S. federal and critical-infrastructure markets.</p></article>
+    <article class="adv-card"><span class="k">Programs</span><h3>UAS Program Design</h3><p>CONOPS, policy, SOPs, training pipeline, Part 107 and waiver pathways, data handling, and the sustainment plan.</p></article>
+    <article class="adv-card"><span class="k">Counter-UAS</span><h3>C-UAS Program Design</h3><p>Authority mapping, threat characterization, layered detection architecture, and operations plans. <a href="c-uas.html" style="color:var(--teal)">C-UAS page</a></p></article>
+    <article class="adv-card"><span class="k">Procurement</span><h3>Acquisition Strategy</h3><p>Market research and sources sought responses, set-aside strategy, acquisition planning, and quote preparation.</p></article>
+    <article class="adv-card"><span class="k">Reference</span><h3>Regulatory Baseline</h3><p>A maintained register of federal, state, and local UAS and counter-UAS authorities, organized by decision.</p></article>
   </div>
 </section>
 
@@ -93,8 +182,8 @@
   <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div><div class="ey-line"></div><span class="ey-lbl">Engagement Model</span></div>
   <h2 class="sh" id="fees-h"><span class="w">HOW WE </span><span class="a">CHARGE</span></h2>
   <div class="sr"></div>
-  <p style="max-width:880px;color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:26px">Every engagement runs on a one-page Statement of Work that names the deliverable, the timeline, and the fee before work begins. The first discovery call is free. We do not run open-ended retainers without a written scope, and we do not provide unpaid advisory beyond that first conversation. The ranges below are typical; each engagement is quoted against its own scope.</p>
-  <div class="adv-cards" style="grid-template-columns:repeat(3,1fr)">
+  <p class="fees-intro">Every engagement runs on a one-page Statement of Work that names the deliverable, the timeline, and the fee before work begins. The first discovery call is free. We do not run open-ended retainers without a written scope, and we do not provide unpaid advisory beyond that first conversation. The ranges below are typical; each engagement is quoted against its own scope.</p>
+  <div class="adv-cards three">
     <article class="adv-card"><span class="k">Project Advisory</span><h3>Scoped Deliverable</h3><p>A named deliverable against a written scope: an NDAA or ASDA determination, a sources-sought response, a federal or U.S. market entry plan, a C-UAS program design, or a quote package built against a solicitation.</p><p class="meta"><b>Typical fee:</b> $5,000 to $25,000 by scope.<br><b>Timeline:</b> two to eight weeks.<br><b>Terms:</b> 50 percent on signature, 50 percent on delivery.</p></article>
     <article class="adv-card"><span class="k">Go-to-Market Retainer</span><h3>Market Entry &amp; GTM Advisory</h3><p>Ongoing advisory for a UAS, C-UAS, or sensor manufacturer entering or expanding in U.S. federal, public safety, and critical-infrastructure markets: capture planning, compliance support, channel strategy, and qualified introductions under a signed agreement.</p><p class="meta"><b>Typical fee:</b> from $5,000 per month.<br><b>Minimum:</b> three months.<br><b>Scales</b> with scope and principal hours.</p></article>
     <article class="adv-card"><span class="k">On-Site &amp; Field</span><h3>Site Work, Demonstrations &amp; Training Days</h3><p>Site surveys, demonstration coordination and support, operator training delivery, and multi-vendor evaluations on your installation or at a range.</p><p class="meta"><b>Day rate:</b> $2,000 to $2,500 per principal day.<br><b>Travel and lodging:</b> at cost.<br><b>Government buyers:</b> fixed-price line items on quote; GSA-benchmarked labor rates on request.</p></article>
@@ -103,7 +192,21 @@
   <div class="hero-acts" style="margin-top:26px"><a href="contact.html?type=Advisory%20%2F%20Program%20Support" class="btn-a">Request a Scoped Proposal</a></div>
 </section>
 
-<section class="cap-s sec" aria-labelledby="field-h" id="field-demonstrations">
+<section class="cap-s sec" aria-labelledby="faq-h" id="faq">
+  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient.png" alt=""></div><div class="ey-line"></div><span class="ey-lbl">Common Questions</span></div>
+  <h2 class="sh" id="faq-h"><span class="w">BEFORE YOU </span><span class="a">REACH OUT</span></h2>
+  <div class="sr"></div>
+  <div class="faq">
+    <details><summary>Does Heightened Senses charge for advisory work?</summary><div class="ans">Yes. The first discovery call is free. After that, every engagement runs on a one-page Statement of Work with a named deliverable, timeline, and fee. Project advisory typically runs $5,000 to $25,000 by scope, go-to-market retainers start at $5,000 per month with a three-month minimum, and on-site work is $2,000 to $2,500 per principal day plus travel at cost.</div></details>
+    <details><summary>Can you help a non-U.S. drone or counter-drone company enter the U.S. market?</summary><div class="ans">Yes. We advise allied foreign manufacturers on export control posture (ITAR, EAR, FMS), NDAA Section 848 and Buy American positioning, SDVOSB channel structure, teaming agreements, and scoped introductions into U.S. federal, public safety, and critical-infrastructure markets. Typical U.S. defense sales cycles run 12 to 24 months and the engagement is planned around that.</div></details>
+    <details><summary>Are you a manufacturer or a reseller?</summary><div class="ans">Neither exclusively. Heightened Senses is a vendor-agnostic integrator, authorized reseller, trainer, and advisory practice. We are not a manufacturer. Manufacturers we represent are disclosed before any advisory work begins, and if the right answer is a platform we do not carry, that is the answer you receive.</div></details>
+    <details><summary>If you advise my agency on a requirement, can you also bid on the procurement?</summary><div class="ans">No. Advisory and supply are kept separate. Where we help an agency develop a requirement, specification, or grant application, we do not compete for the resulting procurement, consistent with 2 CFR 200.319 and federal organizational conflict of interest principles, and we state that in writing at the start of the engagement.</div></details>
+    <details><summary>Do you certify counter-UAS operators?</summary><div class="ans">No. Under 6 CFR Part 124, the FBI National Counter-UAS Training Center is the sole certifying authority for mitigation and detection-and-warning certification. We deliver system-level operator, maintainer, and supervisor training, exercise design, and OEM-authorized proficiency training that sits on top of that certification. We do not issue certifications and are not a certified training center.</div></details>
+    <details><summary>What is the difference between an NDAA determination and Blue UAS status?</summary><div class="ans">An NDAA Section 848 and American Security Drone Act determination establishes whether a platform and its components are free of covered foreign entities and eligible for federal purchase. Blue UAS is a Defense Innovation Unit cleared list that is one route to that eligibility but not the only one. We produce written, sourced determinations by configuration that an agency can place in a contract file.</div></details>
+  </div>
+</section>
+
+<section class="adv-s sec" aria-labelledby="field-h" id="field-demonstrations">
   <div class="field">
     <figure>
         <div class="frame">
