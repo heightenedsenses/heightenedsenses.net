@@ -35,7 +35,6 @@
   section{padding:88px 0}
 
   body{padding-top:56px}
-  @media(max-width:420px){.pp-facts{grid-template-columns:1fr}.pp-facts>div,.idcell{min-width:0;overflow-wrap:anywhere}}
   [id]{scroll-margin-top:80px}
   :focus-visible{outline:2px solid var(--accent-2);outline-offset:3px}
   /* HERO */
@@ -150,6 +149,20 @@
   .contact-meta{margin-top:34px;display:flex;gap:34px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
   .contact-meta b{color:var(--text)}
 
+  /* Mobile: fact tables stack to one column, labels keep whole words */
+  .pp-facts>div,.idcell{min-width:0}
+  .pp-facts .k,.idcell .k{overflow-wrap:normal;word-break:normal;hyphens:none}
+  .pp-facts .v,.idcell .v{overflow-wrap:break-word}
+  @media(max-width:600px){
+    .pp-facts{grid-template-columns:1fr}
+    .pp-facts div{padding:14px 16px}
+    .pp-facts .k,.idcell .k{letter-spacing:.08em;font-size:.72rem}
+    .pp-facts .v{font-size:1rem}
+    .idtable{grid-template-columns:1fr 1fr}
+    .idcell{padding:14px 14px}
+    .idcell .v{font-size:.9rem}
+  }
+  @media(max-width:400px){.idtable{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
