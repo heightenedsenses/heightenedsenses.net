@@ -404,3 +404,5 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
   .field h3{font-size:26px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.fb a.social{display:inline-flex;align-items:center;gap:6px;color:var(--teal)}.fb a.social:hover{color:#fff}

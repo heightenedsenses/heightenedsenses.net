@@ -60,3 +60,5 @@ nav img,footer img{display:block;max-width:100%}
   .fcreds span{padding:5px 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.06);width:100%;text-align:center}
   .fcreds span:last-child{border-bottom:none}
 }
+
+.fb a.social{display:inline-flex;align-items:center;gap:6px;color:var(--teal)}.fb a.social:hover{color:#fff}
