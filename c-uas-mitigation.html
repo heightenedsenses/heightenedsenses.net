@@ -22,7 +22,15 @@
 <meta property="og:title" content="Counter-UAS Mitigation | Heightened Senses">
 <meta property="og:description" content="Handheld, wearable, vehicle-mounted, and fixed-site counter-UAS mitigation for agencies that hold mitigation authority, scoped against that authority before we quote.">
 <meta property="og:url" content="https://heightenedsenses.net/c-uas-mitigation.html">
-<meta property="og:image" content="https://heightenedsenses.net/assets/logo-full.png">
+<meta property="og:image" content="https://heightenedsenses.net/assets/og-heightened-senses-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Operators reviewing an uncrewed aircraft at a July 2026 field demonstration, with the Heightened Senses wordmark.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Counter-UAS Mitigation | Heightened Senses">
+<meta name="twitter:description" content="Handheld, wearable, vehicle-mounted, and fixed-site counter-UAS mitigation for agencies that hold mitigation authority, scoped against that authority before we quote.">
+<meta name="twitter:image" content="https://heightenedsenses.net/assets/og-heightened-senses-1200x630.jpg">
+<meta name="twitter:image:alt" content="Operators reviewing an uncrewed aircraft at a July 2026 field demonstration, with the Heightened Senses wordmark.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -77,7 +85,7 @@
 
 <a class="skip" href="#main">Skip to main content</a>
 <nav id="main-nav" aria-label="Primary">
-  <a href="index.html"><img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses home" width="2000" height="420"></a>
+  <a href="/"><img class="logo-img" src="assets/logo-480.png" alt="Heightened Senses home" width="480" height="101"></a>
   <div class="nav-links" id="nav-links">
     <a href="uas.html">UAS</a>
     <a href="c-uas.html" aria-current="true">C-UAS</a>
@@ -107,7 +115,7 @@
     <p class="lead">Response starts with alerting and a pre-planned operations plan. Mitigation is one part of response, and only for agencies that hold the authority. It is also the most regulated layer of a counter-UAS program. Before we quote a mitigation system, we confirm the authority your agency holds, the training and certification that authority requires, and how the system fits the detection architecture around it.</p>
   </div>
 </section>
-<section id="systems" aria-labelledby="mit-h">
+<section id="systems" aria-label="Mitigation system options">
   <div class="wrap">
     <div class="sec-kicker">Ondas Sentinel &#183; Dronebuster&reg;</div>
     <h2 id="mit-h">Mitigation Systems</h2>
@@ -191,7 +199,7 @@
 
 <footer>
   <div class="ft">
-    <img class="logo-img" src="assets/logo-full.png" alt="Heightened Senses" width="2000" height="420" loading="lazy">
+    <img decoding="async" class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy">
     <div class="fcreds">
       <span>SBA-Certified SDVOSB</span><span>U.S. Air Force Prime Contractor</span><span>Founder: FAA Part 107 Remote Pilot</span>
     </div>
@@ -209,10 +217,11 @@
 </footer>
 <script src="assets/hs-site.js" defer></script>
 <script>
-// Play OEM videos when at least half visible; pause when scrolled away. Skipped for reduced motion.
+// Play OEM videos when at least half visible; pause when scrolled away. Skipped for reduced motion and data saver.
 (function(){
   if(!('IntersectionObserver' in window)) return;
   if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(navigator.connection && navigator.connection.saveData) return;
   var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
     if(e.intersectionRatio>=0.5){var p=v.play();if(p)p.catch(function(){});}else if(!v.paused){v.pause();}});},{threshold:[0,0.5,1]});
   document.querySelectorAll('video.scroll-video').forEach(function(v){io.observe(v);});

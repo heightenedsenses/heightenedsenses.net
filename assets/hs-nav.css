@@ -62,3 +62,6 @@ nav img,footer img{display:block;max-width:100%}
 }
 
 .fb a.social{display:inline-flex;align-items:center;gap:6px;color:var(--teal)}.fb a.social:hover{color:#fff}
+
+/* Footer link tap targets: at least 24px tall */
+.fb a{display:inline-flex;align-items:center;min-height:24px;padding:4px 0}

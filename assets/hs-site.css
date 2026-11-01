@@ -464,3 +464,12 @@ button.copy:hover{color:#fff;border-color:var(--teal)}
 .adv-cards.three{grid-template-columns:repeat(3,1fr)}
 @media(max-width:900px){.adv-cards.three{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.adv-cards.three{grid-template-columns:1fr}}
+
+/* In-text links are underlined so they are distinguishable from body copy (WCAG 1.4.1) */
+main p a:not([class]),main li a:not([class]),main dd a:not([class]),main .ans a:not([class]){text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+
+/* Footer link tap targets: at least 24px tall */
+.fb a{display:inline-flex;align-items:center;min-height:24px;padding:4px 0}
+/* Minimum 24px tap targets for text links and small buttons (WCAG 2.5.8) */
+a.more,.con-val a,.cc-v a{display:inline-flex;align-items:center;min-height:24px}
+button.copy{min-height:24px}
