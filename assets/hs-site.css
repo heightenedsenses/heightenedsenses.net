@@ -448,6 +448,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 .awards{display:flex;flex-direction:column;gap:22px}
 .pp-card.award .pp-title{margin:0}
 .award-scope-h{display:block;margin-top:18px}
+.award-note{margin:6px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
 .award-scope{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
 .award-scope li{font-size:12.5px;color:var(--text);border:1px solid var(--line);background:var(--bg3);border-radius:999px;padding:5px 11px}
 .pp-note{font-size:13.5px;color:var(--muted);line-height:1.6;padding:0 4px}
