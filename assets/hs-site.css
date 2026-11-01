@@ -436,3 +436,9 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 @media(max-width:1100px){.eco-home{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){.hs-home .hero-r{margin-top:28px}.eco-home{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.eco-home{grid-template-columns:1fr}.hero-creds{flex-direction:column;gap:6px}}
+
+/* CONTACT: booking */
+.book-call{margin-top:28px;padding:22px 22px 24px;background:var(--bg2);border:1px solid var(--line);border-radius:10px}
+.book-h{font-family:var(--fh);font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:var(--white);margin-bottom:6px}
+.book-p{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:16px}
+@media(max-width:600px){.book-call .btn-g{display:block;text-align:center}}
