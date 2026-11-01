@@ -36,11 +36,18 @@
     if (t) { for (var i = 0; i < sel.options.length; i++) { if (sel.options[i].text === t) sel.selectedIndex = i; } }
   }
 
+  // Copy buttons (vendor identifiers)
+  document.querySelectorAll('button.copy[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var v = b.getAttribute('data-copy'), done = function(){ var t = b.textContent; b.textContent = 'Copied'; setTimeout(function(){ b.textContent = t; }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(v).then(done, function(){}); });
+  });
+
   // Contact form: prepares an email (no server endpoint configured)
   var f = document.getElementById('cform');
   if (!f) return;
   var TO = 'contracts@heightenedsenses.net';
-  var checks = [['f-name','Enter your name.'],['f-org','Enter your organization.'],['f-email','Enter a valid work email address.'],['f-type','Select a requirement type.'],['f-msg','Describe the requirement.']];
+  var checks = [['f-name','Enter your name.'],['f-org','Enter your organization.'],['f-email','Enter a valid work email address.'],['f-type','Select a requirement type.'],['f-msg','Describe the mission or requirement.']];
   f.addEventListener('submit', function(e){
     e.preventDefault();
     var first = null;
@@ -54,11 +61,14 @@
     var st = document.getElementById('fstat');
     if (first) { st.textContent = 'Please correct the highlighted fields.'; first.focus(); return; }
     var g = function(id){ return document.getElementById(id).value.trim(); };
-    var subject = 'Requirement: ' + g('f-type') + ' | ' + g('f-org');
+    var opt = function(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    var subject = 'Requirement: ' + g('f-type') + ' | ' + g('f-org') + (opt('f-sol') ? ' | ' + opt('f-sol') : '');
     var body = 'Name: ' + g('f-name') + '\nOrganization: ' + g('f-org') + '\nEmail: ' + g('f-email') +
-      '\nPhone: ' + (g('f-phone') || 'Not provided') + '\nTimeframe: ' + (g('f-time') || 'Not provided') +
-      '\nRequirement type: ' + g('f-type') + '\n\nRequirement summary:\n' + g('f-msg') + '\n';
+      '\nPhone: ' + (g('f-phone') || 'Not provided') +
+      '\n\nRequirement type: ' + g('f-type') + '\nSolicitation / RFI / RFQ: ' + (opt('f-sol') || 'None') +
+      '\nTimeframe: ' + (g('f-time') || 'Not provided') + '\nOperating environment: ' + (opt('f-env') || 'Not provided') +
+      '\nKnown constraints: ' + (opt('f-con') || 'Not provided') + '\n\nMission or requirement:\n' + g('f-msg') + '\n';
     window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    st.textContent = 'Your email application should open with this message drafted. It is not sent until you send it there. If nothing opened, email ' + TO + ' or call (443) 944-5958. Your entries remain on this page.';
+    st.textContent = 'Your email application should open with this message drafted. It is not sent until you send it there. If nothing opened, email ' + TO + ' or call (910) 240-2901. Your entries remain on this page.';
   });
 })();
