@@ -34,6 +34,8 @@ a{color:var(--teal);text-decoration:none}
 .topbar{display:flex;justify-content:space-between;max-width:960px;margin:0 auto;padding:14px 24px 0}
 .tb{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .tb.amb{color:var(--amber)}
+.tb-print{background:none;border:0;padding:0;cursor:pointer}
+.tb-print:hover{text-decoration:underline}
 .page{max-width:960px;margin:0 auto;padding:22px 24px 28px}
 
 /* Header */
@@ -246,7 +248,7 @@ a{color:var(--teal);text-decoration:none}
 <body>
 <div class="topbar">
   <a class="tb" href="index.html">&#8592; Back to Website</a>
-  <a class="tb amb" href="assets/Heightened_Senses_Capability_Statement.pdf">Download PDF &#8599;</a>
+  <button type="button" class="tb amb tb-print" onclick="window.print()">Print or Save as PDF</button>
 </div>
 <main class="page">
   <header class="hd">
@@ -361,7 +363,7 @@ a{color:var(--teal);text-decoration:none}
 
   <div class="foot">
     <span>Heightened Senses, LLC &#183; UEI SSZREV67GJK5 &#183; CAGE 9XFG8 &#183; EIN 93-2185308</span>
-    <span>Capability Statement &#183; Current as of October 2026</span>
+    <span>Capability Statement &#183; Current as of November 2026</span>
   </div>
 </main>
 </body>
