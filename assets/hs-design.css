@@ -386,3 +386,16 @@ footer nav.fcol{position:static;display:block;height:auto;padding:0;margin:0;bac
 .pi img{mix-blend-mode:lighten}
 .pt .tg{display:inline-block}
 .cu .hero,.cu .hero.sub{display:block}
+footer .fcontact{margin:0 0 10px;font-size:.875rem;line-height:1.5}
+footer .fcontact a{display:inline-flex;align-items:center;min-height:32px;color:var(--c-text);text-decoration:none;overflow-wrap:anywhere}
+footer .fcontact a:hover{color:var(--c-accent)}
+/* phone footer: identity across the top, links beside credentials and identifiers */
+footer .fcontact a{overflow-wrap:break-word}
+@media(max-width:900px){
+  .fgrid{grid-template-areas:"id id" "cred links" "ids links";align-items:start}
+  .fgrid>.fid{grid-area:id}
+  .fgrid>.fcol:nth-child(2){grid-area:cred}
+  .fgrid>.fcol:nth-child(3){grid-area:ids}
+  .fgrid>.fcol:nth-child(4){grid-area:links}
+}
+@media(max-width:340px){.fgrid{grid-template-areas:"id" "cred" "ids" "links"}}
