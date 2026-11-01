@@ -4,6 +4,28 @@
 
 Founded July 2023 by Paul "Buck" Chambers, retired U.S. Marine Corps Gunnery Sergeant with a counterintelligence and HUMINT background, FAA Part 107 certificated.
 
+## Key facts
+
+- Legal name: Heightened Senses, LLC (North Carolina limited liability company, formed July 2023). Not a manufacturer.
+- One-sentence description: Heightened Senses LLC is an SBA-certified Service-Disabled Veteran-Owned Small Business (SDVOSB) and U.S. Air Force prime contractor providing UAS and counter-UAS integration, operator training, and advisory to federal, Department of War, state, local, and public safety buyers.
+- Identifiers: UEI SSZREV67GJK5. CAGE 9XFG8. SAM.gov registration active.
+- Certifications: SBA-certified SDVOSB and VOSB.
+- NAICS: 336411 (primary), 334511, 423430, 423860, 425120, 488190, 541330, 541370, 541611, 561621, 611430, 611519, 611699.
+- Contact: contracts@heightenedsenses.net, (910) 240-2901, Sneads Ferry, North Carolina 28460.
+- Invoicing: WAWF / PIEE for federal orders.
+
+## Federal performance (one record)
+
+- U.S. Air Force, 20th Fighter Wing, Shaw AFB, South Carolina. Counter-sUAS Radar System Lease, contract FA480326P0068, awarded September 2026 to Heightened Senses as prime contractor. Competed under a total small business set-aside. Lease of two Robin Radar IRIS 3D counter-sUAS radar systems, with site survey, installation, operator training, and sustainment support under contract. One-year base period and two priced option years. Delivery and implementation in progress.
+
+## Authorized manufacturer relationships
+
+- Red Cat (Authorized Reseller): Black Widow, FANG FPV, Trichon.
+- Ondas Sentinel (Authorized Reseller): Dronebuster, DTI passive detection, Sawtooth.
+- Robin Radar (Authorized Reseller): IRIS 3D detection radar, purchase or lease.
+- ARK Electronics (Preferred Fulfillment Partner): NDAA-compliant flight controllers and GNSS.
+- Desert Rotor (Fulfillment Partner): MIRA X ground control station.
+
 ## What we do
 
 - UAS and C-UAS integration: requirement definition, system selection, delivery, installation, operator training, and sustainment.
@@ -28,6 +50,10 @@ Founded July 2023 by Paul "Buck" Chambers, retired U.S. Marine Corps Gunnery Ser
 - [Counter-UAS Detection](https://heightenedsenses.net/c-uas-detection.html): radar, passive RF, acoustic, EO/IR, and Remote ID layers.
 - [Counter-UAS Mitigation](https://heightenedsenses.net/c-uas-mitigation.html): mitigation systems for agencies that hold mitigation authority.
 - [Counter-UAS Authority & Funding](https://heightenedsenses.net/c-uas-authority.html): operating authority and the FY2027 FEMA Counter-UAS Grant Program.
+- [Fixed-Site Drone Detection by Lease](https://heightenedsenses.net/c-uas-fixed-site-lease.html): leasing counter-UAS detection with option years and sustainment priced up front.
+- [Vehicle-Mounted and Mobile Counter-UAS](https://heightenedsenses.net/c-uas-vehicle-mobile.html): vehicle kits, wearable passive sensors, and handheld systems.
+- [Coastal and Port Drone Detection](https://heightenedsenses.net/c-uas-coastal-port.html): layered detection for ports, harbors, and coastal facilities.
+- [Drone Detection for Correctional Facilities](https://heightenedsenses.net/c-uas-corrections.html): detection against contraband drops under the SAFER SKIES framework.
 - [Training & Advisory](https://heightenedsenses.net/training-advisory.html): engagement model, published fee ranges, advisory focus areas, FAQ.
 - [Federal Experience](https://heightenedsenses.net/federal-experience.html): awarded contracts and active performance.
 - [How to Buy](https://heightenedsenses.net/how-to-buy.html): set-aside and procurement pathways.
@@ -39,3 +65,4 @@ Founded July 2023 by Paul "Buck" Chambers, retired U.S. Marine Corps Gunnery Ser
 
 - "Uncrewed" is used in place of "unmanned" throughout.
 - C-UAS, counter-UAS, and counter-drone are used interchangeably.
+- Last updated: November 1, 2026.

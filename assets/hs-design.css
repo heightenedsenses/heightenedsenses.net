@@ -399,3 +399,11 @@ footer .fcontact a{overflow-wrap:break-word}
   .fgrid>.fcol:nth-child(4){grid-area:links}
 }
 @media(max-width:340px){.fgrid{grid-template-areas:"id" "cred" "ids" "links"}}
+/* FAQ accordions on Counter-UAS pages */
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;line-height:1;flex-shrink:0}
+.faq details[open] summary::after{content:"\2212"}
+.cu .faq .ans{color:var(--c-text-2)}
+.cu .next{grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr))}
+.phero .updated{margin:16px 0 0;font-family:var(--f-mono);font-weight:500;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-text-3)}
