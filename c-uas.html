@@ -14,166 +14,23 @@
 <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon-256.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="description" content="Counter-UAS radar, layered drone detection, and Dronebuster mitigation for federal installations and state, local, tribal, and territorial agencies. Fixed-site, vehicle-mounted, mobile, and coastal deployments on purchase or lease from a U.S. Air Force prime contractor and SBA-Certified SDVOSB.">
-<title>Counter-UAS Radar, Detection &amp; Mitigation for Federal and SLTT Agencies | Heightened Senses</title>
+<title>Counter-UAS Integration | Heightened Senses</title>
+<meta name="description" content="Layered counter-UAS integration for federal installations and SLTT agencies: site assessment, authority mapping, detection architecture, installation, operator training, and sustainment.">
+<link rel="canonical" href="https://heightenedsenses.net/c-uas.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Heightened Senses">
+<meta property="og:title" content="Counter-UAS Integration | Heightened Senses">
+<meta property="og:description" content="Layered counter-UAS integration for federal installations and SLTT agencies: site assessment, authority mapping, detection architecture, installation, operator training, and sustainment.">
+<meta property="og:url" content="https://heightenedsenses.net/c-uas.html">
+<meta property="og:image" content="https://heightenedsenses.net/assets/logo-full.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/hs-nav.css">
-<link rel="canonical" href="https://heightenedsenses.net/c-uas.html">
-<style>
-  :root{
-    --bg:#070D14;
-    --bg-2:#0B131D;
-    --bg-3:#101A26;
-    --line:#1C2836;
-    --text:#D8E1EA;
-    --muted:#A9B7C4;
-    --accent:#3FB6D8;
-    --accent-2:#E8A33D;
-    --grad:linear-gradient(135deg,#3FB6D8 0%,#E8A33D 100%);
-    --head:'Barlow Condensed',sans-serif;
-    --body:'Inter',sans-serif;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{opacity:.85}
-  img{max-width:100%;display:block}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  section{padding:88px 0}
-
-  body{padding-top:56px}
-  [id]{scroll-margin-top:80px}
-  :focus-visible{outline:2px solid var(--accent-2);outline-offset:3px}
-  /* HERO */
-  .hero{padding:110px 0 80px;background:
-    radial-gradient(1000px 500px at 80% -10%,rgba(63,182,216,.10),transparent),
-    radial-gradient(700px 400px at 10% 110%,rgba(232,163,61,.06),transparent)}
-  .kicker{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:.85rem;color:var(--accent);margin-bottom:14px}
-  h1{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.02;letter-spacing:.01em}
-  h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero p.lead{max-width:640px;margin:22px 0 28px;color:var(--muted);font-size:1.08rem}
-  .hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
-  .hero-visual{position:relative}
-  .radar-glow{position:absolute;inset:-10% -6% 10%;background:radial-gradient(ellipse at center,rgba(63,182,216,.12) 0%,transparent 68%);pointer-events:none}
-  .hero-visual{display:flex;flex-direction:column;align-items:center}
-  .hero-visual .dome{position:relative;width:min(420px,78%);height:auto;filter:drop-shadow(0 18px 36px rgba(0,0,0,.6))}
-  .hero-visual{overflow:hidden;padding:10px 0}
-  .rings{position:absolute;left:50%;top:44%;width:min(560px,140%);height:min(560px,140vw);transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
-    background:repeating-radial-gradient(circle,rgba(63,182,216,.14) 0 1px,transparent 1px 56px);mask-image:radial-gradient(circle,#000 30%,transparent 72%);-webkit-mask-image:radial-gradient(circle,#000 30%,transparent 72%)}
-  .hero-tag{width:100%}
-  .hero-tag{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;padding:14px 26px 0;border-top:1px solid var(--line);margin-top:22px}
-  .ht1{font-family:var(--head);font-size:16px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text)}
-  .ht2{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:32px}}
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
-  .chip{border:1px solid var(--line);background:var(--bg-2);border-radius:999px;padding:7px 15px;font-size:.8rem;font-weight:600;color:var(--text)}
-  .chip.gold{border-color:rgba(232,163,61,.5);color:var(--accent-2)}
-  .btn-row{display:flex;gap:14px;flex-wrap:wrap}
-  .btn{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.95rem;padding:14px 28px;border-radius:4px;display:inline-block}
-  .btn.primary{background:var(--grad);color:#08121A}
-  .btn.ghost{border:1px solid var(--accent);color:var(--accent)}
-
-  /* SECTION HEADERS */
-  h2{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.05;margin-bottom:14px}
-  .sec-kicker{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;color:var(--accent);margin-bottom:10px}
-  .sec-intro{max-width:820px;color:var(--muted);margin-bottom:44px}
-
-  /* CARDS */
-  .grid{display:grid;gap:22px}
-  .grid.c3{grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
-  .grid.c4{grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr))}
-  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:28px;position:relative;overflow:hidden}
-  .card:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad);opacity:.7}
-  .card .tag{display:inline-block;font-family:var(--head);font-weight:700;font-size:1rem;letter-spacing:.06em;background:var(--bg-3);border:1px solid var(--line);color:var(--accent);border-radius:6px;padding:4px 12px;margin-bottom:14px}
-  .card h3{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:1.25rem;letter-spacing:.03em;margin-bottom:6px}
-  .card .sub{color:var(--accent-2);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
-  .card p{color:var(--muted);font-size:.95rem}
-
-  /* DETECTION LAYERS */
-  .layer{display:flex;gap:18px;align-items:flex-start;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:22px}
-  .layer .abbr{flex:0 0 auto;font-family:var(--head);font-weight:700;font-size:1.1rem;color:#08121A;background:var(--grad);border-radius:8px;width:52px;height:52px;display:flex;align-items:center;justify-content:center}
-  .layer h3{font-family:var(--head);text-transform:uppercase;font-size:1.1rem;margin-bottom:4px}
-  .layer p{color:var(--muted);font-size:.92rem}
-
-  /* GRANT BAND */
-  .band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .band .inner{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
-  @media(max-width:860px){.band .inner{grid-template-columns:1fr}}
-  .band ul{list-style:none;margin:18px 0 26px}
-  .band li{padding:10px 0 10px 30px;position:relative;color:var(--muted)}
-  .band li:before{content:"✓";position:absolute;left:0;color:var(--accent-2);font-weight:700}
-  .panel{background:var(--bg-3);border:1px solid var(--line);border-radius:10px;padding:30px}
-  .panel h3{font-family:var(--head);text-transform:uppercase;font-size:1.3rem;margin-bottom:10px}
-  .panel p{color:var(--muted);font-size:.95rem;margin-bottom:16px}
-
-  /* HOW TO BUY */
-  .buy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:22px}
-  .step{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:26px}
-  .step .num{font-family:var(--head);font-weight:700;font-size:2rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .step h3{font-family:var(--head);text-transform:uppercase;font-size:1.15rem;margin:8px 0 8px}
-  .step p{color:var(--muted);font-size:.93rem}
-  .idtable{margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-  .idcell{background:var(--bg-2);padding:16px 20px}
-  .idcell .k{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
-  .idcell .v{font-weight:600;font-size:.95rem}
-
-  .feature{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:40px}
-  .feature img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px}
-  .feature .sec-intro{margin-bottom:22px}
-  @media(max-width:900px){.feature{grid-template-columns:1fr;gap:24px}}
-  /* VIDEO */
-  .video-frame{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 44px;background:#000}
-  .video-frame video{width:100%;display:block}
-  .hero-reveal{max-width:980px;margin:42px auto 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#000;box-shadow:0 0 60px rgba(63,182,216,.12)}
-  .hero-reveal video{width:100%;display:block}
-
-  /* PAST PERFORMANCE */
-  .pp{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:start}
-  @media(max-width:860px){.pp{grid-template-columns:1fr}}
-  .pp-main{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:32px;position:relative;overflow:hidden}
-  .pp-main:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
-  .pp-main .agency{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:.8rem;color:var(--accent);margin-bottom:10px}
-  .pp-main h3{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:1.7rem;line-height:1.05;margin-bottom:6px}
-  .pp-main .role{color:var(--accent-2);font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
-  .pp-main p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
-  .pp-facts{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:20px}
-  .pp-facts div{background:var(--bg-3);padding:12px 16px}
-  .pp-facts .k{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
-  .pp-facts .v{font-weight:600;font-size:.93rem;margin-top:2px}
-  .pp-side{display:flex;flex-direction:column;gap:14px}
-  .pp-stat{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
-  .pp-stat .big{font-family:var(--head);font-weight:700;font-size:2.1rem;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}
-  .pp-stat .lbl{color:var(--muted);font-size:.85rem}
-  .pp-quiet{color:var(--muted);font-size:.9rem;line-height:1.6;padding:0 4px}
-
-  /* DISCLAIMER */
-  .legal{border-left:3px solid var(--accent-2);background:var(--bg-2);border-radius:0 8px 8px 0;padding:20px 24px;color:var(--text);font-size:.92rem;margin-top:40px}
-
-  /* CONTACT */
-  .contact-band{background:
-    radial-gradient(800px 400px at 50% 0%,rgba(63,182,216,.10),transparent);text-align:center}
-  .contact-band p{max-width:640px;margin:0 auto 30px;color:var(--muted)}
-  .contact-meta{margin-top:34px;display:flex;gap:34px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
-  .contact-meta b{color:var(--text)}
-
-  /* Mobile: fact tables stack to one column, labels keep whole words */
-  .pp-facts>div,.idcell{min-width:0}
-  .pp-facts .k,.idcell .k{overflow-wrap:normal;word-break:normal;hyphens:none}
-  .pp-facts .v,.idcell .v{overflow-wrap:break-word}
-  @media(max-width:600px){
-    .pp-facts{grid-template-columns:1fr}
-    .pp-facts div{padding:14px 16px}
-    .pp-facts .k,.idcell .k{letter-spacing:.08em;font-size:.72rem}
-    .pp-facts .v{font-size:1rem}
-    .idtable{grid-template-columns:1fr 1fr}
-    .idcell{padding:14px 14px}
-    .idcell .v{font-size:.9rem}
-  }
-  @media(max-width:400px){.idtable{grid-template-columns:1fr}}
-</style>
+<link rel="stylesheet" href="assets/hs-cuas.css">
+<script>
+(function(){var m={'#systems':'c-uas-mitigation.html','#detection':'c-uas-detection.html','#radar':'c-uas-detection.html#radar','#funding':'c-uas-authority.html#funding','#how-to-buy':'how-to-buy.html','#past-performance':'federal-experience.html','#training':'c-uas.html#approach','#contact':'contact.html?type=C-UAS%20Integration%20%2F%20Airspace%20Awareness'};var t=m[location.hash];if(t)location.replace(t);})();
+</script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -182,15 +39,15 @@
    "@type": "WebPage",
    "@id": "https://heightenedsenses.net/c-uas.html",
    "url": "https://heightenedsenses.net/c-uas.html",
-   "name": "Counter-UAS Radar, Detection & Mitigation for Federal and SLTT Agencies",
-   "description": "Layered counter-UAS detection and mitigation integration, program design, operator training, and grant alignment from a U.S. Air Force prime contractor and SBA-Certified SDVOSB.",
+   "name": "Counter-UAS Integration",
+   "description": "Layered counter-UAS integration for federal installations and SLTT agencies: site assessment, authority mapping, detection architecture, installation, operator training, and sustainment.",
    "isPartOf": {
     "@id": "https://heightenedsenses.net/#website"
    },
    "about": {
     "@id": "https://heightenedsenses.net/#org"
    },
-   "dateModified": "2026-10-25"
+   "dateModified": "2026-11-01"
   },
   {
    "@type": "BreadcrumbList",
@@ -222,20 +79,7 @@
     "@type": "Audience",
     "audienceType": "Federal installations and state, local, tribal, and territorial agencies"
    },
-   "description": "Design, delivery, installation, and training of layered counter-UAS capability: radar, passive RF, EO/IR, and Remote ID detection; handheld mitigation for authorized federal customers; fixed-site radar on purchase or lease; program design; operator training; SAFER SKIES Act and FEMA counter-UAS grant alignment. Detection and mitigation are kept distinct and mapped to the operating authority the agency holds.",
-   "hasPart": {
-    "@type": "GovernmentService",
-    "name": "Counter-sUAS Radar System Lease, Shaw AFB (Contract FA480326P0068)",
-    "provider": {
-     "@id": "https://heightenedsenses.net/#org"
-    },
-    "serviceType": "Counter-sUAS radar lease, installation, integration, operator training, and sustainment",
-    "audience": {
-     "@type": "Audience",
-     "audienceType": "United States Air Force, 20th Fighter Wing"
-    },
-    "description": "Prime contract awarded September 2026 by the 20th Contracting Squadron under a total small business set-aside. Two Robin Radar IRIS 3D counter-sUAS radar systems delivered on a multi-year lease with site survey, installation, network integration, spectrum coordination, operator training, and sustainment support. One-year base period plus two priced option years."
-   }
+   "description": "Site assessment, authority mapping, layered detection architecture, system selection, installation, operator training, and sustainment. Radar, passive RF, EO/IR, and Remote ID detection; handheld mitigation for authorized customers; fixed-site radar on purchase or lease. Detection and mitigation are kept distinct and mapped to the operating authority the agency holds."
   }
  ]
 }
@@ -259,25 +103,31 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- HERO -->
-<header class="hero">
+<nav class="subnav" aria-label="Counter-UAS sections">
+  <div class="wrap">
+    <a href="c-uas.html" aria-current="page">Overview</a>
+    <a href="c-uas-detection.html">Detection</a>
+    <a href="c-uas-mitigation.html">Mitigation</a>
+    <a href="c-uas-authority.html">Authority &amp; Funding</a>
+  </div>
+</nav>
+<main id="main">
+<section class="hero" aria-labelledby="hero-h">
   <div class="wrap hero-grid">
   <div class="hero-copy">
-    <div class="kicker">Counter-UAS · Prime Contractor to the United States Air Force</div>
-    <h1>Layered<br><span class="grad">Counter-UAS</span> Integration</h1>
-    <p class="lead">We design, deliver, install, and train layered counter-UAS capability for federal installations and for state, local, tribal, and territorial agencies. Prime contractor on a counter-sUAS radar lease for the U.S. Air Force. Authorized reseller for Ondas Sentinel mitigation and Robin Radar IRIS detection. The requirement selects the system.</p>
-    <p class="lead">Deployments cover fixed-site installations, vehicle-mounted and mobile counter-UAS kits, and coastal and port facilities, with counter-UAS radar and passive RF detection available on purchase or lease and detection-to-alert handoff into ATAK and existing command-and-control systems.</p>
+    <div class="kicker">Counter-UAS Integration</div>
+    <h1 id="hero-h">Layered<br><span class="grad">Counter-UAS</span> Integration</h1>
+    <p class="lead">We start with the site, the threat, and the authority your agency holds. From there we design the detection architecture, select the systems, install and integrate them, train the operators, and sustain the program. Detection and mitigation are scoped separately because the law treats them separately.</p>
+    <p class="lead">Fixed-site installations, vehicle-mounted and mobile kits, and coastal and port facilities, for federal installations and for state, local, tribal, and territorial agencies. Radar and passive RF detection are available on purchase or lease.</p>
     <div class="chips">
-      <span class="chip gold">USAF Prime · C-sUAS Radar Lease</span>
+      <span class="chip gold">USAF Prime &#183; C-sUAS Radar Lease</span>
       <span class="chip gold">SBA-Certified SDVOSB</span>
       <span class="chip">Country of Origin Documented</span>
-            <span class="chip">Federal · State · Local · Tribal · Territorial</span>
-      <span class="chip">WAWF / PIEE Invoicing Supported</span>
+      <span class="chip">Federal &#183; State &#183; Local &#183; Tribal &#183; Territorial</span>
     </div>
     <div class="btn-row">
-      <a class="btn primary" href="#contact">Request a Quote</a>
-      <a class="btn ghost" href="#contact">Schedule a Demonstration</a>
+      <a class="btn primary" href="contact.html?type=C-UAS%20Integration%20%2F%20Airspace%20Awareness">Discuss Your Requirement</a>
+      <a class="btn ghost" href="contact.html?type=C-UAS%20Integration%20%2F%20Airspace%20Awareness">Request a Demonstration</a>
     </div>
   </div>
   <div class="hero-visual">
@@ -290,262 +140,21 @@
     <div class="hero-tag"><span class="ht1">IRIS&#8482; 3D Drone Detection Radar</span><span class="ht2">Robin Radar Systems &#183; Under Contract for the U.S. Air Force</span></div>
   </div>
   </div>
-</header>
+</section>
 
-<!-- THREAT CONTEXT -->
-<section>
+<section id="approach" aria-labelledby="approach-h">
   <div class="wrap">
-    <div class="sec-kicker">The Requirement</div>
-    <h2>The Drone Threat Is Not Waiting<br>On Your Procurement Cycle</h2>
-    <p class="sec-intro">Inexpensive commercial drones surveil corrections yards and drop contraband over the wall. They loiter over stadiums and parades. They probe substations, ports, and pipelines. They cross flight lines. The authority environment changed in December 2025 when Congress extended counter-UAS authority to state, local, tribal, and territorial agencies, and the funding environment changed with it. What has not changed is that a single sensor is a gap, not a program. Agencies need layered airspace awareness they can field under current authority, with a procurement path measured in weeks, and a contractor who has actually done it for a federal customer.</p>
-  </div>
-</section>
-
-<!-- PAST PERFORMANCE -->
-<section id="past-performance" class="band">
-  <div class="wrap">
-    <div class="sec-kicker">Prime Contract Performance</div>
-    <h2>We Have Done This For The Air Force</h2>
-    <p class="sec-intro">Past performance is the difference between a reseller and a contractor. This is ours.</p>
-    <div class="pp">
-      <div class="pp-main">
-        <div class="agency">United States Air Force · 20th Fighter Wing · Shaw AFB, South Carolina</div>
-        <h3>Counter-sUAS Radar System Lease</h3>
-        <div class="role">Prime Contractor · Contract FA480326P0068 · Awarded September 2026</div>
-        <p>Heightened Senses responded at the market research phase, then competed for this requirement under a total small business set-aside and won it as prime.</p>
-        <p>We deliver two Robin Radar IRIS 3D counter-sUAS radar systems on a multi-year lease. Our scope runs from site survey and radar siting through power, network integration, spectrum coordination, base access for the installation team, operator training, and sustainment support. The contract carries a one-year base period and two priced option years exercisable at the Government's discretion. Current stage: awarded, delivery in progress.</p>
-        <p>The lease structure matters. It put fielded detection capability on an installation without a capital acquisition, with option years priced up front. If your requirement has the same shape, that model is available to you.</p>
-        <div class="pp-facts">
-          <div><div class="k">Contracting Office</div><div class="v">20th Contracting Squadron / PKA</div></div>
-          <div><div class="k">Competition</div><div class="v">Total Small Business Set-Aside</div></div>
-          <div><div class="k">Scope</div><div class="v">Lease · Install · Integrate · Train · Sustain</div></div>
-          <div><div class="k">Period</div><div class="v">One-year base + two priced option years</div></div>
-        </div>
-      </div>
-      <div class="pp-side">
-        <div class="pp-stat"><div class="big">PRIME</div><div class="lbl">Contractor of record. Not a sub, not a pass-through.</div></div>
-        <div class="pp-stat"><div class="big">BASE + 2</div><div class="lbl">One-year base period with two priced option years.</div></div>
-        <div class="pp-stat"><div class="big">COMPETED</div><div class="lbl">Won as prime on a total small business set-aside.</div></div>
-        <p class="pp-quiet">We publish awards, not pursuits. Federal references available on request.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FIELDED SYSTEMS -->
-<section id="systems" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-kicker">Fielded C-UAS Systems · Ondas Sentinel</div>
-    <h2>Dronebuster&reg; Product Line</h2>
-    <div class="feature">
-      <picture>
-        <source type="image/webp" srcset="assets/dronebuster-operator-900.webp 900w, assets/dronebuster-operator-1600.webp 1600w" sizes="(max-width:900px) 100vw, 560px">
-        <img src="assets/dronebuster-operator-900.jpg" srcset="assets/dronebuster-operator-900.jpg 900w, assets/dronebuster-operator-1600.jpg 1600w" sizes="(max-width:900px) 100vw, 560px" width="1600" height="893" loading="lazy" decoding="async" alt="Operator shouldering a Dronebuster handheld counter-UAS system in the field">
-      </picture>
-      <div>
-    <p class="sec-intro">Proven handheld, wearable, vehicle-mounted, and fixed-site counter-UAS systems, fielded across the Department of War and allied forces. We scope each system against the site, the threat, and the operating authority the agency holds before we quote it.</p>
-        <a class="btn primary" href="#contact">Request Dronebuster Pricing</a>
-      </div>
-    </div>
-    <div class="video-frame">
-      <video class="scroll-video" controls muted playsinline preload="metadata" poster="assets/cuas-video-poster.jpg">
-        <source src="assets/DZYNE-Layered-Defense-CUAS-V2-web.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="grid c3">
-      <div class="card">
-        <span class="tag">DB4</span>
-        <h3>Dronebuster&reg; Block 4</h3>
-        <div class="sub">Handheld Mitigation</div>
-        <p>American-made handheld counter-sUAS mitigation system with optional PNT attack capability. Fielded across the Department of Defense and allied forces.</p>
-      </div>
-      <div class="card">
-        <span class="tag">DB5</span>
-        <h3>Dronebuster&reg; DB5</h3>
-        <div class="sub">Next-Generation Handheld</div>
-        <p>Next-generation handheld counter-sUAS system with advanced 5.2 GHz disrupt capability for evolving threat frequencies.</p>
-      </div>
-      <div class="card">
-        <span class="tag">DTI</span>
-        <h3>DTI System</h3>
-        <div class="sub">Passive Detect · Track · Identify</div>
-        <p>Wearable, portable passive system to detect, track, and identify aerial threats. Non-emitting, for federal, state, and local customers within a layered detection architecture.</p>
-      </div>
-      <div class="card">
-        <span class="tag">DTM</span>
-        <h3>DTIM Kits</h3>
-        <div class="sub">Detect Through Defeat</div>
-        <p>Single-operator, full-spectrum kits pairing passive detection, tracking, and identification with Dronebuster mitigation for complete detect-through-defeat capability.</p>
-      </div>
-      <div class="card">
-        <span class="tag">VEH</span>
-        <h3>Dronebuster&reg; Vehicle Kits</h3>
-        <div class="sub">Mobile Counter-sUAS</div>
-        <p>Vehicle-mounted counter-sUAS systems delivering detection and mitigation on the move for convoys, patrols, and mobile response operations.</p>
-      </div>
-      <div class="card">
-        <span class="tag">SWT</span>
-        <h3>Sawtooth Modular Platform</h3>
-        <div class="sub">Fixed-Site C-UAS</div>
-        <p>Modular, mission-adaptable fixed-site platform integrating sensors and effectors for critical infrastructure, site and event security, and border and perimeter defense. Purchase and leasing models available.</p>
-      </div>
-    </div>
-    <div class="legal">
-      Mitigation systems are available to authorized federal customers today. State, local, tribal, and territorial availability of mitigation systems is governed by 6 U.S.C. § 124n as amended by the SAFER SKIES Act, including the federal Authorized Systems List, training, and certification requirements. Detection systems, including passive RF and active radar, are available to state and local agencies; what an agency may operate depends on the technology, the configuration, and its authority. We will tell you which side of that line your requirement sits on before we quote it.
-    </div>
-  </div>
-</section>
-
-<!-- DETECTION ARCHITECTURE -->
-<section id="detection" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-kicker">Airspace Awareness</div>
-    <h2>Layered Passive Detection</h2>
-    <p class="sec-intro">A single sensor is a gap, not a program. We design layered architectures that fuse complementary detection modalities into one common operating picture, sized to your site, your threat, your authority, and your budget. We are platform agnostic by conviction and by contract: we hold agreements across radar, RF, and mitigation, and we do not carry one manufacturer's inventory into your site looking for a mission to fit it. If the right layer is a sensor we do not sell, we will say so and help you source it.</p>
-    <div class="grid c4">
-      <div class="layer">
-        <div class="abbr">RF</div>
-        <div>
-          <h3>RF Spectrum Sensing</h3>
-          <p>Passive detection and characterization of UAS control and video links. No emissions.</p>
-        </div>
-      </div>
-      <div class="layer">
-        <div class="abbr">RDR</div>
-        <div>
-          <h3>Compact Radar</h3>
-          <p>Non-cooperative detection and tracking of small UAS, cuing EO/IR sensors and feeding a unified common operating picture.</p>
-        </div>
-      </div>
-      <div class="layer">
-        <div class="abbr">EO</div>
-        <div>
-          <h3>EO/IR Confirmation</h3>
-          <p>Visual classification and confirmation of detected tracks for informed response decisions, day and night.</p>
-        </div>
-      </div>
-      <div class="layer">
-        <div class="abbr">RID</div>
-        <div>
-          <h3>Remote ID Monitoring</h3>
-          <p>Broadcast Remote ID sensing integrated into the airspace picture for identification and pattern-of-life awareness.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ROBIN RADAR IRIS -->
-<section id="radar" class="band" style="padding-top:88px">
-  <div class="wrap inner">
-    <div>
-      <div class="sec-kicker">C-UAS Radar Detection · Robin Radar</div>
-      <h2>IRIS&reg; 360-Degree<br>Drone Detection Radar</h2>
-      <p style="color:var(--muted);max-width:640px">The IRIS counter-UAS radar delivers 360-degree, 3D detection, tracking, and classification of small uncrewed aircraft in a 29 kg package, with drone-versus-bird discrimination powered by micro-doppler and deep neural network classification. Tested against military environmental standards, on-the-move capable, and built with an API for integration into layered C-UAS architectures and common operating pictures.</p>
-      <ul>
-        <li>Selected to support counter-UAS operations at the FIFA World Cup 2026, deployed by components of the U.S. Department of Homeland Security alongside state and local agencies</li>
-        <li>Proven at scale: Dutch Ministry of Defence contract for 100 IRIS radars protecting domestic airspace</li>
-        <li>IRIS Long-Range Mode extends instrumented detection range to 12 km, proven against fixed-wing drones and loitering munitions</li>
-        <li>Available on purchase or lease through Heightened Senses, with full OEM warranty, software licensing, and engineering reach-back</li>
-        <li><strong style="color:var(--text)">Under contract to us, as prime, for the United States Air Force.</strong> Two IRIS 3D systems on lease at Shaw AFB, with installation, integration, and sustainment by Heightened Senses. Delivery in progress. See <a href="#past-performance">Past Performance</a>.</li>
-      </ul>
-      <a class="btn primary" href="#contact">Request IRIS Pricing</a>
-    </div>
-    <div>
-      <div class="video-frame" style="margin-bottom:22px">
-        <video class="scroll-video" controls muted playsinline preload="metadata" poster="assets/iris-video-poster.jpg">
-          <source src="assets/Robin-Radar-IRIS.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="panel">
-      <h3>Radar as the Backbone Layer</h3>
-      <p>RF sensing goes quiet against autonomous and pre-programmed drones that emit nothing. Radar does not. IRIS provides non-cooperative detection that anchors the layered architecture, cuing EO/IR confirmation and feeding one unified airspace picture.</p>
-      <p>Available to federal and state, local, tribal, and territorial customers, including law enforcement, public safety, and critical infrastructure authorities, subject to each agency&#8217;s operating authority.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GRANT FUNDING BAND -->
-<section id="funding" class="band">
-  <div class="wrap inner">
-    <div>
-      <div class="sec-kicker">Funding and Authority</div>
-      <h2>SAFER SKIES Act<br>&amp; FEMA Counter-UAS Funding</h2>
-      <p style="color:var(--muted);max-width:640px">Two things changed the state and local counter-UAS landscape. In December 2025, Congress enacted the SAFER SKIES Act as part of the FY2026 National Defense Authorization Act (Pub. L. 119-60, Division H, Title LXXXVI), amending 6 U.S.C. § 124n to extend counter-UAS detection and mitigation authority to state, local, tribal, and territorial law enforcement under a federal framework of authorized systems, training, and certification. FEMA now funds state, local, tribal, and territorial counter-UAS capability through the FY2027 Counter-UAS Grant Program, administered through each State Administrative Agency.</p>
-      <ul>
-        <li>Quotes for an agency's existing requirement, with country of origin and configuration documentation for the grant file</li>
-        <li>Delivery, installation, and integration of detection systems the agency is authorized to operate</li>
-        <li>Operator training and sustainment priced into the acquisition, not discovered after fielding</li>
-      </ul>
-      <a class="btn primary" href="contact.html?type=C-UAS%20Integration%20%2F%20Airspace%20Awareness">Discuss Your Requirement</a>
-    </div>
-    <div class="panel">
-      <h3>Advisory and Supply Are Kept Separate</h3>
-      <p>Federal grant rules bar a contractor that helps develop a grant application, project plan, or budget from competing for the resulting procurement (2 CFR 200.319). We do not write grant applications or specifications for procurements we intend to bid on.</p>
-      <p>If your agency has an approved requirement and funding, we quote, deliver, train, and sustain against it.</p>
-      <p><a href="https://www.fema.gov/grants/preparedness" target="_blank" rel="noopener">FEMA Preparedness Grants ↗</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- HOW TO BUY -->
-<section id="how-to-buy">
-  <div class="wrap">
-    <div class="sec-kicker">Procurement Path</div>
-    <h2>How to Buy: The SDVOSB Advantage</h2>
-    <p class="sec-intro">As an SBA-Certified Service-Disabled Veteran-Owned Small Business, Heightened Senses gives a contracting officer a compliant path to award that supports the agency's small business and Veteran-owned goals in the same action. One accountable contractor from quote through sustainment. You do not manage the manufacturer. We do.</p>
-    <div class="buy-grid">
-      <div class="step">
-        <div class="num">01</div>
-        <h3>SDVOSB Set-Aside &amp; Sole Source</h3>
-        <p>FAR 19.14 set-aside and sole-source authorities allow award to an SDVOSB without full and open competition where the requirement fits the applicable thresholds and the contracting officer determines the price fair and reasonable. We build the quote and the supporting documentation so that determination is easy to make.</p>
-      </div>
-      <div class="step">
-        <div class="num">02</div>
-        <h3>Simplified Acquisition</h3>
-        <p>Clean, fast quotes structured for simplified acquisition procedures and government purchase card thresholds. Requirements in, quote out, with lead times you can plan against. This is how Shaw AFB bought.</p>
-      </div>
-      <div class="step">
-        <div class="num">03</div>
-        <h3>Lease Instead of Buy</h3>
-        <p>Fixed-site detection on a multi-year lease with option years, priced up front, sustainment included. Puts capability on site without a capital acquisition. The Air Force chose this model for IRIS; it is available to you.</p>
-      </div>
-      <div class="step">
-        <div class="num">04</div>
-        <h3>State &amp; Local Purchase Orders</h3>
-        <p>Direct purchase orders for SLTT agencies, grant-funded acquisitions supported end to end including documentation, and lease options on select fixed-site systems.</p>
-      </div>
-    </div>
-    <div class="idtable">
-      <div class="idcell"><div class="k">UEI</div><div class="v">SSZREV67GJK5</div></div>
-      <div class="idcell"><div class="k">CAGE</div><div class="v">9XFG8</div></div>
-      <div class="idcell"><div class="k">SAM Status</div><div class="v">Active</div></div>
-      <div class="idcell"><div class="k">Certification</div><div class="v">SBA-Certified SDVOSB</div></div>
-      <div class="idcell"><div class="k">Primary NAICS</div><div class="v">336411 · 334511 · 425120</div></div>
-      <div class="idcell"><div class="k">Cyber</div><div class="v">NIST SP 800-171 · SPRS</div></div>
-      <div class="idcell"><div class="k">Invoicing</div><div class="v">WAWF / PIEE Supported</div></div>
-      <div class="idcell"><div class="k">Prime Past Performance</div><div class="v">USAF · FA480326P0068</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- TRAINING & PROGRAM DESIGN -->
-<section id="training" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-kicker">Beyond the Hardware</div>
-    <h2>Program Design &amp; Training</h2>
-    <p class="sec-intro">Hardware without a program is shelf inventory. Every system we deliver is wrapped with the assessment, authority mapping, policy, training, and sustainment required to field it as an operational capability and defend it in an audit. This is where a Marine who ran surveillance and countersurveillance for a living earns the difference between a vendor and a contractor.</p>
+    <div class="sec-kicker">The Requirement Selects the System</div>
+    <h2 id="approach-h">How We Build a<br>Counter-UAS Program</h2>
+    <p class="sec-intro">A single sensor is a gap, not a program. Every system we deliver comes with the site assessment, authority mapping, policy, training, and sustainment required to field it as an operational capability and defend it in an audit.</p>
     <div class="grid c4">
       <div class="card">
         <h3>Site Assessment</h3>
-        <p>Site survey, threat characterization, layered sensor architecture, siting, power, network, and spectrum coordination. The same work we performed at Shaw AFB, scaled to your site.</p>
+        <p>Site survey, threat characterization, layered sensor architecture, siting, power, network, and spectrum coordination. The same scope we hold under contract at Shaw AFB, scaled to your site.</p>
       </div>
       <div class="card">
         <h3>Authority Mapping</h3>
-        <p>Before we quote, we map your requirement to the authority you actually hold: 10 U.S.C. § 130i for covered DoD facilities, 6 U.S.C. § 124n and the SAFER SKIES framework for SLTT agencies, and the detection-only options available to your agency. We will tell you what you cannot legally do before you buy something that does it.</p>
+        <p>Before we quote, we map your requirement to the authority you actually hold: 10 U.S.C. § 130i for covered Department of War facilities, 6 U.S.C. § 124n and the SAFER SKIES framework for SLTT agencies, and the detection-only options available to your agency. We will tell you what you cannot legally do before you buy something that does it.</p>
       </div>
       <div class="card">
         <h3>Policy &amp; OPLAN Support</h3>
@@ -553,7 +162,7 @@
       </div>
       <div class="card">
         <h3>Operator Training</h3>
-        <p>Operator and program proficiency training for detection systems and airspace awareness operations, delivered by experienced instructors and coordinated with manufacturer certification where required.</p>
+        <p>Operator and program proficiency training for detection systems and airspace awareness operations, coordinated with manufacturer training where the OEM requires it. We do not issue counter-UAS certifications; the FBI National Counter-UAS Training Center is the certifying authority.</p>
       </div>
       <div class="card">
         <h3>Sustainment</h3>
@@ -567,23 +176,58 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact-band">
+
+<section class="band" aria-labelledby="next-h">
   <div class="wrap">
-    <div class="sec-kicker">Get In Touch</div>
-    <h2>Request a Quote or Demonstration</h2>
-    <p>Send us the requirement, the site, the authority you operate under, and the funding source if you know it. We acknowledge inquiries within one business day and confirm next steps after reviewing the requirement. A system recommendation, pricing, and lead times follow that review. If we are not the right fit, we will tell you.</p>
-    <div class="btn-row" style="justify-content:center">
-      <a class="btn primary" href="mailto:contracts@heightenedsenses.net?subject=C-UAS Quote Request">Request a Quote</a>
-      <a class="btn ghost" href="mailto:contracts@heightenedsenses.net?subject=C-UAS Demonstration Request">Schedule a Demonstration</a>
-    </div>
-    <div class="contact-meta">
-      <span><b>Email</b> · contracts@heightenedsenses.net</span>
-      <span><b>Phone</b> · (443) 944-5958</span>
-      <span><b>Location</b> · Sneads Ferry, NC 28460</span>
+    <div class="sec-kicker">Explore</div>
+    <h2 id="next-h">Detection, Mitigation, Authority</h2>
+    <p class="sec-intro">Each layer has its own page. Start with the one that matches your requirement.</p>
+    <div class="next">
+      <a class="card" href="c-uas-detection.html"><h3>Layered Detection</h3><p>Radar, passive RF, EO/IR, and Remote ID fused into one airspace picture, including the IRIS 3D radar we hold under contract for the Air Force.</p><span class="go">Detection &#8594;</span></a>
+      <a class="card" href="c-uas-mitigation.html"><h3>Mitigation</h3><p>Handheld, vehicle, and fixed-site systems for agencies that hold mitigation authority, and what that authority requires.</p><span class="go">Mitigation &#8594;</span></a>
+      <a class="card" href="c-uas-authority.html"><h3>Authority &amp; Funding</h3><p>The SAFER SKIES Act, what state and local agencies may operate, and the FY2027 FEMA Counter-UAS Grant Program.</p><span class="go">Authority &amp; Funding &#8594;</span></a>
     </div>
   </div>
 </section>
+
+<section aria-labelledby="pp-h">
+  <div class="wrap">
+    <div class="sec-kicker">Prime Contract Performance</div>
+    <h2 id="pp-h">Under Contract for the Air Force</h2>
+    <div class="pp">
+      <div class="pp-main">
+        <div class="agency">United States Air Force &#183; 20th Fighter Wing &#183; Shaw AFB, South Carolina</div>
+        <h3>Counter-sUAS Radar System Lease</h3>
+        <div class="role">Prime Contractor &#183; Contract FA480326P0068 &#183; Awarded September 2026</div>
+        <p>Competed under a total small business set-aside and awarded as prime. Two Robin Radar IRIS 3D counter-sUAS radar systems on lease, with site survey, radar siting, power, network integration, spectrum coordination, operator training, and sustainment support. One-year base period and two priced option years. Current stage: awarded, delivery in progress.</p>
+        <p>The lease put detection capability on an installation without a capital acquisition, with option years priced up front. The same structure is available for other fixed-site requirements.</p>
+        <a class="btn ghost" href="federal-experience.html">Contract Details</a>
+      </div>
+      <div class="pp-side">
+        <div class="pp-stat"><div class="big">PRIME</div><div class="lbl">Contractor of record, not a subcontractor.</div></div>
+        <div class="pp-stat"><div class="big">BASE + 2</div><div class="lbl">One-year base period with two priced option years.</div></div>
+        <p class="pp-quiet">We publish awards, not pursuits. Federal references available on request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-band">
+  <div class="wrap">
+    <div class="sec-kicker">Get In Touch</div>
+    <h2>Discuss Your Requirement</h2>
+    <p>Send the requirement, the site, the authority you operate under, and the timeframe. We acknowledge inquiries within one business day and confirm next steps after reviewing the requirement. If we are not the right fit, we will tell you.</p>
+    <div class="btn-row" style="justify-content:center">
+      <a class="btn primary" href="contact.html?type=C-UAS%20Integration%20%2F%20Airspace%20Awareness">Discuss Your Requirement</a>
+      <a class="btn ghost" href="tel:+14439445958">(443) 944-5958</a>
+    </div>
+    <div class="meta">
+      <span><b>Email</b> &#183; <a href="mailto:contracts@heightenedsenses.net">contracts@heightenedsenses.net</a></span>
+      <span><b>Location</b> &#183; Sneads Ferry, NC 28460</span>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
   <div class="ft">
@@ -604,34 +248,5 @@
   </div>
 </footer>
 <script src="assets/hs-site.js" defer></script>
-
-<script>
-// Scroll-triggered playback: videos play when at least half visible, pause when scrolled away.
-// Muted is required by browsers for autoplay; viewers can unmute via controls.
-(function(){
-  const vids=document.querySelectorAll('video.scroll-video');
-  if(!('IntersectionObserver' in window)){return;}
-  const io=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      const v=e.target;
-      if(e.intersectionRatio>=0.5){
-        // hero reveal plays once and holds; OEM videos resume where they left off
-        if(!(v.dataset.playedOnce==='1' && v.dataset.once==='1')){
-          const p=v.play();
-          if(p){p.catch(()=>{});}
-          v.dataset.playedOnce='1';
-        }
-      }else{
-        if(!v.paused){v.pause();}
-      }
-    });
-  },{threshold:[0,0.5,1]});
-  vids.forEach(v=>{
-    // the hero reveal should not restart on re-scroll; mark it
-    if(v.closest('.hero-reveal')){v.dataset.once='1';}
-    io.observe(v);
-  });
-})();
-</script>
 </body>
 </html>
