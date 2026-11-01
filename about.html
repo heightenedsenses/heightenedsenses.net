@@ -33,7 +33,7 @@
 <meta name="theme-color" content="#070D14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/hs-site.css">
 <script type="application/ld+json">
 {
@@ -88,6 +88,7 @@
  ]
 }
 </script>
+<link rel="stylesheet" href="assets/hs-design.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -109,23 +110,33 @@
 <main id="main">
 <div class="phero">
   <span class="crumb">About</span>
-  <h1 class="hero-h1"><span class="t">Mission-Informed.</span><span class="w">Operator-Led.</span></h1>
+  <h1 class="hero-h1"><span class="t nw">Mission-Informed.</span> <span class="w nw">Operator-Led.</span></h1>
   <p class="lead">Heightened Senses is a UAS and counter-UAS integrator built by an operator, for operators and the people who equip them. We are not a manufacturer. We are the team that helps you decide what to field, then fields it with you.</p>
 </div>
 
 <section class="adv-s sec" aria-labelledby="phil-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">What We Believe</span></div>
-  <h2 class="sh" id="phil-h"><span class="w">THE REQUIREMENT </span><span class="a">SELECTS THE SYSTEM.</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">What We Believe</span></div>
+  <h2 class="sh" id="phil-h">The Requirement Selects the System.</h2>
   <div class="pos-copy">
     <p>Technology decisions made before the mission is understood tend to fail in the field. We start with the operator, the mission, the threat or problem, the environment, and the authorities that apply. The system comes last, and it is whatever serves that requirement best, including when the answer is a platform we do not sell.</p>
   </div>
 </section>
 
-<section class="about-s sec" aria-labelledby="ab-h" style="background:var(--bg2)">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Founder</span></div>
-  <h2 class="sh" id="ab-h"><span class="w">WHY OPERATOR </span><span class="a">EXPERIENCE MATTERS</span></h2>
-  <div class="sr"></div>
+
+<section class="buy-s sec" style="background:var(--bg2)" aria-labelledby="appr-h">
+  <div class="ey"><span class="ey-lbl">Our Approach</span></div>
+  <h2 class="sh" id="appr-h">From Requirement to Execution</h2>
+  <ol class="stage-grid">
+    <li class="step"><div class="num">01</div><h3>Understand the Requirement</h3><p>We define the mission, the site, the constraints, and the authority before anything else.</p></li>
+    <li class="step"><div class="num">02</div><h3>Evaluate the Technology</h3><p>We compare candidate systems against that requirement, with compliance and country of origin documented by configuration.</p></li>
+    <li class="step"><div class="num">03</div><h3>Integrate the Solution</h3><p>We install, configure, and connect the system to what the customer already runs.</p></li>
+    <li class="step"><div class="num">04</div><h3>Train the Operator</h3><p>We train the people who will run it, coordinated with the manufacturer where required.</p></li>
+    <li class="step"><div class="num">05</div><h3>Support Execution</h3><p>We stay through procurement, fielding, and sustainment.</p></li>
+  </ol>
+</section>
+<section class="about-s sec" aria-labelledby="ab-h">
+  <div class="ey"><span class="ey-lbl">Founder</span></div>
+  <h2 class="sh" id="ab-h">Why Operator Experience Matters</h2>
   <div class="about-grid">
     <div>
       <p class="ab">Heightened Senses was founded in July 2023 in the spirit of <strong>&#8220;Service after Service.&#8221;</strong> Founder Paul &#8220;Buck&#8221; Chambers served 16 years in the U.S. Marine Corps. He began as an infantry assaultman with deployments to Iraq and Afghanistan, then spent roughly a decade in counterintelligence and HUMINT, retiring as a Gunnery Sergeant and CI/HUMINT Chief at II Marine Expeditionary Force. He is an FAA Part 107 remote pilot.</p>
@@ -134,12 +145,10 @@
     <div class="about-r">
       <div class="hs-block">
         <div class="hs-frame">
-          <div class="hc tl"></div><div class="hc tr"></div><div class="hc bl"></div><div class="hc br"></div>
           <picture>
             <source type="image/webp" srcset="assets/headshot-400.webp">
             <img class="hs-img" src="assets/headshot-400.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Portrait of Paul Buck Chambers">
           </picture>
-          <div class="hs-ov"></div>
         </div>
         <div class="hs-cap">
           <span class="hs-name">Paul &#8220;Buck&#8221; Chambers</span>
@@ -150,32 +159,17 @@
   </div>
 </section>
 
-<section class="buy-s sec" aria-labelledby="appr-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Our Approach</span></div>
-  <h2 class="sh" id="appr-h"><span class="w">FROM REQUIREMENT </span><span class="a">TO EXECUTION</span></h2>
-  <div class="sr"></div>
-  <ol class="stage-grid">
-    <li class="step"><div class="num">01</div><h3>Understand the Requirement</h3><p>We define the mission, the site, the constraints, and the authority before anything else.</p></li>
-    <li class="step"><div class="num">02</div><h3>Evaluate the Technology</h3><p>We compare candidate systems against that requirement, with compliance and country of origin documented by configuration.</p></li>
-    <li class="step"><div class="num">03</div><h3>Integrate the Solution</h3><p>We install, configure, and connect the system to what the customer already runs.</p></li>
-    <li class="step"><div class="num">04</div><h3>Train the Operator</h3><p>We train the people who will run it, coordinated with the manufacturer where required.</p></li>
-    <li class="step"><div class="num">05</div><h3>Support Execution</h3><p>We stay through procurement, fielding, and sustainment.</p></li>
-  </ol>
-</section>
-
 <section class="adv-s sec" aria-labelledby="lines-h" style="background:var(--bg2)">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Clear Lines</span></div>
-  <h2 class="sh" id="lines-h"><span class="w">INTEGRATOR. </span><span class="a">NOT A MANUFACTURER.</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Clear Lines</span></div>
+  <h2 class="sh" id="lines-h">Integrator. Not a Manufacturer.</h2>
   <div class="pos-copy">
     <p>Heightened Senses is an integrator, authorized reseller, operator trainer, and advisory practice. We are not a manufacturer and do not represent ourselves as one. We disclose which manufacturers we represent before we advise, and we keep advisory and supply separate where federal rules require it.</p>
   </div>
 </section>
 
 <section class="eco-s sec" id="partners" aria-labelledby="eco-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Technology Ecosystem</span></div>
-  <h2 class="sh" id="eco-h"><span class="w">AUTHORIZED </span><span class="a">RELATIONSHIPS</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Technology Ecosystem</span></div>
+  <h2 class="sh" id="eco-h">Authorized Relationships</h2>
   <p class="stage-lead">We maintain relationships across UAS, counter-UAS, avionics, sensing, and ground-control technologies so the requirement can drive the solution. We list only manufacturers that have authorized us to represent them.</p>
   <div class="eco-grid">
     <div class="ecard"><span class="ecat">ISR and FPV Uncrewed Aircraft</span><div class="ename">Red Cat</div><span class="estat ok">Authorized Reseller</span><p class="eval">Black Widow, FANG FPV, and Trichon.</p></div>
@@ -187,27 +181,36 @@
 </section>
 
 <div class="cta-band">
-  <h2 class="sh"><span class="w">BRING US THE </span><span class="a">REQUIREMENT.</span></h2>
+  <h2 class="sh">Bring Us the Requirement.</h2>
   <p>Tell us the mission, operating environment, acquisition timeline, and known constraints. We will determine the next step.</p>
   <div class="hero-acts"><a href="contact.html" class="btn-a">Discuss Your Requirement</a><a href="tel:+19102402901" class="btn-g">(910) 240-2901</a></div>
 </div>
 </main>
 <footer>
-  <div class="ft">
-    <img decoding="async" class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy">
-    <div class="fcreds">
-      <span>SBA-Certified SDVOSB</span><span>U.S. Air Force Prime Contractor</span><span>Founder: FAA Part 107 Remote Pilot</span>
+  <div class="fgrid">
+    <div class="fcol fid">
+      <img class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy" decoding="async">
+      <p class="fmeta">Sneads Ferry, NC 28460</p>
+      <p class="fmeta">&#169; 2026 Heightened Senses, LLC</p>
     </div>
-    <div class="fcopy">&#169; 2026 Heightened Senses, LLC<br>Sneads Ferry, NC 28460</div>
-  </div>
-  <div class="fb">
-    <span>UEI: SSZREV67GJK5</span>
-    <span>CAGE: 9XFG8</span>
-    <span><a href="federal-experience.html">Federal Experience</a></span>
-    <span><a href="how-to-buy.html">How to Buy</a></span>
-    <span><a href="capability-statement.html">Capability Statement</a></span>
-    <span><a href="contact.html">Contact</a></span>
-    <span><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></span>
+    <div class="fcol">
+      <p class="fh">Credentials</p>
+      <ul class="flist"><li>SBA-Certified SDVOSB</li><li>U.S. Air Force Prime Contractor</li><li>Founder: FAA Part 107 Remote Pilot</li></ul>
+    </div>
+    <div class="fcol">
+      <p class="fh">Identifiers</p>
+      <dl class="fids"><div><dt>UEI</dt><dd>SSZREV67GJK5</dd></div><div><dt>CAGE</dt><dd>9XFG8</dd></div></dl>
+    </div>
+    <nav class="fcol" aria-label="Footer">
+      <p class="fh">Company</p>
+      <ul class="flist flinks">
+        <li><a href="federal-experience.html">Federal Experience</a></li>
+        <li><a href="how-to-buy.html">How to Buy</a></li>
+        <li><a href="capability-statement.html">Capability Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
+      </ul>
+    </nav>
   </div>
 </footer>
 <script src="assets/hs-site.js" defer></script>

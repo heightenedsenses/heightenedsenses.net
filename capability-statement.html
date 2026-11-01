@@ -33,14 +33,14 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
 --bg:#070D14;--bg2:#0B131D;--bg3:#101A26;--line:#1C2836;
 --teal:#3FB6D8;--amber:#E8A33D;--white:#ffffff;--text:#D8E1EA;--muted:#A9B7C4;
 --cb:rgba(63,182,216,.18);--grad:linear-gradient(135deg,#3FB6D8 0%,#E8A33D 100%);
---fh:'Barlow Condensed',Arial Narrow,sans-serif;--fb:'Inter',system-ui,sans-serif;--fm:'IBM Plex Mono',ui-monospace,monospace;
+--fh:'Inter',system-ui,sans-serif;--fb:'Inter',system-ui,sans-serif;--fm:'IBM Plex Mono',ui-monospace,monospace;
 }
 html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 body{background:var(--bg);color:var(--white);font-family:var(--fb);line-height:1.5;font-size:11.5px}
@@ -49,6 +49,7 @@ a{color:var(--teal);text-decoration:none}
 .tb{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .tb.amb{color:var(--amber)}
 .tb-print{background:none;border:0;padding:0;cursor:pointer}
+.tb{display:inline-flex;align-items:center;min-height:24px}
 .tb-print:hover{text-decoration:underline}
 .page{max-width:960px;margin:0 auto;padding:22px 24px 28px}
 
@@ -168,6 +169,29 @@ a{color:var(--teal);text-decoration:none}
   .hd{padding-bottom:10px}
   .badges{margin-top:7px}
   a{color:inherit}
+}
+/* Design pass (Nov 2026): Inter headings in mixed case, no gradient accents, light printed document */
+.hd-title,.sh,.card h2,.pp h2,.cn{text-transform:none;letter-spacing:-.012em}
+.hd-title{font-size:28px;letter-spacing:-.02em}
+.hd-title .a,.sh .a{color:inherit}
+.sr,.card::before{display:none}
+.sh{font-size:16px;font-weight:600;margin-bottom:10px;line-height:1.2}
+.card h2,.pp h2{font-size:14px;font-weight:600}
+.cn{font-size:15px;font-weight:600}
+.bdg,.bdg.gold{border-radius:3px;background:none;color:var(--text);border-color:#33475B}
+.card,.pp{border-radius:4px}
+.pp{border-left:2px solid var(--teal)}
+@media print{
+  :root{--bg:#fff;--bg2:#fff;--bg3:#F4F6F8;--line:#C9D1DA;--teal:#1A7393;--amber:#1A7393;--white:#0B131D;--text:#0B131D;--muted:#4A5A6B}
+  html,body,.page{background:#fff!important;color:#0B131D}
+  .page{padding:0.24in 0.42in 0.16in}
+  .sh{margin-bottom:6px;font-size:14.5px}
+  .hd-title{font-size:25px}
+  .hd-logo{mix-blend-mode:normal;filter:invert(1) hue-rotate(180deg)}
+  .card,.pp,.id,.bdg{background:#fff}
+  .card,.pp,.ids,.diff li,.oem div,.codes>div{break-inside:avoid}
+  .foot{color:#4A5A6B;letter-spacing:.05em}
+  .diff li::before{background:#1A7393}
 }
 </style>
 <script type="application/ld+json">
@@ -377,7 +401,7 @@ a{color:var(--teal);text-decoration:none}
 
   <div class="foot">
     <span>Heightened Senses, LLC &#183; UEI SSZREV67GJK5 &#183; CAGE 9XFG8 &#183; EIN 93-2185308</span>
-    <span>Capability Statement &#183; Current as of November 2026</span>
+    <span>Current as of November 2026 &#183; heightenedsenses.net</span>
   </div>
 </main>
 </body>

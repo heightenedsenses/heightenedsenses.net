@@ -4,7 +4,7 @@
 --teal:#3FB6D8;--amber:#E8A33D;--white:#ffffff;
 --muted:#A9B7C4;--muted2:#8FA0B0;
 --cb:rgba(63,182,216,.15);--cb2:rgba(63,182,216,.28);--wb:rgba(255,255,255,.07);--line:#1C2836;--grad:linear-gradient(135deg,#3FB6D8 0%,#E8A33D 100%);--text:#D8E1EA;
---fh:'Barlow Condensed',sans-serif;--fb:'Inter',sans-serif;--fm:'IBM Plex Mono',monospace;
+--fh:'Inter',sans-serif;--fb:'Inter',sans-serif;--fm:'IBM Plex Mono',monospace;
 --pad:72px;
 }
 /* NAV */

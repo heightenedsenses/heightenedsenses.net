@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#070D14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#070D14;--panel:#0F1924;--line:#1C2836;--text:#E6EDF3;--muted:#A9B7C4;--cyan:#3FB6D8;--amber:#E8A33D}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -20,12 +20,12 @@ body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-s
 .top img{height:38px;width:auto}
 .hero{text-align:center}
 .photo{width:132px;height:132px;border-radius:50%;object-fit:cover;border:3px solid var(--amber);display:block;margin:0 auto 16px}
-h1{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:32px;letter-spacing:.01em;line-height:1.05}
+h1{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;font-size:32px;letter-spacing:.01em;line-height:1.05}
 .role{color:var(--muted);font-size:15px;margin-top:6px}
-.tag{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-top:14px}
+.tag{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-top:14px}
 .creds{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:12px}
-.creds span{font-family:"Barlow Condensed",sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);color:var(--muted);padding:4px 9px;border-radius:3px}
-.save{display:flex;align-items:center;justify-content:center;gap:10px;margin:26px 0 12px;background:var(--amber);color:#0B131D;text-decoration:none;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;padding:16px;border-radius:6px}
+.creds span{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);color:var(--muted);padding:4px 9px;border-radius:3px}
+.save{display:flex;align-items:center;justify-content:center;gap:10px;margin:26px 0 12px;background:var(--amber);color:#0B131D;text-decoration:none;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;padding:16px;border-radius:6px}
 .save svg{width:22px;height:22px}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
 .btn{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);color:var(--text);text-decoration:none;padding:14px;border-radius:6px;font-size:15px;font-weight:500;min-height:52px}
@@ -34,10 +34,17 @@ h1{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:32px;lett
 .btn small{display:block;color:var(--muted);font-size:12px;font-weight:400;margin-top:1px}
 .about{margin-top:26px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:14px;line-height:1.55}
 .about b{color:var(--text);font-weight:600}
-.ids{margin-top:14px;font-family:"Barlow Condensed",sans-serif;font-size:14px;letter-spacing:.06em;color:var(--muted);text-align:center}
+.ids{margin-top:14px;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px;letter-spacing:.06em;color:var(--muted);text-align:center}
 footer{margin-top:22px;text-align:center;font-size:12px;color:#6F8091}
 footer a{color:#6F8091}
 @media (min-width:480px){body{padding-top:48px}}
+
+/* Nov 2026: Inter replaces Barlow Condensed; calmer case and tracking */
+h1{font-weight:700;letter-spacing:-.015em}
+.tag{font-size:12px;letter-spacing:.14em}
+.creds span{font-size:12px;letter-spacing:.04em}
+.save{font-size:17px;letter-spacing:.01em;text-transform:none}
+.ids{font-size:13px;letter-spacing:.02em}
 </style>
 </head>
 <body>

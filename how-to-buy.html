@@ -33,7 +33,7 @@
 <meta name="theme-color" content="#070D14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/hs-site.css">
 <script type="application/ld+json">
 {
@@ -117,6 +117,7 @@
  ]
 }
 </script>
+<link rel="stylesheet" href="assets/hs-design.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -138,22 +139,21 @@
 <main id="main">
 <div class="phero">
   <span class="crumb">How to Buy</span>
-  <h1 class="hero-h1"><span class="t">Purchasing</span><span class="w">Information</span></h1>
+  <h1 class="hero-h1"><span class="t">Purchasing</span> <span class="w">Information</span></h1>
   <p class="lead">We quote directly to federal, state, and local buyers. The contracting officer determines the acquisition approach; we provide the documentation that supports it.</p>
 </div>
 
 <section class="pp-s sec" aria-labelledby="vend-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">For Contracting Officers</span></div>
-  <h2 class="sh" id="vend-h"><span class="w">VENDOR </span><span class="a">INFORMATION</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">For Contracting Officers</span></div>
+  <h2 class="sh" id="vend-h">Vendor Information</h2>
   <div class="cg vendor">
       <div class="cc"><span class="cc-l">Legal Entity</span><div class="cc-v">Heightened Senses, LLC (North Carolina limited liability company)</div></div>
       <div class="cc"><span class="cc-l">SBA Certification</span><div class="cc-v">Service-Disabled Veteran-Owned Small Business (SDVOSB) and Veteran-Owned Small Business (VOSB)</div></div>
       <div class="cc"><span class="cc-l">SAM Registration</span><div class="cc-v">Active</div></div>
-      <div class="cc"><span class="cc-l">UEI</span><div class="cc-v">SSZREV67GJK5<button type="button" class="copy" data-copy="SSZREV67GJK5" aria-label="Copy UEI">Copy</button></div></div>
-      <div class="cc"><span class="cc-l">CAGE</span><div class="cc-v">9XFG8<button type="button" class="copy" data-copy="9XFG8" aria-label="Copy CAGE">Copy</button></div></div>
-      <div class="cc"><span class="cc-l">NAICS</span><div class="cc-v">336411 (primary) &#183; 334511 &#183; 423430 &#183; 423860 &#183; 425120 &#183; 488190 &#183; 541330 &#183; 541370 &#183; 541611 &#183; 561621 &#183; 611430 &#183; 611519 &#183; 611699</div></div>
-      <div class="cc"><span class="cc-l">PSC</span><div class="cc-v">1550 &#183; 1680 &#183; 5821 &#183; 5840 &#183; 5865 &#183; 6350 &#183; R425 &#183; U008 and others on the SAM record</div></div>
+      <div class="cc"><span class="cc-l">UEI</span><div class="cc-v mono">SSZREV67GJK5<button type="button" class="copy" data-copy="SSZREV67GJK5" aria-label="Copy UEI">Copy</button></div></div>
+      <div class="cc"><span class="cc-l">CAGE</span><div class="cc-v mono">9XFG8<button type="button" class="copy" data-copy="9XFG8" aria-label="Copy CAGE">Copy</button></div></div>
+      <div class="cc"><span class="cc-l">NAICS</span><div class="cc-v"><ul class="codes"><li>336411 (primary)</li><li>334511</li><li>423430</li><li>423860</li><li>425120</li><li>488190</li><li>541330</li><li>541370</li><li>541611</li><li>561621</li><li>611430</li><li>611519</li><li>611699</li></ul></div></div>
+      <div class="cc"><span class="cc-l">PSC</span><div class="cc-v"><ul class="codes"><li>1550</li><li>1680</li><li>5821</li><li>5840</li><li>5865</li><li>6350</li><li>R425</li><li>U008</li></ul><span class="codes-note">and others on the SAM record</span></div></div>
       <div class="cc"><span class="cc-l">Cybersecurity</span><div class="cc-v">NIST SP 800-171 self-assessment in SPRS</div></div>
       <div class="cc"><span class="cc-l">Invoicing</span><div class="cc-v">WAWF / PIEE for federal orders</div></div>
       <div class="cc"><span class="cc-l">Physical Address</span><div class="cc-v">187 Marina Wynd Way, Sneads Ferry, NC 28460</div></div>
@@ -166,9 +166,8 @@
 </section>
 
 <section class="buy-s sec" aria-labelledby="buy-h" style="background:var(--bg2)">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Quote Process</span></div>
-  <h2 class="sh" id="buy-h"><span class="w">FROM REQUEST </span><span class="a">TO AWARD</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Quote Process</span></div>
+  <h2 class="sh" id="buy-h">From Request to Award</h2>
   <div class="buy-grid">
     <div class="step"><div class="num">01</div><h3>Send the Requirement</h3><p>The solicitation number, or a requirement summary with quantities, site, and timeframe, to contracts@heightenedsenses.net.</p></div>
     <div class="step"><div class="num">02</div><h3>Acknowledgement</h3><p>We acknowledge within one business day and confirm any questions.</p></div>
@@ -178,9 +177,8 @@
 </section>
 
 <section class="adv-s sec" id="ways-to-buy" aria-labelledby="opt-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Ways to Buy</span></div>
-  <h2 class="sh" id="opt-h"><span class="w">WAYS </span><span class="a">TO BUY</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Ways to Buy</span></div>
+  <h2 class="sh" id="opt-h">Ways to Buy</h2>
   <div class="adv-cards">
     <article class="adv-card"><span class="k">Open Market</span><h3>Purchase Order or Contract</h3><p>Direct quotes for federal, state, and local buyers, including simplified acquisition. Public safety agencies receive configuration and country of origin documentation for grant files.</p></article>
     <article class="adv-card"><span class="k">Set-Aside</span><h3>SDVOSB Set-Aside or Sole Source</h3><p>Available where the requirement and FAR thresholds allow, at the contracting officer's determination.</p></article>
@@ -190,27 +188,36 @@
 </section>
 
 <div class="cta-band">
-  <h2 class="sh"><span class="w">REQUEST </span><span class="a">A QUOTE</span></h2>
+  <h2 class="sh">Request a Quote</h2>
   <p>Send the solicitation number or a requirement summary. We acknowledge inquiries within one business day.</p>
   <div class="hero-acts"><a href="contact.html" class="btn-a">Request a Quote</a><a href="tel:+19102402901" class="btn-g">(910) 240-2901</a></div>
 </div>
 </main>
 <footer>
-  <div class="ft">
-    <img decoding="async" class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy">
-    <div class="fcreds">
-      <span>SBA-Certified SDVOSB</span><span>U.S. Air Force Prime Contractor</span><span>Founder: FAA Part 107 Remote Pilot</span>
+  <div class="fgrid">
+    <div class="fcol fid">
+      <img class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy" decoding="async">
+      <p class="fmeta">Sneads Ferry, NC 28460</p>
+      <p class="fmeta">&#169; 2026 Heightened Senses, LLC</p>
     </div>
-    <div class="fcopy">&#169; 2026 Heightened Senses, LLC<br>Sneads Ferry, NC 28460</div>
-  </div>
-  <div class="fb">
-    <span>UEI: SSZREV67GJK5</span>
-    <span>CAGE: 9XFG8</span>
-    <span><a href="federal-experience.html">Federal Experience</a></span>
-    <span><a href="how-to-buy.html">How to Buy</a></span>
-    <span><a href="capability-statement.html">Capability Statement</a></span>
-    <span><a href="contact.html">Contact</a></span>
-    <span><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></span>
+    <div class="fcol">
+      <p class="fh">Credentials</p>
+      <ul class="flist"><li>SBA-Certified SDVOSB</li><li>U.S. Air Force Prime Contractor</li><li>Founder: FAA Part 107 Remote Pilot</li></ul>
+    </div>
+    <div class="fcol">
+      <p class="fh">Identifiers</p>
+      <dl class="fids"><div><dt>UEI</dt><dd>SSZREV67GJK5</dd></div><div><dt>CAGE</dt><dd>9XFG8</dd></div></dl>
+    </div>
+    <nav class="fcol" aria-label="Footer">
+      <p class="fh">Company</p>
+      <ul class="flist flinks">
+        <li><a href="federal-experience.html">Federal Experience</a></li>
+        <li><a href="how-to-buy.html">How to Buy</a></li>
+        <li><a href="capability-statement.html">Capability Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
+      </ul>
+    </nav>
   </div>
 </footer>
 <script src="assets/hs-site.js" defer></script>

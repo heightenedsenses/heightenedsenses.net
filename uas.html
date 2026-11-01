@@ -33,7 +33,7 @@
 <meta name="theme-color" content="#070D14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/hs-site.css">
 <script type="application/ld+json">
 {
@@ -109,6 +109,7 @@
  ]
 }
 </script>
+<link rel="stylesheet" href="assets/hs-design.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -128,30 +129,21 @@
   </button>
 </nav>
 <main id="main">
-<section class="hero sub" id="home" aria-labelledby="hero-h">
-  <div class="hero-fade"></div>
+<section class="hero sub solo" id="home" aria-labelledby="hero-h">
   <div class="hero-l">
     <span class="crumb">UAS Mission Integration</span>
-    <h1 class="hero-h1 long" id="hero-h"><span class="t">Configured for</span><span class="w">the Mission.</span></h1>
+    <h1 class="hero-h1 long" id="hero-h"><span class="t">Configured for</span> <span class="w">the Mission.</span></h1>
     <p class="hero-body">We start with the mission and the operating environment, then build the configuration around it: aircraft, payload, communications, control, data, and the operators who run it. Compliance status and country of origin are documented per product and per configuration.</p>
     <div class="hero-acts">
       <a href="contact.html?type=UAS%20Mission%20Integration" class="btn-a">Discuss a UAS Requirement</a>
       <a href="#configure" class="btn-g">How We Configure &#8595;</a>
     </div>
   </div>
-  <div class="hero-r">
-    <div class="rs">
-      <div class="rc"></div>
-      <img decoding="async" width="1940" height="707" class="hero-img" src="assets/arachnid-family.webp" srcset="assets/arachnid-family-1200.webp 1200w, assets/arachnid-family.webp 1940w" sizes="(max-width:900px) 100vw, 560px" onerror="this.onerror=null;this.src='assets/hero-composite.png'" alt="Red Cat ARACHNID family of uncrewed systems: ISR sUAS, FPV, and ground control">
-      <div class="hero-tag"><span class="ht1">ARACHNID&#8482; Family of Systems</span><span class="ht2">ISR + FPV + GCS &#183; Red Cat Holdings</span></div>
-    </div>
-  </div>
 </section>
 
 <section class="adv-s sec" id="configure" aria-labelledby="cfg-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Configuration Process</span></div>
-  <h2 class="sh" id="cfg-h"><span class="w">SEVEN DECISIONS, </span><span class="a">ONE CONFIGURATION</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Configuration Process</span></div>
+  <h2 class="sh" id="cfg-h">Seven Decisions, One Configuration</h2>
   <p class="stage-lead">A UAS capability is more than an aircraft. We work through each element against the requirement, and we document what we deliver.</p>
   <div class="cfg-grid">
     <article class="adv-card"><span class="k">01</span><h3>Aircraft</h3><p>Size, endurance, and flight profile matched to the mission, from FPV to ISR quadrotors and hybrid VTOL.</p></article>
@@ -165,9 +157,8 @@
 </section>
 
 <section class="cap-s sec" id="packages" aria-labelledby="cap-h" style="background:var(--bg)">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Example Configurations</span></div>
-  <h2 class="sh" id="cap-h"><span class="w">MISSION </span><span class="a">PACKAGES</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Example Configurations</span></div>
+  <h2 class="sh" id="cap-h">Mission Packages</h2>
   <div class="cap-grid-wrap">
     <div>
       <p class="cap-intro">Example configurations built around a mission, not a catalog. Each is scoped against your requirement and documented for the exact configuration.</p>
@@ -189,14 +180,18 @@
 
 
 <section class="plat-s sec" id="platforms" aria-labelledby="plat-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Representative Technologies</span></div>
-  <h2 class="sh" id="plat-h"><span class="w">TECHNOLOGIES </span><span class="a">WE INTEGRATE</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Representative Technologies</span></div>
+  <h2 class="sh" id="plat-h">Technologies We Integrate</h2>
   <p class="cap-intro">These are examples of the technologies available for a configuration under our executed manufacturer agreements. The mission decides which one fits, or whether something else does.</p>
+  <figure class="plat-fig">
+    <img loading="lazy" decoding="async" width="1940" height="707" src="assets/arachnid-family.webp" srcset="assets/arachnid-family-1200.webp 1200w, assets/arachnid-family.webp 1940w" sizes="(max-width:1000px) 100vw, 900px" onerror="this.onerror=null;this.src='assets/hero-composite.png'" alt="Red Cat ARACHNID family of uncrewed systems: ISR sUAS, FPV, and ground control">
+    <figcaption>ARACHNID&#8482; Family of Systems &#183; ISR + FPV + GCS &#183; Red Cat Holdings</figcaption>
+  </figure>
   <div class="plat-grid">
     <div class="pc">
-      <div class="pi"><span class="pb">Blue UAS Cleared</span><img decoding="async" width="571" height="378" src="assets/black-widow.jpg" alt="Black Widow sUAS" loading="lazy"></div>
+      <div class="pi"><img decoding="async" width="571" height="378" src="assets/black-widow.jpg" alt="Black Widow sUAS" loading="lazy"></div>
       <div class="pcon">
+        <span class="pb">Blue UAS Cleared</span>
         <div class="pn">Black Widow&#8482;</div>
         <div class="ps">Tactical ISR Quadrotor &#183; Army SRR Program of Record</div>
         <p class="pd">U.S.-manufactured short-range reconnaissance sUAS. EO/IR dual sensor, 45+ min endurance, GPS-denied capable via Palantir VNav, resilient mesh radio integrated, ATAK compatible.</p>
@@ -204,8 +199,9 @@
       </div>
     </div>
     <div class="pc">
-      <div class="pi"><span class="pb">Blue UAS Cleared</span><img decoding="async" width="768" height="297" src="assets/fang.png" alt="FANG FPV drone" style="object-position:center 40%" loading="lazy"></div>
+      <div class="pi"><img decoding="async" width="768" height="297" src="assets/fang.png" alt="FANG FPV drone" style="object-position:center 40%" loading="lazy"></div>
       <div class="pcon">
+        <span class="pb">Blue UAS Cleared</span>
         <div class="pn">FANG&#8482; FPV</div>
         <div class="ps">FPV Drone System &#183; NDAA Compliant</div>
         <p class="pd">NDAA-compliant FPV family. Retrievable and reusable. Blue UAS Cleared October 2025. Integrates with the ATAK ecosystem.</p>
@@ -213,8 +209,9 @@
       </div>
     </div>
     <div class="pc">
-      <div class="pi"><span class="pb">ISR + Mapping</span><img decoding="async" width="1024" height="259" src="assets/TRICHON.png" alt="Trichon hybrid VTOL" style="object-position:center 30%" loading="lazy"></div>
+      <div class="pi"><img decoding="async" width="1024" height="259" src="assets/TRICHON.png" alt="Trichon hybrid VTOL" style="object-position:center 30%" loading="lazy"></div>
       <div class="pcon">
+        <span class="pb">ISR + Mapping</span>
         <div class="pn">Trichon&#8482;</div>
         <div class="ps">Hybrid VTOL Tri-Copter</div>
         <p class="pd">Extended-endurance hybrid VTOL with tool-free payload swap. Supports ISR, mapping, and photogrammetry missions.</p>
@@ -225,27 +222,36 @@
 </section>
 
 <div class="cta-band">
-  <h2 class="sh"><span class="w">BRING US THE </span><span class="a">MISSION.</span></h2>
+  <h2 class="sh">Bring Us the Mission.</h2>
   <p>Tell us the mission, the operating environment, and the purchasing timeline. We will come back with configuration options and the documentation that goes with them.</p>
   <div class="hero-acts"><a href="contact.html?type=UAS%20Mission%20Integration" class="btn-a">Discuss a UAS Requirement</a><a href="tel:+19102402901" class="btn-g">(910) 240-2901</a></div>
 </div>
 </main>
 <footer>
-  <div class="ft">
-    <img decoding="async" class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy">
-    <div class="fcreds">
-      <span>SBA-Certified SDVOSB</span><span>U.S. Air Force Prime Contractor</span><span>Founder: FAA Part 107 Remote Pilot</span>
+  <div class="fgrid">
+    <div class="fcol fid">
+      <img class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy" decoding="async">
+      <p class="fmeta">Sneads Ferry, NC 28460</p>
+      <p class="fmeta">&#169; 2026 Heightened Senses, LLC</p>
     </div>
-    <div class="fcopy">&#169; 2026 Heightened Senses, LLC<br>Sneads Ferry, NC 28460</div>
-  </div>
-  <div class="fb">
-    <span>UEI: SSZREV67GJK5</span>
-    <span>CAGE: 9XFG8</span>
-    <span><a href="federal-experience.html">Federal Experience</a></span>
-    <span><a href="how-to-buy.html">How to Buy</a></span>
-    <span><a href="capability-statement.html">Capability Statement</a></span>
-    <span><a href="contact.html">Contact</a></span>
-    <span><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></span>
+    <div class="fcol">
+      <p class="fh">Credentials</p>
+      <ul class="flist"><li>SBA-Certified SDVOSB</li><li>U.S. Air Force Prime Contractor</li><li>Founder: FAA Part 107 Remote Pilot</li></ul>
+    </div>
+    <div class="fcol">
+      <p class="fh">Identifiers</p>
+      <dl class="fids"><div><dt>UEI</dt><dd>SSZREV67GJK5</dd></div><div><dt>CAGE</dt><dd>9XFG8</dd></div></dl>
+    </div>
+    <nav class="fcol" aria-label="Footer">
+      <p class="fh">Company</p>
+      <ul class="flist flinks">
+        <li><a href="federal-experience.html">Federal Experience</a></li>
+        <li><a href="how-to-buy.html">How to Buy</a></li>
+        <li><a href="capability-statement.html">Capability Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
+      </ul>
+    </nav>
   </div>
 </footer>
 <script src="assets/hs-site.js" defer></script>

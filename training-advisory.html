@@ -33,7 +33,7 @@
 <meta name="theme-color" content="#070D14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/hs-site.css">
 <style>
 /* Page-scoped grid: 3 columns on desktop, 2 on tablet, 1 on phone. Replaces inline styles that blocked the mobile override. */
@@ -127,6 +127,7 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/hs-design.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -147,10 +148,9 @@
 </nav>
 <main id="main">
 <section class="hero sub" id="home" aria-labelledby="hero-h">
-  <div class="hero-fade"></div>
   <div class="hero-l">
     <span class="crumb">Training &amp; Advisory</span>
-    <h1 class="hero-h1 long" id="hero-h"><span class="t">Training &amp; Advisory</span><span class="w">With a Defined Scope</span></h1>
+    <h1 class="hero-h1 long" id="hero-h"><span class="t">Training &amp; Advisory</span> <span class="w">With a Defined Scope</span></h1>
     <p class="hero-body">Every engagement starts with a written scope and ends with a deliverable you can put in a program or contract file. We train operators to run what they field, and we advise agencies, programs, and manufacturers on how to define, plan, and buy it.</p>
     <div class="hero-acts">
       <a href="contact.html?type=Training" class="btn-a">Discuss Training or Advisory</a>
@@ -159,7 +159,6 @@
   </div>
   <div class="hero-r">
     <div class="photo-frame">
-      <div class="hc tl"></div><div class="hc tr"></div><div class="hc bl"></div><div class="hc br"></div>
       <picture>
         <source type="image/webp" srcset="assets/fpv-training-course-900.webp 900w, assets/fpv-training-course-1600.webp 1600w" sizes="(max-width:900px) 100vw, 620px">
         <img decoding="async" src="assets/fpv-training-course-900.jpg" srcset="assets/fpv-training-course-900.jpg 900w, assets/fpv-training-course-1600.jpg 1600w" sizes="(max-width:900px) 100vw, 620px" width="1600" height="871" alt="Operator flying an FPV proficiency course of gates and a landing pad" fetchpriority="high">
@@ -169,9 +168,8 @@
 </section>
 
 <section class="adv-s sec" aria-labelledby="train-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Training</span></div>
-  <h2 class="sh" id="train-h"><span class="w">OPERATORS WHO </span><span class="a">CAN RUN IT</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Training</span></div>
+  <h2 class="sh" id="train-h">Operators Who Can Run It</h2>
   <div class="eng two">
     <article class="adv-card"><span class="k">Training</span><h3>Operator Training</h3><p>Initial training for UAS and detection systems, delivered at your site or range and coordinated with the manufacturer where the OEM requires it.</p><p class="meta"><b>For:</b> units and agencies fielding new systems.<br><b>Deliverables:</b> training plan, practical assessment, completion records.</p></article>
     <article class="adv-card"><span class="k">Proficiency</span><h3>Proficiency Development</h3><p>Recurring proficiency for operators already fielded: flight hours, scenario drills, and evaluated practical events, so skills hold between deployments and turnover.</p><p class="meta"><b>For:</b> programs maintaining a trained bench.<br><b>Deliverables:</b> proficiency plan, evaluated events, records.</p></article>
@@ -180,9 +178,8 @@
 </section>
 
 <section class="cap-s sec" aria-labelledby="adv-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Advisory</span></div>
-  <h2 class="sh" id="adv-h"><span class="w">DEFINE IT, PLAN IT, </span><span class="a">BUY IT</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Advisory</span></div>
+  <h2 class="sh" id="adv-h">Define It, Plan It, Buy It</h2>
   <div class="adv-cards three">
     <article class="adv-card"><span class="k">Requirements</span><h3>Requirements Development</h3><p>Mission, site, constraints, authority, and interfaces turned into a requirement a program office can act on.</p><p class="meta"><b>Deliverable:</b> requirements matrix.</p></article>
     <article class="adv-card"><span class="k">Programs</span><h3>Program Design</h3><p>CONOPS, policy, SOPs, training pipeline, Part 107 and waiver pathways, data handling, and the sustainment plan for a UAS program.</p><p class="meta"><b>Deliverable:</b> program plan.</p></article>
@@ -195,9 +192,8 @@
 </section>
 
 <section class="adv-s sec" aria-labelledby="mfr-h">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Manufacturer Advisory</span></div>
-  <h2 class="sh" id="mfr-h"><span class="w">FOR </span><span class="a">MANUFACTURERS</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Manufacturer Advisory</span></div>
+  <h2 class="sh" id="mfr-h">For Manufacturers</h2>
   <div class="adv-cards">
     <article class="adv-card"><span class="k">Manufacturers</span><h3>Federal Market Entry</h3><p>What compliance requires, how to structure a product line for federal buyers, and how to build a channel that does not disintermediate you.</p></article>
     <article class="adv-card"><span class="k">Allied Manufacturers</span><h3>U.S. Market Entry for Non-U.S. OEMs</h3><p>Export control posture (ITAR, EAR, FMS), NDAA Section 848 and Buy American positioning, SDVOSB channel structure, teaming agreements, and a scoped introduction program for allied manufacturers entering U.S. federal and critical-infrastructure markets.</p></article>
@@ -205,9 +201,8 @@
 </section>
 
 <section class="adv-s sec" aria-labelledby="fees-h" id="engagement-fees">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Engagement Model</span></div>
-  <h2 class="sh" id="fees-h"><span class="w">HOW WE </span><span class="a">CHARGE</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Engagement Model</span></div>
+  <h2 class="sh" id="fees-h">How We Charge</h2>
   <p class="fees-intro">Every engagement runs on a one-page Statement of Work that names the deliverable, the timeline, and the fee before work begins. We start with a short scoping call to confirm fit and define the scope. Advisory work begins under a signed Statement of Work. The ranges below are typical; each engagement is quoted against its own scope.</p>
   <div class="adv-cards three">
     <article class="adv-card"><span class="k">Project Advisory</span><h3>Scoped Deliverable</h3><p>A named deliverable against a written scope: a configuration-specific NDAA and ASDA compliance analysis, a sources-sought response, a federal or U.S. market entry plan, a C-UAS program design, or a quote package built against a solicitation.</p><p class="meta"><b>Typical fee:</b> $5,000 to $25,000 by scope.<br><b>Timeline:</b> two to eight weeks.<br><b>Terms:</b> 50 percent on signature, 50 percent on delivery.</p></article>
@@ -219,9 +214,8 @@
 </section>
 
 <section class="cap-s sec" aria-labelledby="faq-h" id="faq">
-  <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">Common Questions</span></div>
-  <h2 class="sh" id="faq-h"><span class="w">BEFORE YOU </span><span class="a">REACH OUT</span></h2>
-  <div class="sr"></div>
+  <div class="ey"><span class="ey-lbl">Common Questions</span></div>
+  <h2 class="sh" id="faq-h">Before You Reach Out</h2>
   <div class="faq">
     <details><summary>Does Heightened Senses charge for advisory work?</summary><div class="ans">Yes. Every engagement runs on a one-page Statement of Work with a named deliverable, timeline, and fee. We start with a short scoping call to confirm fit and define the scope. Project advisory typically runs $5,000 to $25,000 by scope, go-to-market retainers start at $2,500 per month with a three-month minimum, and on-site work is $2,000 to $2,500 per principal day plus travel at cost.</div></details>
     <details><summary>Can you help a non-U.S. drone or counter-drone company enter the U.S. market?</summary><div class="ans">Yes. We advise allied foreign manufacturers on export control posture (ITAR, EAR, FMS), NDAA Section 848 and Buy American positioning, SDVOSB channel structure, teaming agreements, and scoped introductions into U.S. federal, public safety, and critical-infrastructure markets. Typical U.S. defense sales cycles run 12 to 24 months and the engagement is planned around that.</div></details>
@@ -236,7 +230,6 @@
   <div class="field">
     <figure>
         <div class="frame">
-          <div class="hc tl"></div><div class="hc tr"></div><div class="hc bl"></div><div class="hc br"></div>
           <picture>
             <source type="image/webp" srcset="assets/ncarng-cuas-demo-2026-07-800.webp 800w, assets/ncarng-cuas-demo-2026-07-1280.webp 1280w" sizes="(max-width:900px) 100vw, 680px">
             <img src="assets/ncarng-cuas-demo-2026-07-800.jpg" srcset="assets/ncarng-cuas-demo-2026-07-800.jpg 800w, assets/ncarng-cuas-demo-2026-07-1280.jpg 1280w" sizes="(max-width:900px) 100vw, 680px" width="1280" height="853" loading="lazy" decoding="async" alt="Participants reviewing an uncrewed aircraft and controller during an outdoor field demonstration.">
@@ -245,7 +238,7 @@
         <figcaption>Field demonstration, July 2026. Heightened Senses coordinated and supported an OEM Counter-UAS technology demonstration with the North Carolina Army National Guard.</figcaption>
       </figure>
     <div>
-      <div class="ey"><div class="ey-icon"><img src="assets/icon-gradient-84.png" alt="" width="84" height="57" loading="lazy" decoding="async"></div><div class="ey-line"></div><span class="ey-lbl">In the Field</span></div>
+      <div class="ey"><span class="ey-lbl">In the Field</span></div>
       <h3 id="field-h">Field Demonstrations</h3>
       <p>Field time is part of validating the requirement. We put candidate systems in front of the operators who will run them, in their own conditions, so the evaluation rests on what they observed rather than on a brochure.</p>
       <p>We coordinate the manufacturer, the site, and the agenda, and the findings feed directly into architecture and selection.</p>
@@ -255,27 +248,36 @@
 </section>
 
 <div class="cta-band">
-  <h2 class="sh"><span class="w">DISCUSS YOUR </span><span class="a">REQUIREMENT</span></h2>
+  <h2 class="sh">Discuss Your Requirement</h2>
   <p>Send the requirement and the timeframe. We acknowledge inquiries within one business day and confirm next steps after reviewing the requirement.</p>
   <div class="hero-acts"><a href="contact.html?type=Advisory%20%2F%20Program%20Support" class="btn-a">Discuss a Training or Advisory Need</a><a href="tel:+19102402901" class="btn-g">(910) 240-2901</a></div>
 </div>
 </main>
 <footer>
-  <div class="ft">
-    <img decoding="async" class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy">
-    <div class="fcreds">
-      <span>SBA-Certified SDVOSB</span><span>U.S. Air Force Prime Contractor</span><span>Founder: FAA Part 107 Remote Pilot</span>
+  <div class="fgrid">
+    <div class="fcol fid">
+      <img class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy" decoding="async">
+      <p class="fmeta">Sneads Ferry, NC 28460</p>
+      <p class="fmeta">&#169; 2026 Heightened Senses, LLC</p>
     </div>
-    <div class="fcopy">&#169; 2026 Heightened Senses, LLC<br>Sneads Ferry, NC 28460</div>
-  </div>
-  <div class="fb">
-    <span>UEI: SSZREV67GJK5</span>
-    <span>CAGE: 9XFG8</span>
-    <span><a href="federal-experience.html">Federal Experience</a></span>
-    <span><a href="how-to-buy.html">How to Buy</a></span>
-    <span><a href="capability-statement.html">Capability Statement</a></span>
-    <span><a href="contact.html">Contact</a></span>
-    <span><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></span>
+    <div class="fcol">
+      <p class="fh">Credentials</p>
+      <ul class="flist"><li>SBA-Certified SDVOSB</li><li>U.S. Air Force Prime Contractor</li><li>Founder: FAA Part 107 Remote Pilot</li></ul>
+    </div>
+    <div class="fcol">
+      <p class="fh">Identifiers</p>
+      <dl class="fids"><div><dt>UEI</dt><dd>SSZREV67GJK5</dd></div><div><dt>CAGE</dt><dd>9XFG8</dd></div></dl>
+    </div>
+    <nav class="fcol" aria-label="Footer">
+      <p class="fh">Company</p>
+      <ul class="flist flinks">
+        <li><a href="federal-experience.html">Federal Experience</a></li>
+        <li><a href="how-to-buy.html">How to Buy</a></li>
+        <li><a href="capability-statement.html">Capability Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
+      </ul>
+    </nav>
   </div>
 </footer>
 <script src="assets/hs-site.js" defer></script>
