@@ -406,3 +406,13 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.05);padding:
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 .fb a.social{display:inline-flex;align-items:center;gap:6px;color:var(--teal)}.fb a.social:hover{color:#fff}
+
+/* FIVE-STAGE MODEL (homepage) */
+.stage-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.stage-grid .step{position:relative}
+.stage-grid .step .lbl{font-family:var(--fm);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);display:block;margin:4px 0 10px}
+.stage-lead{font-size:15px;color:var(--muted);line-height:1.8;max-width:820px;margin-bottom:30px}
+.acq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:26px}
+@media(max-width:1100px){.stage-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.stage-grid{grid-template-columns:1fr 1fr}.acq-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.stage-grid{grid-template-columns:1fr}}
