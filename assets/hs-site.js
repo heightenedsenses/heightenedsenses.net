@@ -3,7 +3,7 @@
   // Navigation background on scroll
   var nav = document.getElementById('main-nav');
   window.addEventListener('scroll', function(){
-    if (nav) nav.style.background = window.scrollY > 40 ? 'rgba(4,8,13,.99)' : 'rgba(5,9,14,.97)';
+    if (nav) nav.style.background = window.scrollY > 40 ? 'rgba(7,13,20,.99)' : 'rgba(7,13,20,.97)';
   }, {passive:true});
 
   // Mobile menu
@@ -22,11 +22,37 @@
       o.style.display = 'block'; void o.offsetHeight; o.classList.add('active');
       document.body.style.overflow = 'hidden';
     };
-    h.addEventListener('click', function(){ h.classList.contains('active') ? close() : open(); });
+    h.addEventListener('click', function(){
+      if (h.classList.contains('active')) { close(); }
+      else { open(); var first = n.querySelector('a'); if (first) first.focus(); }
+    });
     o.addEventListener('click', close);
     n.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
-    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && h.classList.contains('active')) { close(); h.focus(); } });
-    window.addEventListener('resize', function(){ if (window.innerWidth > 900) close(); });
+    document.addEventListener('keydown', function(e){
+      if (!h.classList.contains('active')) return;
+      if (e.key === 'Escape') { close(); h.focus(); return; }
+      if (e.key === 'Tab') {
+        // keep focus inside the open menu (toggle button plus menu links)
+        var items = [h].concat([].slice.call(n.querySelectorAll('a')));
+        var i = items.indexOf(document.activeElement);
+        if (e.shiftKey && i <= 0) { e.preventDefault(); items[items.length - 1].focus(); }
+        else if (!e.shiftKey && i === items.length - 1) { e.preventDefault(); items[0].focus(); }
+      }
+    });
+    // close when tapping outside the menu panel
+    document.addEventListener('click', function(e){
+      if (h.classList.contains('active') && !n.contains(e.target) && !h.contains(e.target)) close();
+    });
+    window.addEventListener('resize', function(){ if (window.innerWidth >= 1180) close(); });
+  }
+
+  // Counter-UAS section tabs: keep the current tab in view and drop the edge fade at the end of the row
+  var sw = document.querySelector('.subnav .wrap');
+  if (sw) {
+    var cur = sw.querySelector('[aria-current="page"]');
+    if (cur && sw.scrollWidth > sw.clientWidth) sw.scrollLeft = Math.max(0, cur.offsetLeft - 16);
+    var edge = function(){ sw.classList.toggle('at-end', sw.scrollLeft + sw.clientWidth >= sw.scrollWidth - 4); };
+    sw.addEventListener('scroll', edge, {passive:true}); window.addEventListener('resize', edge); edge();
   }
 
   // Contact form: preselect requirement type from ?type=

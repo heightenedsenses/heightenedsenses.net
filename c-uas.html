@@ -33,7 +33,7 @@
 <meta name="twitter:image:alt" content="Operators reviewing an uncrewed aircraft at a July 2026 field demonstration, with the Heightened Senses wordmark.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/hs-nav.css">
 <link rel="stylesheet" href="assets/hs-cuas.css">
 <script>
@@ -92,8 +92,9 @@
  ]
 }
 </script>
+<link rel="stylesheet" href="assets/hs-design.css">
 </head>
-<body>
+<body class="cu">
 
 <a class="skip" href="#main">Skip to main content</a>
 <nav id="main-nav" aria-label="Primary">
@@ -121,31 +122,22 @@
 </nav>
 <main id="main">
 <section class="hero" aria-labelledby="hero-h">
-  <div class="wrap hero-grid">
+  <div class="wrap hero-grid solo">
   <div class="hero-copy">
     <div class="kicker">Counter-UAS Integration</div>
-    <h1 id="hero-h">Layered<br><span class="grad">Counter-UAS</span> Integration</h1>
+    <h1 id="hero-h">Layered <span class="grad nw">Counter-UAS</span> Integration</h1>
     <p class="lead">A counter-UAS program is a chain: detect, identify, track, respond, then train and sustain. We design that chain around the site, the threat, and the authority your agency holds, select the systems for each link, install and integrate them, and train the people who run it.</p>
     <p class="lead">Fixed sites, vehicle-mounted and mobile kits, and coastal and port facilities, for federal installations and for state, local, tribal, and territorial agencies.</p>
+    <div class="btn-row">
+      <a class="btn primary" href="contact.html?type=Counter-UAS%20Integration%20%2F%20Airspace%20Awareness">Discuss Your Requirement</a>
+      <a class="btn ghost" href="contact.html?type=Counter-UAS%20Integration%20%2F%20Airspace%20Awareness">Request a Demonstration</a>
+    </div>
     <div class="chips">
       <span class="chip gold">USAF Prime &#183; C-sUAS Radar Lease</span>
       <span class="chip gold">SBA-Certified SDVOSB</span>
       <span class="chip">Country of Origin Documented</span>
       <span class="chip">Federal &#183; State &#183; Local &#183; Tribal &#183; Territorial</span>
     </div>
-    <div class="btn-row">
-      <a class="btn primary" href="contact.html?type=Counter-UAS%20Integration%20%2F%20Airspace%20Awareness">Discuss Your Requirement</a>
-      <a class="btn ghost" href="contact.html?type=Counter-UAS%20Integration%20%2F%20Airspace%20Awareness">Request a Demonstration</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="radar-glow"></div>
-    <div class="rings" aria-hidden="true"></div>
-    <picture>
-      <source type="image/webp" srcset="assets/iris-radar-dome.webp">
-      <img decoding="async" class="dome" src="assets/iris-radar-dome.png" width="365" height="454" alt="Robin Radar IRIS 3D drone detection radar" fetchpriority="high">
-    </picture>
-    <div class="hero-tag"><span class="ht1">IRIS&#8482; 3D Drone Detection Radar</span><span class="ht2">Robin Radar Systems &#183; Under Contract for the U.S. Air Force</span></div>
   </div>
   </div>
 </section>
@@ -153,7 +145,7 @@
 <section id="chain" aria-labelledby="chain-h">
   <div class="wrap">
     <div class="sec-kicker">The Problem</div>
-    <h2 id="chain-h">Detect. Identify. Track.<br>Respond. Sustain.</h2>
+    <h2 id="chain-h">Detect. Identify. Track. Respond. Sustain.</h2>
     <p class="sec-intro">No single sensor or effector covers the whole chain. We build each link from the layers that fit your mission and your authority.</p>
     <ol class="chain">
       <li class="card"><span class="tag">01</span><h3>Detect</h3><p>Know that something is in the airspace.</p><div class="sub">Radar &#183; Passive RF &#183; Acoustic &#183; Remote ID</div></li>
@@ -180,7 +172,7 @@
 <section id="approach" aria-labelledby="approach-h">
   <div class="wrap">
     <div class="sec-kicker">The Requirement Selects the System</div>
-    <h2 id="approach-h">How We Build a<br>Counter-UAS Program</h2>
+    <h2 id="approach-h">How We Build a Counter-UAS Program</h2>
     <p class="sec-intro">A single sensor is a gap, not a program. Every system we deliver comes with the site assessment, authority mapping, policy, training, and sustainment required to field it as an operational capability and defend it in an audit.</p>
     <div class="grid c4">
       <div class="card">
@@ -236,13 +228,16 @@
         <div class="role">Prime Contractor &#183; Contract FA480326P0068 &#183; Awarded September 2026</div>
         <p>Competed under a total small business set-aside and awarded as prime. Lease of two Robin Radar IRIS 3D counter-sUAS radar systems, with site survey, installation, operator training, and sustainment support under contract. One-year base period and two priced option years. Delivery and implementation in progress.</p>
         <p>The lease structure gives the installation detection capability without a capital acquisition, with option years priced up front. The same structure is available for other fixed-site requirements.</p>
+        <p class="pp-quiet">We publish awards, not pursuits. Federal references available on request.</p>
         <a class="btn ghost" href="federal-experience.html">Contract Details</a>
       </div>
-      <div class="pp-side">
-        <div class="pp-stat"><div class="big">PRIME</div><div class="lbl">Contractor of record, not a subcontractor.</div></div>
-        <div class="pp-stat"><div class="big">BASE + 2</div><div class="lbl">One-year base period with two priced option years.</div></div>
-        <p class="pp-quiet">We publish awards, not pursuits. Federal references available on request.</p>
-      </div>
+      <figure class="rec-fig">
+        <picture>
+      <source type="image/webp" srcset="assets/iris-radar-dome.webp">
+      <img decoding="async" class="dome" src="assets/iris-radar-dome.png" width="365" height="454" alt="Robin Radar IRIS 3D drone detection radar" loading="lazy">
+    </picture>
+        <figcaption>IRIS&#8482; 3D Drone Detection Radar &#183; Robin Radar Systems &#183; Under Contract for the U.S. Air Force</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -265,21 +260,30 @@
 </main>
 
 <footer>
-  <div class="ft">
-    <img decoding="async" class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy">
-    <div class="fcreds">
-      <span>SBA-Certified SDVOSB</span><span>U.S. Air Force Prime Contractor</span><span>Founder: FAA Part 107 Remote Pilot</span>
+  <div class="fgrid">
+    <div class="fcol fid">
+      <img class="logo-img" src="assets/logo-480.png" alt="Heightened Senses" width="480" height="101" loading="lazy" decoding="async">
+      <p class="fmeta">Sneads Ferry, NC 28460</p>
+      <p class="fmeta">&#169; 2026 Heightened Senses, LLC</p>
     </div>
-    <div class="fcopy">&#169; 2026 Heightened Senses, LLC<br>Sneads Ferry, NC 28460</div>
-  </div>
-  <div class="fb">
-    <span>UEI: SSZREV67GJK5</span>
-    <span>CAGE: 9XFG8</span>
-    <span><a href="federal-experience.html">Federal Experience</a></span>
-    <span><a href="how-to-buy.html">How to Buy</a></span>
-    <span><a href="capability-statement.html">Capability Statement</a></span>
-    <span><a href="contact.html">Contact</a></span>
-    <span><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></span>
+    <div class="fcol">
+      <p class="fh">Credentials</p>
+      <ul class="flist"><li>SBA-Certified SDVOSB</li><li>U.S. Air Force Prime Contractor</li><li>Founder: FAA Part 107 Remote Pilot</li></ul>
+    </div>
+    <div class="fcol">
+      <p class="fh">Identifiers</p>
+      <dl class="fids"><div><dt>UEI</dt><dd>SSZREV67GJK5</dd></div><div><dt>CAGE</dt><dd>9XFG8</dd></div></dl>
+    </div>
+    <nav class="fcol" aria-label="Footer">
+      <p class="fh">Company</p>
+      <ul class="flist flinks">
+        <li><a href="federal-experience.html">Federal Experience</a></li>
+        <li><a href="how-to-buy.html">How to Buy</a></li>
+        <li><a href="capability-statement.html">Capability Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="social" href="https://www.linkedin.com/company/heightened-senses-llc" target="_blank" rel="noopener" aria-label="Heightened Senses on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
+      </ul>
+    </nav>
   </div>
 </footer>
 <script src="assets/hs-site.js" defer></script>
