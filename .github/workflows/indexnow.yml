@@ -1,0 +1,64 @@
+name: IndexNow
+
+# Runs after GitHub Pages finishes deploying main, so search engines are only
+# notified once the new version is live. Manual runs can submit specific URLs.
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Space-separated URLs to submit (leave blank to submit the whole sitemap)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Submit changed pages
+        if: github.event_name == 'workflow_run'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          COMMIT_MSG: ${{ github.event.workflow_run.head_commit.message }}
+        run: |
+          if printf '%s' "$COMMIT_MSG" | grep -qi '\[skip indexnow\]'; then
+            echo "Commit message requests [skip indexnow]."; exit 0
+          fi
+          # Compare with the commit of the previous successful Pages deployment,
+          # so several pushes between deployments are all covered.
+          BASE=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?branch=main&status=success&per_page=50" \
+            --jq "[.workflow_runs[] | select(.name == \"pages-build-deployment\" and .id != ${RUN_ID})][0].head_sha" 2>/dev/null || true)
+          if [ -z "$BASE" ] || [ "$BASE" = "null" ] || ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            BASE="$HEAD_SHA^1"
+          fi
+          echo "Comparing $BASE..$HEAD_SHA"
+          python3 .github/scripts/indexnow.py changed "$BASE" "$HEAD_SHA"
+
+      - name: Submit URLs (manual run)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          URLS: ${{ inputs.urls }}
+        run: |
+          if [ -n "$URLS" ]; then
+            python3 .github/scripts/indexnow.py urls $URLS
+          else
+            python3 .github/scripts/indexnow.py sitemap
+          fi
