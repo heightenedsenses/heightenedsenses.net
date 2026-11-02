@@ -195,6 +195,36 @@ a{color:var(--teal);text-decoration:none}
   .foot{color:#4A5A6B;letter-spacing:.05em}
   .diff li::before{background:#1A7393}
 }
+/* Print header with the SBA mark: keep it to the original height */
+@media print{
+  .hd{grid-template-columns:auto 1fr auto;gap:18px;padding-bottom:8px}
+  .hd-sba{height:62px}
+  .hd-sub{white-space:nowrap;font-size:8.5px;letter-spacing:.12em}
+  .badges{flex-wrap:nowrap;gap:5px;margin-top:6px}
+  .bdg{font-size:8.5px;padding:2px 7px;white-space:nowrap}
+}
+/* Phone screen reading (final responsive pass): print sizes stay untouched */
+@media screen and (max-width:700px){
+  .page{padding-left:16px;padding-right:16px}
+  .hd-sba{height:72px}
+  .lead{font-size:15px;line-height:1.6}
+  .card p,.diff li,.pp p{font-size:14px;line-height:1.55}
+  .oem div,.cr,.cl,.reg{font-size:13px;line-height:1.55}
+  .cr b{width:64px}
+  .card .k,.reg .k,.id-l,.ct,.cr2,.hd-sub,.foot,.pp .ag{font-size:11px}
+  .id-v{font-size:14px}
+  .sh{font-size:18px}
+  .card h2,.pp h2{font-size:16px}
+  .bdg{font-size:11px}
+  .oem i{font-size:10.5px}
+  .codes{grid-template-columns:1fr 1fr;gap:18px 16px}
+  .cr b{display:block;width:auto}
+  .facts{grid-template-columns:1fr!important;gap:8px!important}
+  .facts div{font-size:13px;line-height:1.45}
+  .facts span{display:block;font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+}
+@media screen and (max-width:420px){.codes{grid-template-columns:1fr}}
+.nw{white-space:nowrap}
 </style>
 <script type="application/ld+json">
 {
@@ -327,7 +357,7 @@ a{color:var(--teal);text-decoration:none}
       <div class="sh">Prime Contract <span class="a">Performance</span></div>
       <div class="sr"></div>
       <div class="pp">
-        <span class="ag">U.S. Air Force &#183; 20th Fighter Wing &#183; Shaw AFB, SC</span>
+        <span class="ag"><span class="nw">U.S. Air Force</span> &#183; <span class="nw">20th Fighter Wing</span> &#183; <span class="nw">Shaw AFB, SC</span></span>
         <h2>Counter-sUAS Radar System Lease</h2>
         <p>Competed under a total small business set-aside and awarded as prime. Lease of two Robin Radar IRIS 3D counter-sUAS radar systems, with site survey, installation, operator training, and sustainment support under contract. Delivery and implementation in progress.</p>
         <div class="facts">
