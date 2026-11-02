@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="76" viewBox="0 0 260 76" role="img" aria-label="Certified veteran business">
+<rect width="260" height="76" rx="8" fill="#17364F"/>
+<g transform="translate(7.857,0) scale(1.357143)">
+<polygon points="24.00,13.00 27.53,23.15 38.27,23.36 29.71,29.85 32.82,40.14 24.00,34.00 15.18,40.14 18.29,29.85 9.73,23.36 20.47,23.15" fill="#C8A054"/>
+<line x1="46" y1="13" x2="166" y2="13" stroke="#C8A054" stroke-width="1"/>
+<text x="46" y="27" font-family="Archivo,Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.3" fill="#FFFFFF">CERTIFIED</text>
+<text x="46" y="40" font-family="Archivo,Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.3" fill="#FFFFFF">VETERAN BUSINESS</text>
+<line x1="46" y1="45" x2="166" y2="45" stroke="#C8A054" stroke-width="1"/>
+<text x="46" y="53" font-family="IBM Plex Sans,Segoe UI,Helvetica,Arial,sans-serif" font-size="6.8" font-weight="500" letter-spacing="0.4" fill="#9FB3C4">CLICK TO VERIFY</text>
+</g>
+</svg>
