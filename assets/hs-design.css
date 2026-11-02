@@ -415,3 +415,36 @@ footer .fcontact a{overflow-wrap:break-word}
 .verify p{margin:0;max-width:44ch;font-size:15px;color:var(--c-text)}
 .verify p a{color:var(--c-accent)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Final responsive pass, November 1, 2026 */
+/* Balanced headings: no one-word last lines */
+h1,h2,h3{text-wrap:balance}
+main p{text-wrap:pretty}
+/* Metadata separators end a line instead of starting the next one */
+.pt .tg+.tg::before{content:none}
+.pt .tg:not(:last-child)::after{content:"\00B7";margin:0 .6em;color:#4C5E70}
+.hero-creds span+span::before{content:none}
+.hero-creds span{display:inline-block;white-space:nowrap}
+.hero-creds span:not(:last-child)::after{content:"\00B7";margin:0 .7em;color:#4C5E70}
+@media(max-width:360px){.hero-creds span{white-space:normal}}
+/* Inline contact links on Counter-UAS closing band: full-height tap target */
+.cu .contact-band .meta a{display:inline-block;padding:4px 0}
+@media(max-width:760px){
+  /* Wide aircraft fill their frame instead of floating in empty space */
+  .pi{aspect-ratio:16/10;max-width:none}
+  .pi img{padding:6px 10px}
+}
+.nw{white-space:nowrap}
+@media(max-width:600px){.book-call .btn-g{display:flex;align-items:center;justify-content:center;width:100%}}
+/* Contact and vendor rows: label above value on phones, so addresses never break mid-word */
+@media(max-width:480px){
+  .con-row{grid-template-columns:1fr;gap:4px;padding:12px 0}
+  .con-val a{overflow-wrap:normal;word-break:normal}
+}
+.cc .copy{min-height:32px;padding:0 12px}
+/* Counter-UAS heroes on small phones: the call to action follows the first paragraph */
+@media(max-width:480px){
+  .cu .hero-copy{display:flex;flex-direction:column}
+  .cu .hero-copy>.lead+.lead{order:2;margin-top:24px}
+  .cu .hero-copy>.chips{order:3}
+}
